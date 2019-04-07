@@ -1,0 +1,18 @@
+
+
+#foo {
+  width: 1px;
+
+  .test {
+    font: Comic Sans;
+  }
+
+  .foo::after {
+    width: 100%;
+  }
+
+  &::after {
+    width: 100%;
+  }
+
+}

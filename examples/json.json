@@ -1,0 +1,10 @@
+{
+  "Propety": "foo",
+  "list": [
+    "one"
+  ],
+  "b": true,
+  "bf": false,
+  "n": 1,
+  "nf": 1.1
+}
