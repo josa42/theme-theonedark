@@ -59,30 +59,30 @@ highlight   CursorColumn       guifg=NONE ctermfg=NONE guibg=#2c323c ctermbg=236
 highlight   CursorLine         guifg=NONE ctermfg=NONE guibg=#2c323c ctermbg=236 gui=NONE cterm=NONE
 highlight   Directory          guifg=#61afef ctermfg=75 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 highlight   DiffAdd            guifg=#282c34 ctermfg=236 guibg=#98c379 ctermbg=108 gui=NONE cterm=NONE
-highlight   DiffChange         guifg=#e5c07b ctermfg=180 gui=underline cterm=underline
+highlight   DiffChange         guifg=#e5c07b ctermfg=180 guibg=NONE ctermbg=NONE gui=underline cterm=underline
 highlight   DiffDelete         guifg=#282c34 ctermfg=236 guibg=#e06c75 ctermbg=168 gui=NONE cterm=NONE
 highlight   DiffText           guifg=#282c34 ctermfg=236 guibg=#e5c07b ctermbg=180 gui=NONE cterm=NONE
 highlight   EndOfBuffer        guifg=#282c34 ctermfg=236 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 highlight   ErrorMsg           guifg=#e06c75 ctermfg=168 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
-highlight   VertSplit          guifg=#282c34 ctermfg=236 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
+highlight   VertSplit          guifg=#21252B ctermfg=235 guibg=#21252B ctermbg=235 gui=NONE cterm=NONE
 highlight   Folded             guifg=#5c6370 ctermfg=241 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 highlight   FoldColumn         guifg=NONE ctermfg=NONE guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 highlight   SignColumn         guifg=NONE ctermfg=NONE guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
-highlight   IncSearch          guifg=#e5c07b ctermfg=180 guibg=#5c6370 ctermbg=241 gui=NONE cterm=NONE
+highlight   IncSearch          guifg=#282c34 ctermfg=236 guibg=#61afef ctermbg=75 gui=NONE cterm=NONE
 highlight   LineNr             guifg=#4B5263 ctermfg=240 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 highlight   CursorLineNr       guifg=NONE ctermfg=NONE guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
-highlight   MatchParen         guifg=#61afef ctermfg=75 gui=underline cterm=underline
+highlight   MatchParen         guifg=#61afef ctermfg=75 guibg=NONE ctermbg=NONE gui=underline cterm=underline
 highlight   ModeMsg            guifg=NONE ctermfg=NONE guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 highlight   MoreMsg            guifg=NONE ctermfg=NONE guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 highlight   NonText            guifg=#3B4048 ctermfg=238 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
-highlight   Normal             guifg=#abb2bf ctermfg=249 guibg=#282c34 ctermbg=236 gui=NONE cterm=NONE
+highlight   Normal             guifg=#abb2bf ctermfg=249 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 highlight   Pmenu              guifg=NONE ctermfg=NONE guibg=#3E4452 ctermbg=238 gui=NONE cterm=NONE
 highlight   PmenuSel           guifg=#282c34 ctermfg=236 guibg=#61afef ctermbg=75 gui=NONE cterm=NONE
 highlight   PmenuSbar          guifg=NONE ctermfg=NONE guibg=#3B4048 ctermbg=238 gui=NONE cterm=NONE
 highlight   PmenuThumb         guifg=NONE ctermfg=NONE guibg=#abb2bf ctermbg=249 gui=NONE cterm=NONE
 highlight   Question           guifg=#c678dd ctermfg=176 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 highlight   QuickFixLine       guifg=#282c34 ctermfg=236 guibg=#e5c07b ctermbg=180 gui=NONE cterm=NONE
-highlight   Search             guifg=#282c34 ctermfg=236 guibg=#e5c07b ctermbg=180 gui=NONE cterm=NONE
+highlight   Search             guifg=#282c34 ctermfg=236 guibg=#61afef ctermbg=75 gui=NONE cterm=NONE
 highlight   SpecialKey         guifg=#3B4048 ctermfg=238 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 highlight   SpellBad           gui=undercurl cterm=undercurl
 highlight   SpellCap           gui=undercurl cterm=undercurl
@@ -135,7 +135,7 @@ highlight cssIdentifier   guifg=#61afef ctermfg=75 guibg=NONE ctermbg=NONE gui=N
 
 " highlight cssPseudoClass  guifg=#56b6c2 ctermfg=73 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 highlight cssImportant guifg=#c678dd ctermfg=176 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
-highlight cssProp      guifg=#abb2bf ctermfg=249 gui=NONE cterm=NONE
+highlight cssProp      guifg=#abb2bf ctermfg=249 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 
 " call s:h("cssDefinition", { "fg": s:purple })
 " call s:h("cssFontAttr", { "fg": s:dark_yellow })
@@ -203,8 +203,8 @@ highlight htmlEndTag         guifg=#abb2bf ctermfg=249 gui=NONE cterm=NONE
 highlight htmlTagName        guifg=#e06c75 ctermfg=168 gui=NONE cterm=NONE
 highlight htmlSpecialTagName guifg=#e06c75 ctermfg=168 gui=NONE cterm=NONE
 highlight htmlArg            guifg=#d19a66 ctermfg=173 gui=NONE cterm=NONE
-highlight htmlH1             guifg=#abb2bf ctermfg=249 gui=NONE cterm=NONE
-highlight htmlTitle          guifg=#abb2bf ctermfg=249 gui=NONE cterm=NONE
+highlight htmlH1             guifg=#abb2bf ctermfg=249 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
+highlight htmlTitle          guifg=#abb2bf ctermfg=249 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -366,7 +366,7 @@ highlight markdownBold   guifg=#abb2bf ctermfg=249 guibg=NONE ctermbg=NONE gui=b
 " call s:h("markdownOrderedListMarker", { "fg": s:red })
 " call s:h("markdownIdDeclaration", { "fg": s:blue })
 highlight markdownLinkText guifg=#61afef ctermfg=75 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
-highlight markdownLinkDelimiter guifg=#abb2bf ctermfg=249 gui=NONE cterm=NONE
+highlight markdownLinkDelimiter guifg=#abb2bf ctermfg=249 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 highlight markdownUrl guifg=#56b6c2 ctermfg=73 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 "
 " " Perl
@@ -585,3 +585,24 @@ let g:indentLine_color_term = '241'
 " https://groups.google.com/forum/#!msg/vim_dev/afPqwAFNdrU/nqh6tOM87QUJ
 " set background=dark
 
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Plugin NERDTree
+"
+" hi NERDTreePart     Special
+" hi NERDTreePartFile Type
+" hi NERDTreeExecFile Title
+" hi NERDTreeDirSlash Comment
+
+" hi NERDTreeLinkTarget Type
+" hi NERDTreeLinkFile   NERDTreeFile
+" hi NERDTreeLinkDir    NERDTreeDir
+
+" hi NERDTreeDir      Directory
+" hi NERDTreeFile     Normal
+" hi NERDTreeOpenable NERDTreeDir
+" hi NERDTreeClosable NERDTreeDir
+" hi NERDTreeIgnore   ignore
+" hi NERDTreeRO       WarningMsg
+" hi NERDTreeFlags    Number

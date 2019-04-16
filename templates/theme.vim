@@ -585,3 +585,24 @@ let g:indentLine_color_term = '{{.Comment.Foreground.Cterm}}'
 " https://groups.google.com/forum/#!msg/vim_dev/afPqwAFNdrU/nqh6tOM87QUJ
 " set background=dark
 
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Plugin NERDTree
+"
+" hi NERDTreePart     Special
+" hi NERDTreePartFile Type
+" hi NERDTreeExecFile Title
+" hi NERDTreeDirSlash Comment
+
+" hi NERDTreeLinkTarget Type
+" hi NERDTreeLinkFile   NERDTreeFile
+" hi NERDTreeLinkDir    NERDTreeDir
+
+" hi NERDTreeDir      Directory
+" hi NERDTreeFile     Normal
+" hi NERDTreeOpenable NERDTreeDir
+" hi NERDTreeClosable NERDTreeDir
+" hi NERDTreeIgnore   ignore
+" hi NERDTreeRO       WarningMsg
+" hi NERDTreeFlags    Number
