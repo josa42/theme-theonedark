@@ -21,21 +21,21 @@ highlight   Boolean          guifg=#d19a66 ctermfg=173 guibg=NONE ctermbg=NONE g
 highlight   Float            guifg=#d19a66 ctermfg=173 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 highlight   Identifier       guifg=#e06c75 ctermfg=168 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 highlight   Function         guifg=#61afef ctermfg=75 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
-highlight   Statement        guifg=#c678dd ctermfg=176 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
+highlight   Statement        guifg=#e06c75 ctermfg=168 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 highlight   Conditional      guifg=#c678dd ctermfg=176 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 highlight   Repeat           guifg=#c678dd ctermfg=176 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 highlight   Label            guifg=#c678dd ctermfg=176 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
-highlight   Operator         guifg=#c678dd ctermfg=176 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
-highlight   Keyword          guifg=#e06c75 ctermfg=168 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
+highlight   Operator         guifg=#56b6c2 ctermfg=73 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
+highlight   Keyword          guifg=#c678dd ctermfg=176 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 highlight   Exception        guifg=#c678dd ctermfg=176 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 highlight   PreProc          guifg=#e5c07b ctermfg=180 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 highlight   Include          guifg=#61afef ctermfg=75 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 highlight   Define           guifg=#c678dd ctermfg=176 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 highlight   Macro            guifg=#c678dd ctermfg=176 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 highlight   PreCondit        guifg=#e5c07b ctermfg=180 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
-highlight   Type             guifg=#e5c07b ctermfg=180 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
-highlight   StorageClass     guifg=#e5c07b ctermfg=180 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
-highlight   Structure        guifg=#e5c07b ctermfg=180 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
+highlight   Type             guifg=#56b6c2 ctermfg=73 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
+highlight   StorageClass     guifg=#c678dd ctermfg=176 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
+highlight   Structure        guifg=#c678dd ctermfg=176 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 highlight   Typedef          guifg=#e5c07b ctermfg=180 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 highlight   Special          guifg=#61afef ctermfg=75 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 highlight   SpecialChar      guifg=NONE ctermfg=NONE guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
@@ -103,6 +103,12 @@ highlight   WarningMsg         guifg=#e5c07b ctermfg=180 guibg=NONE ctermbg=NONE
 highlight   WildMenu           guifg=#282c34 ctermfg=236 guibg=#61afef ctermbg=75 gui=NONE cterm=NONE
 
 
+" Language
+" highlight   ClassName          guifg=#e5c07b ctermfg=180 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
+" highlight   Property           guifg=#e06c75 ctermfg=168 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
+
+
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Diff
 
@@ -129,12 +135,12 @@ endif
 " call s:h("cssAttrComma", { "fg": s:purple })
 " call s:h("cssAttributeSelector", { "fg": s:green })
 highlight cssBraces       guifg=#abb2bf ctermfg=249 gui=NONE cterm=NONE
-highlight cssClassName    guifg=#e5c07b ctermfg=180 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
-highlight cssClassNameDot guifg=#e5c07b ctermfg=180 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
+highlight cssClassName    guifg=#56b6c2 ctermfg=73 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
+highlight cssClassNameDot guifg=#56b6c2 ctermfg=73 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 highlight cssIdentifier   guifg=#61afef ctermfg=75 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 
 " highlight cssPseudoClass  guifg=#56b6c2 ctermfg=73 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
-highlight cssImportant guifg=#c678dd ctermfg=176 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
+highlight cssImportant guifg=#e06c75 ctermfg=168 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 highlight cssProp      guifg=#abb2bf ctermfg=249 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 
 " call s:h("cssDefinition", { "fg": s:purple })
@@ -151,8 +157,8 @@ highlight cssProp      guifg=#abb2bf ctermfg=249 guibg=NONE ctermbg=NONE gui=NON
 " call s:h("cssTagName", { "fg": s:red })
 
 " scss
-highlight scssSelectorChar guifg=#e5c07b ctermfg=180 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
-highlight scssSelectorName guifg=#e5c07b ctermfg=180 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
+highlight scssSelectorChar guifg=#56b6c2 ctermfg=73 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
+highlight scssSelectorName guifg=#56b6c2 ctermfg=73 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 
 
 " " https://github.com/cakebaker/scss-syntax.vim
@@ -226,6 +232,9 @@ highlight javaScriptNull     gui=NONE cterm=NONE
 
 
 
+highlight jsClassDefinitio guifg=#e5c07b ctermfg=180 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
+
+
 " " https://github.com/pangloss/vim-javascript
 " call s:h("jsArrowFunction", { "fg": s:purple })
 " call s:h("jsClassKeyword", { "fg": s:purple })
@@ -237,7 +246,7 @@ highlight javaScriptNull     gui=NONE cterm=NONE
 " call s:h("jsExtendsKeyword", { "fg": s:purple })
 " call s:h("jsFrom", { "fg": s:purple })
 " call s:h("jsFuncCall", { "fg": s:blue })
-" call s:h("jsFunction", { "fg": s:purple })
+highlight link jsFunction Structure
 " call s:h("jsGenerator", { "fg": s:yellow })
 " call s:h("jsGlobalObjects", { "fg": s:yellow })
 " call s:h("jsImport", { "fg": s:purple })
@@ -292,6 +301,10 @@ highlight jsUndefined     gui=NONE cterm=NONE
 " hi! link jsFunction                Keyword
 " hi! link jsTemplateBraces          Special
 
+
+" highlight link jsVariableDef Identifier
+highlight jsObjectKey  guifg=#e06c75 ctermfg=168 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
+highlight jsObjectProp guifg=#e06c75 ctermfg=168 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 
 " " JSON
 highlight jsonCommentError guifg=#5c6370 ctermfg=241 guibg=NONE ctermbg=NONE gui=italic cterm=italic
@@ -386,17 +399,25 @@ highlight markdownUrl guifg=#56b6c2 ctermfg=73 guibg=NONE ctermbg=NONE gui=NONE 
 " call s:h("perlVarPlain",{ "fg": s:blue })
 "
 " " PHP
+highlight phpClass         guifg=#e5c07b ctermfg=180 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
+highlight phpFunction      guifg=#61afef ctermfg=75 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
+highlight phpRegion        guifg=#abb2bf ctermfg=249 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
+highlight phpUseClass      guifg=#e5c07b ctermfg=180 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
+highlight phpClassExtends  guifg=#98c379 ctermfg=108 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
+highlight phpParent        guifg=#abb2bf ctermfg=249 gui=NONE cterm=NONE
+highlight link phpInclude Keyword
+highlight link phpVarSelector Identifier
+
+
+
 " call s:h("phpVarSelector", { "fg": s:red })
 " call s:h("phpOperator", { "fg": s:white })
 " call s:h("phpParent", { "fg": s:white })
 " call s:h("phpMemberSelector", { "fg": s:white })
 " call s:h("phpType", { "fg": s:purple })
 " call s:h("phpKeyword", { "fg": s:purple })
-" call s:h("phpClass", { "fg": s:yellow })
-" call s:h("phpUseClass", { "fg": s:white })
 " call s:h("phpUseAlias", { "fg": s:white })
 " call s:h("phpInclude", { "fg": s:purple })
-" call s:h("phpClassExtends", { "fg": s:green })
 " call s:h("phpDocTags", { "fg": s:white })
 " call s:h("phpFunction", { "fg": s:blue })
 " call s:h("phpFunctions", { "fg": s:cyan })
@@ -466,6 +487,56 @@ highlight GitGutterDelete guifg=#e06c75 ctermfg=168 gui=NONE cterm=NONE
 " call s:h("EasyMotionTarget2Second", { "fg": s:dark_yellow, "gui": "bold", "cterm": "bold" })
 " call s:h("EasyMotionShade",  { "fg": s:comment_grey })
 "
+
+
+" Lua
+
+" highlight link luaParens           Text
+" highlight link luaBraces           Text
+" highlight link luaBrackets         Text
+" highlight link luaBuiltIn          Special
+" highlight link luaComment          Comment
+" highlight link luaCommentLongTag   luaCommentLong
+" highlight link luaCommentLong      luaComment
+" highlight link luaCommentTodo      Todo
+" highlight link luaCond             Conditional
+" highlight link luaConstant         Constant
+" highlight link luaDocTag           Underlined
+" highlight link luaEllipsis         Special
+" highlight link luaElse             Conditional
+" highlight link luaError            Error
+" highlight link luaFloat            Float
+" highlight link luaFuncArgName      Noise
+" highlight link luaFuncCall         PreProc
+" highlight link luaFuncId           Text
+" highlight link luaFuncName         Function
+" highlight luaFuncTable        guifg=#e06c75 ctermfg=168 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
+" highlight link luaFuncKeyword      luaFunction
+" highlight link luaFunction         Function
+" highlight link luaFuncParens       Text
+" highlight link luaGoto             luaStatement
+" highlight link luaGotoLabel        Noise
+" highlight link luaIn               Repeat
+" highlight link luaLabel            Label
+highlight link luaLocal            StorageClass
+" highlight link luaNumber           Number
+" highlight link luaSymbolOperator   luaOperator
+" highlight link luaOperator         Operator
+" highlight link luaRepeat           Repeat
+" highlight link luaSemiCol          Delimiter
+" highlight link luaSpecialTable     Special
+" highlight link luaSpecialValue     PreProc
+" highlight link luaStatement        Statement
+" highlight link luaString           String
+" highlight link luaStringLong       luaString
+" highlight link luaStringSpecial    SpecialChar
+" highlight link luaErrHand          Exception
+
+
+
+" viml
+highlight link vimLet StorageClass
+highlight link vimVar Normal
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Plugin: mhinz/vim-signify

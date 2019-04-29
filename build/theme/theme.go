@@ -14,6 +14,7 @@ type Theme struct {
 	Cyan       Color `yaml:"cyan"`
 	White      Color `yaml:"white"`
 	Grey       Color `yaml:"grey"`
+	VisualGrey Color `yaml:"visual_grey"`
 
 	// s:visual_grey.gui
 	// s:dark_red.gui

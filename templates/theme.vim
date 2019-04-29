@@ -103,6 +103,12 @@ highlight   WarningMsg         {{.WarningMsg}}
 highlight   WildMenu           {{.WildMenu}}
 
 
+" Language
+" highlight   ClassName          {{.ClassName}}
+" highlight   Property           {{.Property}}
+
+
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Diff
 
@@ -226,6 +232,9 @@ highlight javaScriptNull     {{.Null}}
 
 
 
+highlight jsClassDefinitio {{.ClassName}}
+
+
 " " https://github.com/pangloss/vim-javascript
 " call s:h("jsArrowFunction", { "fg": s:purple })
 " call s:h("jsClassKeyword", { "fg": s:purple })
@@ -237,7 +246,7 @@ highlight javaScriptNull     {{.Null}}
 " call s:h("jsExtendsKeyword", { "fg": s:purple })
 " call s:h("jsFrom", { "fg": s:purple })
 " call s:h("jsFuncCall", { "fg": s:blue })
-" call s:h("jsFunction", { "fg": s:purple })
+highlight link jsFunction Structure
 " call s:h("jsGenerator", { "fg": s:yellow })
 " call s:h("jsGlobalObjects", { "fg": s:yellow })
 " call s:h("jsImport", { "fg": s:purple })
@@ -292,6 +301,10 @@ highlight jsUndefined     {{.Null}}
 " hi! link jsFunction                Keyword
 " hi! link jsTemplateBraces          Special
 
+
+" highlight link jsVariableDef Identifier
+highlight jsObjectKey  {{.Property}}
+highlight jsObjectProp {{.Property}}
 
 " " JSON
 highlight jsonCommentError {{.Comment}}
@@ -386,17 +399,25 @@ highlight markdownUrl {{.Constant}}
 " call s:h("perlVarPlain",{ "fg": s:blue })
 "
 " " PHP
+highlight phpClass         {{.ClassName}}
+highlight phpFunction      {{.Function}}
+highlight phpRegion        {{.Normal}}
+highlight phpUseClass      {{.ClassName}}
+highlight phpClassExtends  {{.ExtendsClassName}}
+highlight phpParent        {{.Brace}}
+highlight link phpInclude Keyword
+highlight link phpVarSelector Identifier
+
+
+
 " call s:h("phpVarSelector", { "fg": s:red })
 " call s:h("phpOperator", { "fg": s:white })
 " call s:h("phpParent", { "fg": s:white })
 " call s:h("phpMemberSelector", { "fg": s:white })
 " call s:h("phpType", { "fg": s:purple })
 " call s:h("phpKeyword", { "fg": s:purple })
-" call s:h("phpClass", { "fg": s:yellow })
-" call s:h("phpUseClass", { "fg": s:white })
 " call s:h("phpUseAlias", { "fg": s:white })
 " call s:h("phpInclude", { "fg": s:purple })
-" call s:h("phpClassExtends", { "fg": s:green })
 " call s:h("phpDocTags", { "fg": s:white })
 " call s:h("phpFunction", { "fg": s:blue })
 " call s:h("phpFunctions", { "fg": s:cyan })
@@ -466,6 +487,57 @@ highlight GitGutterDelete {{.GutterRemoved}}
 " call s:h("EasyMotionTarget2Second", { "fg": s:dark_yellow, "gui": "bold", "cterm": "bold" })
 " call s:h("EasyMotionShade",  { "fg": s:comment_grey })
 "
+
+
+" Lua
+
+" highlight link luaParens           Text
+" highlight link luaBraces           Text
+" highlight link luaBrackets         Text
+" highlight link luaBuiltIn          Special
+" highlight link luaComment          Comment
+" highlight link luaCommentLongTag   luaCommentLong
+" highlight link luaCommentLong      luaComment
+" highlight link luaCommentTodo      Todo
+" highlight link luaCond             Conditional
+" highlight link luaConstant         Constant
+" highlight link luaDocTag           Underlined
+" highlight link luaEllipsis         Special
+" highlight link luaElse             Conditional
+" highlight link luaError            Error
+" highlight link luaFloat            Float
+" highlight link luaFuncArgName      Noise
+" highlight link luaFuncCall         PreProc
+" highlight link luaFuncId           Text
+" highlight link luaFuncName         Function
+" highlight luaFuncTable        {{.Error}}
+" highlight link luaFuncKeyword      luaFunction
+" highlight link luaFunction         Function
+" highlight link luaFuncParens       Text
+" highlight link luaGoto             luaStatement
+" highlight link luaGotoLabel        Noise
+" highlight link luaIn               Repeat
+" highlight link luaLabel            Label
+highlight link luaLocal            StorageClass
+" highlight link luaNumber           Number
+" highlight link luaSymbolOperator   luaOperator
+" highlight link luaOperator         Operator
+" highlight link luaRepeat           Repeat
+" highlight link luaSemiCol          Delimiter
+" highlight link luaSpecialTable     Special
+" highlight link luaSpecialValue     PreProc
+" highlight link luaStatement        Statement
+" highlight link luaString           String
+" highlight link luaStringLong       luaString
+" highlight link luaStringSpecial    SpecialChar
+" highlight link luaErrHand          Exception
+
+
+
+" viml
+highlight link vimLet StorageClass
+highlight link vimVar Normal
+highlight link vimCommand Structure
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Plugin: mhinz/vim-signify

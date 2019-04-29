@@ -9,6 +9,7 @@ import (
 
 	"github.com/josa42/theme-generator/build/theme"
 	"gopkg.in/yaml.v2"
+	"path/filepath"
 )
 
 func main() {
@@ -26,9 +27,20 @@ func main() {
 	writeTheme(theme, "theme.vim", "./dist/vim/colors/theonedark.vim")
 	writeTheme(theme, "lightline.vim", "./dist/vim/autoload/lightline/colorscheme/theonedark.vim")
 	writeTheme(theme, "airline.vim", "./dist/vim/autoload/airline/themes/theonedark.vim")
+	writeTheme(theme, "theme.tmux", "./dist/tmux/theonedark.tmux")
+	writeTheme(theme, "theme.itermcolors", "./dist/iterm2/theonedark.itermcolors")
+
+	// theme.
+
+	os.Chmod("./dist/tmux/theonedark.tmux", os.ModePerm)
 }
 
 func writeTheme(theme theme.Theme, templateName string, filePath string) {
+
+	dir := filepath.Dir(filePath)
+	if _, err := os.Stat(dir); os.IsNotExist(err) {
+		os.MkdirAll(dir, os.ModePerm)
+	}
 	fmt.Printf("theme: %s\n", templateName)
 	templ, err := template.New(templateName).ParseFiles("templates/" + templateName)
 	if err != nil {
