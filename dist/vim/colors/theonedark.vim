@@ -537,6 +537,7 @@ highlight link luaLocal            StorageClass
 " viml
 highlight link vimLet StorageClass
 highlight link vimVar Normal
+highlight link vimCommand Structure
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Plugin: mhinz/vim-signify

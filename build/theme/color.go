@@ -30,6 +30,20 @@ func (c Color) Gui() string {
 	return "NONE"
 }
 
+func (c Color) Hex() string {
+	if c != "" {
+		return string(c)
+	}
+	return ""
+}
+
+func (c Color) Hex0x() string {
+	if c != "" {
+		return strings.Replace(string(c), "#", "0x", 1)
+	}
+	return ""
+}
+
 func (c Color) Flat() string {
 	return fmt.Sprintf("[ '%s', %s ]", c.Gui(), c.Cterm())
 }

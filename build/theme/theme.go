@@ -2,20 +2,40 @@ package theme
 
 type Theme struct {
 
+	// Base
+	Body Style `yaml:"body"`
+
 	// Colors
-	Black      Color `yaml:"black"`
-	Red        Color `yaml:"red"`
-	DarkRed    Color `yaml:"dark_red"`
-	Green      Color `yaml:"green"`
-	Yellow     Color `yaml:"yellow"`
-	DarkYellow Color `yaml:"dark_yellow"`
-	Blue       Color `yaml:"blue"`
-	Purple     Color `yaml:"purple"`
-	Cyan       Color `yaml:"cyan"`
-	White      Color `yaml:"white"`
+	Black        Color `yaml:"black"`
+	BlackBright  Color `yaml:"black_bright"`
+	BlackDim     Color `yaml:"black_dim"`
+	Blue         Color `yaml:"blue"`
+	BlueBright   Color `yaml:"blue_bright"`
+	BlueDim      Color `yaml:"blue_dim"`
+	Cyan         Color `yaml:"cyan"`
+	CyanBright   Color `yaml:"cyan_bright"`
+	CyanDim      Color `yaml:"cyan_dim"`
+	Green        Color `yaml:"green"`
+	GreenBright  Color `yaml:"green_bright"`
+	GreenDim     Color `yaml:"green_dim"`
+	Purple       Color `yaml:"purple"`
+	PurpleBright Color `yaml:"purple_bright"`
+	PurpleDim    Color `yaml:"purple_dim"`
+	Red          Color `yaml:"red"`
+	RedBright    Color `yaml:"red_bright"`
+	RedDim       Color `yaml:"red_dim"`
+	White        Color `yaml:"white"`
+	WhiteBright  Color `yaml:"white_bright"`
+	WhiteDim     Color `yaml:"white_dim"`
+	Yellow       Color `yaml:"yellow"`
+	YellowBright Color `yaml:"yellow_bright"`
+	YellowDim    Color `yaml:"yellow_dim"`
+
 	Grey       Color `yaml:"grey"`
 	VisualGrey Color `yaml:"visual_grey"`
 
+	DarkRed    Color `yaml:"dark_red"`
+	DarkYellow Color `yaml:"dark_yellow"`
 	// s:visual_grey.gui
 	// s:dark_red.gui
 	// s:green.gui " No da
@@ -112,6 +132,11 @@ type Theme struct {
 	VisualNOS        Style `yaml:"visual_nos"`
 	WarningMsg       Style `yaml:"warning_msg"`
 	WildMenu         Style `yaml:"wild_menu"`
+
+	// Language
+	ClassName        Style `yaml:"class_name"`
+	ExtendsClassName Style `yaml:"exetnds_class_name"`
+	Property         Style `yaml:"property"`
 
 	Brace         Style `yaml:"brace"`
 	TemplateBrace Style `yaml:"template_brace"`

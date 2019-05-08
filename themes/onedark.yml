@@ -66,16 +66,37 @@ definitions:
 ################################################################################
 # Colors
 
-black:    *black
-red:      *red
-dark_red: *darkRed
-green:    *green
-yellow:   *yellow
+black:           *black
+black_bright:    *black
+black_dim:       *black
+blue:            *blue
+blue_bright:     *blue
+blue_dim:        *blue
+cyan:            *cyan
+cyan_bright:     *cyan
+cyan_dim:        *cyan
+green:           *green
+green_bright:    *green
+green_dim:       *green
+purple:          *purple
+purple_bright:   *purple
+purple_dim:      *purple
+red:             *red
+red_bright:      *red
+red_dim:         *red
+white:           *white
+white_bright:    *white
+white_dim:       *white
+yellow:          *yellow
+yellow_bright:   *yellow
+yellow_dim:      *yellow
+
+
+dark_red:    *darkRed
 dark_yellow: *darkYellow
-blue:     *blue
-purple:   *magenta
-cyan:     *cyan
-white:    *white
+
+
+
 
 grey: *commentGrey
 visual_grey: *visualGrey
@@ -85,6 +106,8 @@ visual_grey: *visualGrey
 
 ################################################################################
 # Interface
+
+body:                        { foreground: *white,          background: *black                           }
 
 tab_active:                  { foreground: *white,          background: *black,         font: 'bold'     }
 tabbar:                      { foreground: *gutterFgGrey,   background: *darkBackground                  }
