@@ -68,7 +68,7 @@ set "pane-active-border-fg" "$onedark_green"
 set "pane-active-border-bg" "$onedark_black"
 
 set "display-panes-active-colour" "$onedark_yellow"
-et "display-panes-colour" "$onedark_blue"
+set "display-panes-colour" "$onedark_blue"
 
 set "status-bg" "$onedark_black"
 set "status-fg" "$onedark_white"
