@@ -221,7 +221,7 @@ match_paren:                 { foreground: *blue,           background: *none,  
 mode_msg:                    { foreground: *none,           background: *none                            }  # 'showmode' message (e.g., "-- INSERT --")
 more_msg:                    { foreground: *none,           background: *none                            }  # more-prompt
 non_text:                    { foreground: *specialGrey,    background: *none                            }  # '~' and '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line).
-normal:                      { foreground: *white,          background: *none                            }  # normal text
+normal:                      { foreground: *white,          background: *black                           }  # normal text
 pmenu:                       { foreground: *none,           background: *menuGrey                        }  # Popup menu: normal item.
 pmenu_sel:                   { foreground: *black,          background: *blue                            }  # Popup menu: selected item.
 pmenu_sbar:                  { foreground: *none,           background: *specialGrey                     }  # Popup menu: scrollbar.

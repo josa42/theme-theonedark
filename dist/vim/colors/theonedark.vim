@@ -75,7 +75,7 @@ highlight   MatchParen         guifg=#61afef ctermfg=75 guibg=NONE ctermbg=NONE 
 highlight   ModeMsg            guifg=NONE ctermfg=NONE guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 highlight   MoreMsg            guifg=NONE ctermfg=NONE guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 highlight   NonText            guifg=#3B4048 ctermfg=238 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
-highlight   Normal             guifg=#abb2bf ctermfg=249 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
+highlight   Normal             guifg=#abb2bf ctermfg=249 guibg=#282c34 ctermbg=236 gui=NONE cterm=NONE
 highlight   Pmenu              guifg=NONE ctermfg=NONE guibg=#3E4452 ctermbg=238 gui=NONE cterm=NONE
 highlight   PmenuSel           guifg=#282c34 ctermfg=236 guibg=#61afef ctermbg=75 gui=NONE cterm=NONE
 highlight   PmenuSbar          guifg=NONE ctermfg=NONE guibg=#3B4048 ctermbg=238 gui=NONE cterm=NONE
@@ -401,7 +401,7 @@ highlight markdownUrl guifg=#56b6c2 ctermfg=73 guibg=NONE ctermbg=NONE gui=NONE 
 " " PHP
 highlight phpClass         guifg=#e5c07b ctermfg=180 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 highlight phpFunction      guifg=#61afef ctermfg=75 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
-highlight phpRegion        guifg=#abb2bf ctermfg=249 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
+highlight phpRegion        guifg=#abb2bf ctermfg=249 guibg=#282c34 ctermbg=236 gui=NONE cterm=NONE
 highlight phpUseClass      guifg=#e5c07b ctermfg=180 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 highlight phpClassExtends  guifg=#98c379 ctermfg=108 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 highlight phpParent        guifg=#abb2bf ctermfg=249 gui=NONE cterm=NONE
