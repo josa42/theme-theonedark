@@ -5,11 +5,11 @@ import (
 	"io/ioutil"
 	"log"
 	"os"
+	"path/filepath"
 	"text/template"
 
 	"github.com/josa42/theme-generator/build/theme"
 	"gopkg.in/yaml.v2"
-	"path/filepath"
 )
 
 func main() {
@@ -32,6 +32,8 @@ func main() {
 	writeTheme(theme, "alacritty.yml", "./dist/alacritty/colors.yml")
 	writeTheme(theme, "kitty.conf", "./dist/kitty/theonedark.conf")
 	writeTheme(theme, "slack.txt", "./dist/slack/colors.txt")
+	writeTheme(theme, "vimr-basic.css", "./dist/vimr/markdown.css")
+	writeTheme(theme, "vimr-markdown.css", "./dist/vimr/markdown.css")
 
 	// theme.
 

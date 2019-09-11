@@ -1,0 +1,10 @@
+:root {
+  --background: {{.Black.Gui}};
+  --background: #21252B;
+}
+
+html {
+  background-color: var(--background);
+}
+
+

@@ -1,0 +1,266 @@
+:root {
+  /* --background: #282c34; */
+  --background: #21252B;
+  --highlight-background: #3E4452;
+  --text: #abb2bf;
+  --dim-text: #5c6370;
+  --code-background: #3E4452;
+}
+
+
+html {
+  background-color: var(--background);
+}
+
+/*----------------------------------------------------------------------------*/
+/* Text Color                                                                 */
+
+.markdown-body,
+.markdown-body h1 .octicon-link,
+.markdown-body h2 .octicon-link,
+.markdown-body h3 .octicon-link,
+.markdown-body h4 .octicon-link,
+.markdown-body h5 .octicon-link,
+.markdown-body h6 .octicon-link {
+  color: var(--text);
+}
+
+.markdown-body h1,
+.markdown-body h2 {
+  border-bottom: 1px solid var(--highlight-background);
+}
+
+.markdown-body h6 {
+  color: var(--dim-text);
+}
+
+/*----------------------------------------------------------------------------*/
+/* Image                                                                      */
+
+.markdown-body img {
+  background-color: var(--highlight-background);
+}
+
+/*----------------------------------------------------------------------------*/
+/* Code                                                                       */
+
+.markdown-body code {
+  background-color: var(--code-background);
+}
+
+.markdown-body pre>code {
+  background: transparent;
+}
+
+.markdown-body .highlight pre,
+.markdown-body pre {
+  background-color: var(--code-background);
+}
+
+.markdown-body pre code {
+  background-color: transparent;
+}
+
+/* TODO not shure what al these pl rules are */
+/*
+
+.markdown-body .pl-c {
+  color: #6a737d;
+}
+
+.markdown-body .pl-c1,
+.markdown-body .pl-s .pl-v {
+  color: #005cc5;
+}
+
+.markdown-body .pl-e,
+.markdown-body .pl-en {
+  color: #6f42c1;
+}
+
+.markdown-body .pl-s .pl-s1,
+.markdown-body .pl-smi {
+  color: #24292e;
+}
+
+.markdown-body .pl-ent {
+  color: #22863a;
+}
+
+.markdown-body .pl-k {
+  color: #d73a49;
+}
+
+.markdown-body .pl-pds,
+.markdown-body .pl-s,
+.markdown-body .pl-s .pl-pse .pl-s1,
+.markdown-body .pl-sr,
+.markdown-body .pl-sr .pl-cce,
+.markdown-body .pl-sr .pl-sra,
+.markdown-body .pl-sr .pl-sre {
+  color: #032f62;
+}
+
+
+.markdown-body .pl-smw,
+.markdown-body .pl-v {
+  color: #e36209;
+}
+
+.markdown-body .pl-bu {
+  color: #b31d28;
+}
+
+.markdown-body .pl-ii {
+  background-color: #b31d28;
+  color: #fafbfc;
+}
+
+.markdown-body .pl-c2 {
+  background-color: #d73a49;
+  color: #fafbfc;
+}
+
+.markdown-body .pl-sr .pl-cce {
+  color: #22863a;
+}
+
+.markdown-body .pl-ml {
+  color: #735c0f;
+}
+
+.markdown-body .pl-mh,
+.markdown-body .pl-mh .pl-en,
+.markdown-body .pl-ms {
+  color: #005cc5;
+}
+
+.markdown-body .pl-mi {
+  color: #24292e;
+}
+
+.markdown-body .pl-mb {
+  color: #24292e;
+}
+
+.markdown-body .pl-md {
+  background-color: #ffeef0;
+  color: #b31d28;
+}
+
+.markdown-body .pl-mi1 {
+  background-color: #f0fff4;
+  color: #22863a;
+}
+
+.markdown-body .pl-mc {
+  background-color: #ffebda;
+  color: #e36209;
+}
+
+.markdown-body .pl-mi2 {
+  background-color: #005cc5;
+  color: #f6f8fa;
+}
+
+.markdown-body .pl-mdr {
+  color: #6f42c1;
+  font-weight: 700;
+}
+
+.markdown-body .pl-ba {
+  color: #586069;
+}
+
+.markdown-body .pl-sg {
+  color: #959da5;
+}
+
+.markdown-body .pl-corl {
+  color: #032f62;
+}
+*/
+
+/* .markdown-body hr { */
+/*   border-bottom: 1px solid #dfe2e5; */
+/* } */
+
+
+/*
+.markdown-body .border {
+  border: 1px solid #e1e4e8!important;
+}
+
+.markdown-body .border-bottom {
+  border-bottom: 1px solid #e1e4e8!important;
+}
+
+.markdown-body .bg-white {
+  background-color: #fff!important;
+}
+
+.markdown-body .bg-gray-light {
+  background-color: #fafbfc!important;
+}
+
+.markdown-body .text-gray-light {
+  color: #6a737d!important;
+}
+
+.markdown-body hr {
+  border-bottom-color: var(--highlight-background);
+  background-color: transparent;
+}
+
+.markdown-body blockquote {
+  border-left: .25em solid var(--highlight-background);
+}
+
+.markdown-body kbd {
+  background-color: #fafbfc;
+  border: 1px solid #c6cbd1;
+  border-bottom-color: #959da5;
+  box-shadow: inset 0 -1px 0 #959da5;
+  color: #444d56;
+}
+
+
+
+
+
+.markdown-body .commit-tease-sha {
+  color: #444d56;
+}
+
+
+.markdown-body .blob-num {
+  color: rgba(27,31,35,.3);
+}
+
+.markdown-body .blob-num:hover {
+  color: rgba(27,31,35,.6);
+}
+
+.markdown-body .blob-code-inner {
+  color: #24292e;
+}
+
+.markdown-body .pl-token.active,
+.markdown-body .pl-token:hover {
+  background: #ffea7f;
+}
+
+.markdown-body kbd {
+  background-color: #fafbfc;
+  border: 1px solid #d1d5da;
+  border-bottom-color: #c6cbd1;
+  box-shadow: inset 0 -1px 0 #c6cbd1;
+  color: #444d56;
+}
+
+.markdown-body :checked+.radio-label {
+  border-color: #0366d6;
+}
+
+
+*/
