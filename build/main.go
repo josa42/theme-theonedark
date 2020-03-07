@@ -7,9 +7,10 @@ import (
 	"os"
 	"text/template"
 
+	"path/filepath"
+
 	"github.com/josa42/theme-generator/build/theme"
 	"gopkg.in/yaml.v2"
-	"path/filepath"
 )
 
 func main() {
