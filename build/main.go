@@ -29,6 +29,7 @@ func main() {
 	writeTheme(theme, "lightline.vim", "./dist/vim/autoload/lightline/colorscheme/theonedark.vim")
 	writeTheme(theme, "airline.vim", "./dist/vim/autoload/airline/themes/theonedark.vim")
 	writeTheme(theme, "theme.tmux", "./dist/tmux/theonedark.tmux")
+	writeTheme(theme, "clap.vim", "./dist/vim/autoload/clap/themes/theonedark.vim")
 	writeTheme(theme, "theme.itermcolors", "./dist/iterm2/theonedark.itermcolors")
 	writeTheme(theme, "alacritty.yml", "./dist/alacritty/colors.yml")
 	writeTheme(theme, "kitty.conf", "./dist/kitty/theonedark.conf")

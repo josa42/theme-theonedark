@@ -184,6 +184,12 @@ type Theme struct {
 	StatusbarError            Style `yaml:"statusbar_error"`
 	StatusbarWarning          Style `yaml:"statusbar_warning"`
 
+	// Dialog
+	Dialog         Style `yaml:"dialog"`
+	DialogBody     Style `yaml:"dialog_body"`
+	DialogInput    Style `yaml:"dialog_input"`
+	DialogSelected Style `yaml:"dialog_selected"`
+
 	// XML / HTML
 	TagSurround Style `yaml:"tag_surround"`
 	TagName     Style `yaml:"tag_name"`

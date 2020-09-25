@@ -48,6 +48,13 @@ func (c Color) Flat() string {
 	return fmt.Sprintf("[ '%s', %s ]", c.Gui(), c.Cterm())
 }
 
+func (c Color) ObjProps(key string) string {
+	if c != "" {
+		return fmt.Sprintf("'gui%[1]s' :'%[2]s', 'cterm%[1]s' : '%[3]s'", key, c.Gui(), c.Cterm())
+	}
+	return ""
+}
+
 func (c Color) Iterm() string {
 
 	components := []string{}

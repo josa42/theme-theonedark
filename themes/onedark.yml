@@ -116,17 +116,23 @@ tabbar:                      { foreground: *gutterFgGrey,   background: *darkBac
 statusbar:                   { foreground: *white,          background: *darkBackground                  }
 statusbar_inactive:          { foreground: *white,          background: *darkBackground                  }
 
+dialog:                      {                              background: *darkBackground                  }
+dialog_body:                 { foreground: *white,          background: *cursorGrey                      }
+dialog_meta:                 {}
+dialog_input:                { foreground: *white,                                       font: 'bold'    }
+dialog_selected:             {                              background: *visualGrey,     font: 'bold'    }
+
 statusbar_normal:            { foreground: *black,          background: *blue                            }
-statusbar_normal_primary:    { foreground: *black,          background: *blue,          font: 'bold'     }
+statusbar_normal_primary:    { foreground: *black,          background: *blue,           font: 'bold'    }
 statusbar_normal_secondary:  { foreground: *blue,           background: *darkBackground                  }
 statusbar_insert:            { foreground: *black,          background: *green                           }
-statusbar_insert_primary:    { foreground: *black,          background: *green,         font: 'bold'     }
+statusbar_insert_primary:    { foreground: *black,          background: *green,          font: 'bold'    }
 statusbar_insert_secondary:  { foreground: *green,          background: *darkBackground                  }
 statusbar_replace:           { foreground: *black,          background: *red                             }
-statusbar_replace_primary:   { foreground: *black,          background: *red,           font: 'bold'     }
+statusbar_replace_primary:   { foreground: *black,          background: *red,            font: 'bold'    }
 statusbar_replace_secondary: { foreground: *red,            background: *darkBackground                  }
 statusbar_visual:            { foreground: *black,          background: *yellow                          }
-statusbar_visual_primary:    { foreground: *black,          background: *yellow,        font: 'bold'     }
+statusbar_visual_primary:    { foreground: *black,          background: *yellow,         font: 'bold'    }
 statusbar_visual_secondary:  { foreground: *yellow,         background: *darkBackground                  }
 statusbar_error:             { foreground: *black,          background: *red                             }
 statusbar_warning:           { foreground: *black,          background: *yellow                          }

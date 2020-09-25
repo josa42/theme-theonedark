@@ -45,6 +45,26 @@ func (s Style) Flat() string {
 	return fmt.Sprintf("[ %s, %s ]", s.Foreground.Flat(), s.Background.Flat())
 }
 
+func (s Style) ObjProps() string {
+	parts := []string{}
+
+	if s.Foreground != nil {
+		parts = append(parts, s.Foreground.ObjProps("fg"))
+	}
+	if s.Background != nil {
+		parts = append(parts, s.Background.ObjProps("bg"))
+	}
+	if s.Font != "" {
+		parts = append(parts, s.Font.ObjProps())
+	}
+
+	return strings.Join(parts, ", ")
+}
+
+func (s Style) Obj() string {
+	return fmt.Sprintf("{ %s }", s.ObjProps())
+}
+
 func (s Style) Flater() string {
 	// if s.Font != "" {
 	// 	return fmt.Sprintf("[ %s, %s, '%s' ]", s.Foreground.Flat(), s.Background.Flat(), s.Font)
