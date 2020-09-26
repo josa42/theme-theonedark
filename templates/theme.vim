@@ -42,6 +42,7 @@ hi! todVariable        {{.Purple.Vim "fg"}}
 hi! todVariableName    {{.White.Vim "fg"}}
 hi! todCommentTag      {{.White.Vim "fg"}}  term=bold cterm=bold gui=bold
 hi! todCommentValue    {{.White.Vim "fg"}}
+hi! todCommentTitle    {{.White.Vim "fg"}}  term=bold,underline cterm=bold,underline gui=bold,underline
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -171,6 +172,7 @@ hi! LspDiagnosticsError {{.Red.Vim "fg"}}
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Language: CSS
+"
 " => https://github.com/neovim/neovim/blob/dd7355358edc40734afcce695432756859377eb8/runtime/syntax/css.vim
 
 hi! cssAttrComma         {{.Purple.Vim     "fg"}}
@@ -195,7 +197,9 @@ hi! cssSelectorOp2       {{.Purple.Vim     "fg"}}
 hi! cssTagName           {{.Red.Vim        "fg"}}
 hi! cssUnitDecorators    {{.Red.Vim        "fg"}}
 
-" scss
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Language: scss
+
 hi! scssSelectorChar {{.Type}}
 hi! scssSelectorName {{.Type}}
 
@@ -389,20 +393,20 @@ hi! link javascriptDocComment        todComment
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Language: JSON
 
-hi! link jsonCommentError todComment
-hi! link jsonBoolean      todBoolean
-hi! link jsonNumber       todNumber
-hi! link jsonString       todString
-hi! link jsonKeyword      todProperty
-hi! link jsonBraces       todBraces
+hi! link jsonBoolean           todBoolean
+hi! link jsonBraces            todBraces
+hi! link jsonCommentError      todComment
+hi! link jsonKeyword           todProperty
+hi! link jsonMissingCommaError todError
+hi! link jsonNoQuotesError     todError
+hi! link jsonNumError          todError
+hi! link jsonNumber            todNumber
+hi! link jsonQuote             todNormal
+hi! link jsonSemicolonError    todError
+hi! link jsonString            todString
+hi! link jsonStringSQError     todError
 
-" call s:h("jsonQuote", { "fg": s:white })
-" call s:h("jsonMissingCommaError", { "fg": s:red, "gui": "reverse" })
-" call s:h("jsonNoQuotesError", { "fg": s:red, "gui": "reverse" })
-" call s:h("jsonNumError", { "fg": s:red, "gui": "reverse" })
-" call s:h("jsonStringSQError", { "fg": s:red, "gui": "reverse" })
-" call s:h("jsonSemicolonError", { "fg": s:red, "gui": "reverse" })
-"
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Language: LESS
 
@@ -627,9 +631,10 @@ hi! link luaLocal            StorageClass
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Language: viml
-hi! link vimLet StorageClass
-hi! link vimVar Normal
-hi! link vimCommand Structure
+hi! link vimLet          StorageClass
+hi! link vimVar          Normal
+hi! link vimCommand      Structure
+hi! link vimCommentTitle todCommentTitle
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Plugin: mhinz/vim-signify

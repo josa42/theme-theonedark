@@ -42,6 +42,7 @@ hi! todVariable        guifg=#c678dd ctermfg=176
 hi! todVariableName    guifg=#abb2bf ctermfg=249
 hi! todCommentTag      guifg=#abb2bf ctermfg=249  term=bold cterm=bold gui=bold
 hi! todCommentValue    guifg=#abb2bf ctermfg=249
+hi! todCommentTitle    guifg=#abb2bf ctermfg=249  term=bold,underline cterm=bold,underline gui=bold,underline
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -195,7 +196,9 @@ hi! cssSelectorOp2       guifg=#c678dd ctermfg=176
 hi! cssTagName           guifg=#e06c75 ctermfg=168
 hi! cssUnitDecorators    guifg=#e06c75 ctermfg=168
 
-" scss
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Language: scss
+
 hi! scssSelectorChar guifg=#56b6c2 ctermfg=73 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 hi! scssSelectorName guifg=#56b6c2 ctermfg=73 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 
@@ -627,9 +630,10 @@ hi! link luaLocal            StorageClass
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Language: viml
-hi! link vimLet StorageClass
-hi! link vimVar Normal
-hi! link vimCommand Structure
+hi! link vimLet          StorageClass
+hi! link vimVar          Normal
+hi! link vimCommand      Structure
+hi! link vimCommentTitle todCommentTitle
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Plugin: mhinz/vim-signify
