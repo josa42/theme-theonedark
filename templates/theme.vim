@@ -1,14 +1,10 @@
 hi! clear
-
-if exists("syntax_on")
-  syntax reset
-endif
+if exists("syntax_on") | syntax reset | endif
 
 set t_Co=256
 
 if has("nvim") | let $NVIM_TUI_ENABLE_TRUE_COLOR=1 | endif
 if has("termguicolors") | set termguicolors | endif
-
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -384,12 +380,6 @@ hi! link javascriptDocTags           todCommentTag
 hi! link javascriptDocParamName      todCommentValue
 hi! link javascriptDocComment        todComment
 
-" hi! link jsDocParam                DraculaOrangeItalic
-" hi! link jsDocTags                 Keyword
-" hi! link jsDocType                 Type
-" hi! link jsDocTypeBrackets         DraculaCyan
-" hi! link jsTemplateBraces          Special
-
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Language: JSON
 
@@ -460,18 +450,20 @@ hi! markdownH6 {{.Identifier}}
 " call s:h("markdownId", { "fg": s:purple })
 hi! markdownBlockquote {{.Comment}}
 " call s:h("markdownBlockquote", { "fg": s:comment_grey })
-hi! markdownItalic {{.TextItalic}}
-hi! markdownBold   {{.TextBold}}
-" call s:h("markdownItalic", { "fg": s:purple, "gui": "italic", "cterm": "italic" })
-" call s:h("markdownBold", { "fg": s:dark_yellow, "gui": "bold", "cterm": "bold" })
+
+hi! markdownItalic term=italic cterm=italic gui=italic
+hi! markdownBold   term=bold   cterm=bold   gui=bold
+"
 " call s:h("markdownListMarker", { "fg": s:red })
 " call s:h("markdownOrderedListMarker", { "fg": s:red })
 " call s:h("markdownIdDeclaration", { "fg": s:blue })
 hi! markdownLinkText {{.Function}}
 hi! markdownLinkDelimiter {{.Text}}
 hi! markdownUrl {{.Constant}}
-"
-" " Perl
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Language: Perl
+
 " call s:h("perlFiledescRead", { "fg": s:green })
 " call s:h("perlFunction", { "fg": s:purple })
 " call s:h("perlMatchStartEnd",{ "fg": s:blue })
@@ -498,8 +490,6 @@ hi! phpClassExtends  {{.ExtendsClassName}}
 hi! phpParent        {{.Brace}}
 hi! link phpInclude Keyword
 hi! link phpVarSelector Identifier
-
-
 
 " call s:h("phpVarSelector", { "fg": s:red })
 " call s:h("phpOperator", { "fg": s:white })
@@ -659,9 +649,11 @@ hi! diffAdded    {{.GutterAdded}}
 hi! diffRemoved  {{.GutterRemoved}}
 
 
-" " Git Highlighting
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Plugin: Git Highlighting
 
-hi! gitcommitComment {{.Comment}}
+hi! link gitcommitComment todComment
+
 " call s:h("gitcommitUnmerged", { "fg": s:green })
 " call s:h("gitcommitOnBranch", {})
 " call s:h("gitcommitBranch", { "fg": s:purple })
@@ -682,6 +674,7 @@ hi! gitcommitComment {{.Comment}}
 " hi link gitcommitDiscardedArrow gitcommitDiscardedFile
 " hi link gitcommitSelectedArrow gitcommitSelectedFile
 " hi link gitcommitUnmergedArrow gitcommitUnmergedFile
+
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Plugin: coc.nvim
@@ -713,7 +706,8 @@ hi! link CocHintHighlight CocUnderline
 hi! clear CocHintLine
 
 
-" " Neovim terminal colors
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Neovim: terminal colors
 "
 if has("nvim")
   let g:terminal_color_0 =         '{{.Black.Gui}}'
@@ -742,22 +736,14 @@ endif
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Plugin: indentLine
+
 let g:indentLine_setColors = 0
 let g:indentLine_color_gui =  '{{.Comment.Foreground.Gui}}'
 let g:indentLine_color_term = '{{.Comment.Foreground.Cterm}}'
 
 
-
-" "
-
-" Must appear at the end of the file to work around this oddity:
-" https://groups.google.com/forum/#!msg/vim_dev/afPqwAFNdrU/nqh6tOM87QUJ
-" set background=dark
-
-
-
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Plugin NERDTree
+" Plugin: NERDTree
 "
 " hi NERDTreePart     Special
 " hi NERDTreePartFile Type
