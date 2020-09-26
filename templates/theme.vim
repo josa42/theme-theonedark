@@ -151,20 +151,18 @@ endif
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Neovim: LSP
+
 hi! LspDiagnosticsError {{.Red.Vim "fg"}}
 
 
-
-" " Termdebug highlighting for Vim 8.1+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Plugin: Termdebug highlighting for Vim 8.1+
 "
 " " See `:h hl-debugPC` and `:h hl-debugBreakpoint`.
 " call s:h("debugPC", { "bg": s:special_grey }) " the current position
 " call s:h("debugBreakpoint", { "fg": s:black, "bg": s:red }) " a breakpoint
 "
-" "
-"
-" " Language-Specific Highlighting
-"
+
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Language: CSS
@@ -193,6 +191,7 @@ hi! cssSelectorOp2       {{.Purple.Vim     "fg"}}
 hi! cssTagName           {{.Red.Vim        "fg"}}
 hi! cssUnitDecorators    {{.Red.Vim        "fg"}}
 
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Language: scss
 
@@ -208,7 +207,10 @@ hi! scssSelectorName {{.Type}}
 " call s:h("scssSelectorName", { "fg": s:dark_yellow })
 " call s:h("scssVariable", { "fg": s:purple })
 
-" " Sass
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Language: Sass
+
 " " https://github.com/tpope/vim-haml
 " call s:h("sassAmpersand", { "fg": s:red })
 " call s:h("sassClass", { "fg": s:dark_yellow })
@@ -226,17 +228,16 @@ hi! scssSelectorName {{.Type}}
 " call s:h("sassVariable", { "fg": s:purple })
 
 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Language: Fish Shell
 
-" " Fish Shell
 " call s:h("fishKeyword", { "fg": s:purple })
 " call s:h("fishConditional", { "fg": s:purple })
-"
-" " Go
-hi! goCoverageCovered {{.OK}}
-hi! goCoverageUncover {{.Error}}
 
 
-" " HTML
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Language: HTML
+
 hi! htmlArg            {{.DarkYellow.Vim "fg"}}
 hi! htmlEndTag         {{.White.Vim      "fg"}}
 hi! htmlH1             {{.White.Vim      "fg"}}
@@ -296,6 +297,10 @@ hi! link goType        todTypeName
 hi! link goDeclaration todType
 hi! link goDeclType    todType
 hi! link goBoolean     todBoolean
+
+hi! goCoverageCovered {{.OK}}
+hi! goCoverageUncover {{.Error}}
+
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Language: JavaScript
@@ -564,13 +569,14 @@ hi! GitGutterAdd    {{.GutterAdded}}
 hi! GitGutterChange {{.GutterChanged}}
 hi! GitGutterDelete {{.GutterRemoved}}
 
-"
-" " easymotion/vim-easymotion
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Plugin: easymotion/vim-easymotion
+
 " call s:h("EasyMotionTarget", { "fg": s:red, "gui": "bold", "cterm": "bold" })
 " call s:h("EasyMotionTarget2First", { "fg": s:yellow, "gui": "bold", "cterm": "bold" })
 " call s:h("EasyMotionTarget2Second", { "fg": s:dark_yellow, "gui": "bold", "cterm": "bold" })
 " call s:h("EasyMotionShade",  { "fg": s:comment_grey })
-"
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -618,13 +624,13 @@ hi! link luaLocal            StorageClass
 " highlight link luaErrHand          Exception
 
 
-
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Language: viml
 hi! link vimLet          StorageClass
 hi! link vimVar          Normal
 hi! link vimCommand      Structure
 hi! link vimCommentTitle todCommentTitle
+
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Plugin: mhinz/vim-signify
