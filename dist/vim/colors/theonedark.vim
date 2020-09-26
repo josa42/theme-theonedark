@@ -189,15 +189,17 @@ hi! cssPseudoClassId     guifg=#d19a66 ctermfg=173
 hi! cssSelectorOp        guifg=#c678dd ctermfg=176
 hi! cssSelectorOp2       guifg=#c678dd ctermfg=176
 hi! cssTagName           guifg=#e06c75 ctermfg=168
-hi! cssUnitDecorators    guifg=#e06c75 ctermfg=168
-hi! todNormal            guifg=#abb2bf ctermfg=249
+hi! cssUnitDecorators    guifg=#d19a66 ctermfg=173
+hi! cssVendor            guifg=#5c6370 ctermfg=241
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Language: scss
 
-hi! scssSelectorChar guifg=#56b6c2 ctermfg=73 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
-hi! scssSelectorName guifg=#56b6c2 ctermfg=73 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
+hi! link sassId    cssIdentifier
+hi! link sassClass cssClassName
+
+
 
 
 " " https://github.com/cakebaker/scss-syntax.vim

@@ -1,17 +1,13 @@
-
-.test {
-  font: "Comic Sans";
+button {
+  color: red;
 }
 
-#foo {
-  width: 1px;
-  background: url("httpp://example.org");
+.my-class h1 {
+  color: #ff0000;
 }
 
-.foo::after {
-  width: 100% !important;
-}
-
-h1 {
-  transform: translateY(1px);
+#my-id {
+  width: 100%;
+  transform: rotate(100deg);
+  display: -webkit-flex;
 }

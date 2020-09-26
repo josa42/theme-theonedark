@@ -189,15 +189,15 @@ hi! cssPseudoClassId     {{.DarkYellow.Vim "fg"}}
 hi! cssSelectorOp        {{.Purple.Vim     "fg"}}
 hi! cssSelectorOp2       {{.Purple.Vim     "fg"}}
 hi! cssTagName           {{.Red.Vim        "fg"}}
-hi! cssUnitDecorators    {{.Red.Vim        "fg"}}
-hi! todNormal            {{.White.Vim      "fg"}}
+hi! cssUnitDecorators    {{.DarkYellow.Vim "fg"}}
+hi! cssVendor            {{.Grey.Vim       "fg"}}
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Language: scss
 
-hi! scssSelectorChar {{.Type}}
-hi! scssSelectorName {{.Type}}
+hi! link sassId    cssIdentifier
+hi! link sassClass cssClassName
 
 
 " " https://github.com/cakebaker/scss-syntax.vim
