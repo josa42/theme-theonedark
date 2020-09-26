@@ -228,28 +228,42 @@ hi! htmlItalic              term=italic                cterm=italic             
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Theme: groups
-hi! todNormal          guifg=#abb2bf ctermfg=249
-hi! todModuleName      guifg=#e5c07b ctermfg=180
+
 hi! todBoolean         guifg=#56b6c2 ctermfg=73
 hi! todBraces          guifg=#abb2bf ctermfg=249
-hi! todClassName       guifg=#e5c07b ctermfg=180
+hi! todClassName       guifg=#56b6c2 ctermfg=73
+hi! todFunction        guifg=#c678dd ctermfg=176
 hi! todFunctionName    guifg=#61afef ctermfg=75
+hi! todImport          guifg=#61afef ctermfg=75
+hi! todKeyword         guifg=#c678dd ctermfg=176
+hi! todModule          guifg=#61afef ctermfg=75
+hi! todModuleName      guifg=#56b6c2 ctermfg=73
+hi! todNormal          guifg=#abb2bf ctermfg=249
 hi! todNull            guifg=#d19a66 ctermfg=173
+hi! todNumber          guifg=#d19a66 ctermfg=173
+hi! todOperatorKeyword guifg=#56b6c2 ctermfg=73
+hi! todOperatorSymbol  guifg=#56b6c2 ctermfg=73
 hi! todProperty        guifg=#e06c75 ctermfg=168
 hi! todReturn          guifg=#c678dd ctermfg=176
-hi! todVariable        guifg=#c678dd ctermfg=176
-hi! todFunction        guifg=#c678dd ctermfg=176
-hi! todKeyword         guifg=#c678dd ctermfg=176
-hi! todImport          guifg=#61afef ctermfg=75
-hi! todNumber          guifg=#d19a66 ctermfg=173
 hi! todStatic          guifg=#c678dd ctermfg=176
 hi! todSuper           guifg=#56b6c2 ctermfg=73
 hi! todThis            guifg=#56b6c2 ctermfg=73
-hi! todOperatorSymbol  guifg=#56b6c2 ctermfg=73
-hi! todOperatorKeyword guifg=#56b6c2 ctermfg=73
+hi! todType            guifg=#c678dd ctermfg=176
+hi! todTypeName        guifg=#56b6c2 ctermfg=73
+hi! todVariable        guifg=#c678dd ctermfg=176
 hi! todVariableName    guifg=#abb2bf ctermfg=249
 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Language: Go
 
+" fatih/vim-go => sheerun/vim-polyglot
+
+hi! link goImport      todImport
+hi! link goPackage     todModule
+hi! link goType        todTypeName
+hi! link goDeclaration todType
+hi! link goDeclType    todType
+hi! link goBoolean     todBoolean
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Language: JavaScript
@@ -292,9 +306,11 @@ hi! link jsTopOperator     todOperatorSymbol
 hi! link jsNew             todOperatorKeyword
 hi! link jsIfCondition     todOperatorSymbol
 hi! link jsComma           todNormal
+hi! link jsClassMethodType todStatic
 
 " axmellon/vim-jsx-pretty
 
+" TODO
 
 " othree/yajs.vim
 "
@@ -325,104 +341,6 @@ hi! link javascriptOpSymbols         todOperatorSymbol
 hi! link javascriptOperator          todOperatorKeyword
 hi! link javascriptArrowFuncArg      todVariableName
 
-" ???
-" hi! link javascriptIdentifierName todFunctionName
-
-" highlight javaScriptBraces   guifg=#abb2bf ctermfg=249 gui=NONE cterm=NONE
-" highlight javaScriptFunction guifg=#61afef ctermfg=75 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
-" highlight javaScriptNumber   guifg=#d19a66 ctermfg=173 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
-" highlight javaScriptNull     gui=NONE cterm=NONE
-
-
-" call s:h("javaScriptIdentifier", { "fg": s:purple })
-" call s:h("javaScriptNumber", { "fg": s:dark_yellow })
-" call s:h("javaScriptRequire", { "fg": s:cyan })
-" call s:h("javaScriptReserved", { "fg": s:purple })
-"
-
-
-
-
-" highlight jsClassDefinitio guifg=#e5c07b ctermfg=180 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
-
-
-" " https://github.com/pangloss/vim-javascript
-
-" call s:h("jsArrowFunction", { "fg": s:purple })
-" call s:h("jsClassKeyword", { "fg": s:purple })
-" call s:h("jsClassMethodType", { "fg": s:purple })
-" call s:h("jsDocParam", { "fg": s:blue })
-" call s:h("jsDocTags", { "fg": s:purple })
-" call s:h("jsExport", { "fg": s:purple })
-" call s:h("jsExportDefault", { "fg": s:purple })
-" call s:h("jsExtendsKeyword", { "fg": s:purple })
-" call s:h("jsFrom", { "fg": s:purple })
-" call s:h("jsFuncCall", { "fg": s:blue })
-" highlight link jsFunction Structure
-" call s:h("jsGenerator", { "fg": s:yellow })
-" call s:h("jsGlobalObjects", { "fg": s:yellow })
-" call s:h("jsImport", { "fg": s:purple })
-" call s:h("jsModuleAs", { "fg": s:purple })
-" call s:h("jsModuleWords", { "fg": s:purple })
-" call s:h("jsModules", { "fg": s:purple })
-" highlight jsNull     gui=NONE cterm=NONE
-" call s:h("jsOperator", { "fg": s:purple })
-" call s:h("jsStorageClass", { "fg": s:purple })
-" call s:h("jsSuper", { "fg": s:red })
-" highlight jsTemplateBraces guifg=#e06c75 ctermfg=168 gui=NONE cterm=NONE
-" call s:h("jsTemplateVar", { "fg": s:green })
-" call s:h("jsThis", { "fg": s:red })
-" highlight jsUndefined     gui=NONE cterm=NONE
-" TODO: diferenciate between null and undefined?
-
-" " https://github.com/othree/yajs.vim
-
-
-" call s:h("javascriptArrowFunc", { "fg": s:purple })
-" call s:h("javascriptClassExtends", { "fg": s:purple })
-" call s:h("javascriptClassKeyword", { "fg": s:purple })
-" call s:h("javascriptDocNotation", { "fg": s:purple })
-" call s:h("javascriptDocParamName", { "fg": s:blue })
-" call s:h("javascriptDocTags", { "fg": s:purple })
-" call s:h("javascriptEndColons", { "fg": s:white })
-" call s:h("javascriptExport", { "fg": s:purple })
-" call s:h("javascriptFuncArg", { "fg": s:white })
-" call s:h("javascriptFuncKeyword", { "fg": s:purple })
-" call s:h("javascriptIdentifier", { "fg": s:red })
-" call s:h("javascriptImport", { "fg": s:purple })
-" call s:h("javascriptMethodName", { "fg": s:white })
-" call s:h("javascriptObjectLabel", { "fg": s:white })
-" call s:h("javascriptOpSymbol", { "fg": s:cyan })
-" call s:h("javascriptOpSymbols", { "fg": s:cyan })
-" call s:h("javascriptPropertyName", { "fg": s:green })
-" call s:h("javascriptTemplateSB", { "fg": s:dark_red })
-" call s:h("javascriptVariable", { "fg": s:purple })
-
-
-" highlight javascriptArrowFunc", { "fg": s:purple })
-" highlight javascriptClassExtends", { "fg": s:purple })
-" highlight javascriptClassKeyword", { "fg": s:purple })
-" highlight javascriptDocNotation", { "fg": s:purple })
-" highlight javascriptDocParamName", { "fg": s:blue })
-" highlight javascriptDocTags", { "fg": s:purple })
-" highlight javascriptEndColons", { "fg": s:white })
-" highlight javascriptExport", { "fg": s:purple })
-" highlight javascriptFuncArg", { "fg": s:white })
-" highlight javascriptFuncKeyword", { "fg": s:purple })
-" highlight javascriptIdentifier", { "fg": s:red })
-" highlight javascriptImport", { "fg": s:purple })
-" highlight javascriptMethodName", { "fg": s:white })
-" highlight javascriptObjectLabel", { "fg": s:white })
-" highlight javascriptOpSymbol", { "fg": s:cyan })
-" highlight javascriptOpSymbols", { "fg": s:cyan })
-" highlight javascriptPropertyName", { "fg": s:green })
-" highlight javascriptTemplateSB", { "fg": s:dark_red })
-" highlight javascriptVariable", { "fg": s:purple })
-
-
-" hi! link jsArrowFunction           Operator
-" hi! link jsClassMethodType         Keyword
-" hi! link jsDestructuringAssignment DraculaOrangeItalic
 " hi! link jsDocParam                DraculaOrangeItalic
 " hi! link jsDocTags                 Keyword
 " hi! link jsDocType                 Type
@@ -430,11 +348,6 @@ hi! link javascriptArrowFuncArg      todVariableName
 " hi! link jsFuncArgOperator         Operator
 " hi! link jsFunction                Keyword
 " hi! link jsTemplateBraces          Special
-
-
-" highlight link jsVariableDef Identifier
-" hi! jsObjectKey  guifg=#e06c75 ctermfg=168 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
-" hi! jsObjectProp guifg=#e06c75 ctermfg=168 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 
 " " JSON
 hi! jsonCommentError guifg=#5c6370 ctermfg=241 guibg=NONE ctermbg=NONE gui=italic cterm=italic
@@ -444,8 +357,10 @@ hi! jsonNumber   guifg=#d19a66 ctermfg=173 guibg=NONE ctermbg=NONE gui=NONE cter
 hi! jsonString   guifg=#98c379 ctermfg=108 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 
 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Language: JSON
+
 " call s:h("jsonQuote", { "fg": s:white })
-"
 " call s:h("jsonMissingCommaError", { "fg": s:red, "gui": "reverse" })
 " call s:h("jsonNoQuotesError", { "fg": s:red, "gui": "reverse" })
 " call s:h("jsonNumError", { "fg": s:red, "gui": "reverse" })
@@ -456,8 +371,10 @@ hi! jsonString   guifg=#98c379 ctermfg=108 guibg=NONE ctermbg=NONE gui=NONE cter
 " call s:h("lessVariable", { "fg": s:purple })
 " call s:h("lessAmpersandChar", { "fg": s:white })
 " call s:h("lessClass", { "fg": s:dark_yellow })
-"
-" " Markdown
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Language: Markdown
+
 hi! mkdHeading guifg=#e06c75 ctermfg=168 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 
 " mkdItalic      xxx cleared

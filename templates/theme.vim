@@ -228,26 +228,42 @@ hi! htmlItalic              term=italic                cterm=italic             
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Theme: groups
-hi! todNormal          {{.White.Vim "fg"}}
-hi! todModuleName      {{.Yellow.Vim "fg"}}
+
 hi! todBoolean         {{.Cyan.Vim "fg"}}
 hi! todBraces          {{.White.Vim "fg"}}
-hi! todClassName       {{.Yellow.Vim "fg"}}
+hi! todClassName       {{.Cyan.Vim "fg"}}
+hi! todFunction        {{.Purple.Vim "fg"}}
 hi! todFunctionName    {{.Blue.Vim "fg"}}
+hi! todImport          {{.Blue.Vim "fg"}}
+hi! todKeyword         {{.Purple.Vim "fg"}}
+hi! todModule          {{.Blue.Vim "fg"}}
+hi! todModuleName      {{.Cyan.Vim "fg"}}
+hi! todNormal          {{.White.Vim "fg"}}
 hi! todNull            {{.DarkYellow.Vim "fg"}}
+hi! todNumber          {{.DarkYellow.Vim "fg"}}
+hi! todOperatorKeyword {{.Cyan.Vim "fg"}}
+hi! todOperatorSymbol  {{.Cyan.Vim "fg"}}
 hi! todProperty        {{.Red.Vim "fg"}}
 hi! todReturn          {{.Purple.Vim "fg"}}
-hi! todVariable        {{.Purple.Vim "fg"}}
-hi! todFunction        {{.Purple.Vim "fg"}}
-hi! todKeyword         {{.Purple.Vim "fg"}}
-hi! todImport          {{.Blue.Vim "fg"}}
-hi! todNumber          {{.DarkYellow.Vim "fg"}}
 hi! todStatic          {{.Purple.Vim "fg"}}
 hi! todSuper           {{.Cyan.Vim "fg"}}
 hi! todThis            {{.Cyan.Vim "fg"}}
-hi! todOperatorSymbol  {{.Cyan.Vim "fg"}}
-hi! todOperatorKeyword {{.Cyan.Vim "fg"}}
+hi! todType            {{.Purple.Vim "fg"}}
+hi! todTypeName        {{.Cyan.Vim "fg"}}
+hi! todVariable        {{.Purple.Vim "fg"}}
 hi! todVariableName    {{.White.Vim "fg"}}
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Language: Go
+
+" fatih/vim-go => sheerun/vim-polyglot
+
+hi! link goImport      todImport
+hi! link goPackage     todModule
+hi! link goType        todTypeName
+hi! link goDeclaration todType
+hi! link goDeclType    todType
+hi! link goBoolean     todBoolean
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Language: JavaScript
@@ -290,6 +306,7 @@ hi! link jsTopOperator     todOperatorSymbol
 hi! link jsNew             todOperatorKeyword
 hi! link jsIfCondition     todOperatorSymbol
 hi! link jsComma           todNormal
+hi! link jsClassMethodType todStatic
 
 " axmellon/vim-jsx-pretty
 
@@ -340,6 +357,9 @@ hi! jsonNumber   {{.Number}}
 hi! jsonString   {{.String}}
 
 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Language: JSON
+
 " call s:h("jsonQuote", { "fg": s:white })
 " call s:h("jsonMissingCommaError", { "fg": s:red, "gui": "reverse" })
 " call s:h("jsonNoQuotesError", { "fg": s:red, "gui": "reverse" })
@@ -351,8 +371,10 @@ hi! jsonString   {{.String}}
 " call s:h("lessVariable", { "fg": s:purple })
 " call s:h("lessAmpersandChar", { "fg": s:white })
 " call s:h("lessClass", { "fg": s:dark_yellow })
-"
-" " Markdown
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Language: Markdown
+
 hi! mkdHeading {{.Identifier}}
 
 " mkdItalic      xxx cleared

@@ -27,6 +27,8 @@ const Comp = ({ foo }) => {
 class Foo extends Bar {
   static foo() {}
 
+  private bar()
+
   foo() {
     if (this.bar == 'bar') {
       this.bar = "foo"
@@ -57,10 +59,12 @@ foo.apply()
 
 let f = new Foo()
 
-const struct = {
+export const struct = {
   foo0: "hello",
   foo1: () => {},
   foo2: function() {},
   foo2: function Name() {},
   foo3() {},
 }
+
+export default Foo
