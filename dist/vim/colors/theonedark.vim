@@ -190,6 +190,7 @@ hi! cssSelectorOp        guifg=#c678dd ctermfg=176
 hi! cssSelectorOp2       guifg=#c678dd ctermfg=176
 hi! cssTagName           guifg=#e06c75 ctermfg=168
 hi! cssUnitDecorators    guifg=#e06c75 ctermfg=168
+hi! todNormal            guifg=#abb2bf ctermfg=249
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -332,25 +333,25 @@ hi! link jsThis            todThis
 " yuezk/vim-js
 
 hi! link jsBraces          todBraces
+hi! link jsClassMethodType todStatic
 hi! link jsClassName       todClassName
+hi! link jsComma           todNormal
 hi! link jsConstructor     todFunctionName
+hi! link jsDocIdentifier   todCommentValue
+hi! link jsDocModuleName   todCommentValue
+hi! link jsDocTags         todCommentTag
+hi! link jsIdentifierProp  todProperty
+hi! link jsIfCondition     todOperatorSymbol
 hi! link jsImport          todImport
 hi! link jsModuleName      todModuleName
+hi! link jsNew             todOperatorKeyword
 hi! link jsNewClassName    todClassName
 hi! link jsNumberDot       todNumber
 hi! link jsParens          todParens
 hi! link jsReturn          todReturn
-hi! link jsVariableType    todVariable
 hi! link jsSuper           todSuper
-hi! link jsIdentifierProp  todProperty
 hi! link jsTopOperator     todOperatorSymbol
-hi! link jsNew             todOperatorKeyword
-hi! link jsIfCondition     todOperatorSymbol
-hi! link jsComma           todNormal
-hi! link jsClassMethodType todStatic
-hi! link jsDocTags                   todCommentTag
-hi! link jsDocModuleName             todCommentValue
-hi! link jsDocIdentifier             todCommentValue
+hi! link jsVariableType    todVariable
 
 " axmellon/vim-jsx-pretty
 
@@ -364,29 +365,29 @@ hi! link jsDocIdentifier             todCommentValue
 " - new className
 
 hi! link javascriptArrowFunc         todKeyword
+hi! link javascriptArrowFuncArg      todVariableName
 hi! link javascriptBoolean           todBoolean
 hi! link javascriptBraces            todBraces
 hi! link javascriptClassName         todClassName
 hi! link javascriptClassSuper        todSuper
 hi! link javascriptClassSuperName    todClassName
+hi! link javascriptDocComment        todComment
+hi! link javascriptDocParamName      todCommentValue
+hi! link javascriptDocTags           todCommentTag
 hi! link javascriptEndColons         toEndColon
 hi! link javascriptFunctionMethod    todFunctionName
 hi! link javascriptNull              todNull
 hi! link javascriptNumber            todNumber
 hi! link javascriptObjectLabel       todProperty
 hi! link javascriptObjectMethodName  todFunctionName
+hi! link javascriptOpSymbol          todOperatorSymbol
+hi! link javascriptOpSymbols         todOperatorSymbol
+hi! link javascriptOperator          todOperatorKeyword
 hi! link javascriptProp              todProperty
 hi! link javascriptReflectMethod     todFunctionName
 hi! link javascriptReturn            todReturn
 hi! link javascriptUndefined         todNull
 hi! link javascriptVariable          todVariable
-hi! link javascriptOpSymbol          todOperatorSymbol
-hi! link javascriptOpSymbols         todOperatorSymbol
-hi! link javascriptOperator          todOperatorKeyword
-hi! link javascriptArrowFuncArg      todVariableName
-hi! link javascriptDocTags           todCommentTag
-hi! link javascriptDocParamName      todCommentValue
-hi! link javascriptDocComment        todComment
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Language: JSON
@@ -440,34 +441,23 @@ hi! mkdHeading guifg=#e06c75 ctermfg=168 guibg=NONE ctermbg=NONE gui=NONE cterm=
 " mkdNonListItemBlock xxx cleared
 " mkdRule        xxx links to Identifier
 
-hi! markdownCode guifg=#98c379 ctermfg=108 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
-hi! markdownCodeBlock guifg=#98c379 ctermfg=108 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
-hi! markdownCodeDelimiter guifg=#98c379 ctermfg=108 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
-"
-" call s:h("markdownRule", { "fg": s:comment_grey })
-" call s:h("markdownHeadingRule", { "fg": s:comment_grey })
+hi! link markdownBlockquote    todComment
+hi! link markdownCode          todString
+hi! link markdownCodeBlock     todString
+hi! link markdownCodeDelimiter todString
 
-hi! markdownHeadingDelimiter guifg=#e06c75 ctermfg=168 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
-hi! markdownH1 guifg=#e06c75 ctermfg=168 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
-hi! markdownH2 guifg=#e06c75 ctermfg=168 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
-hi! markdownH3 guifg=#e06c75 ctermfg=168 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
-hi! markdownH4 guifg=#e06c75 ctermfg=168 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
-hi! markdownH5 guifg=#e06c75 ctermfg=168 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
-hi! markdownH6 guifg=#e06c75 ctermfg=168 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
-" call s:h("markdownIdDelimiter", { "fg": s:purple })
-" call s:h("markdownId", { "fg": s:purple })
-hi! markdownBlockquote guifg=#5c6370 ctermfg=241 guibg=NONE ctermbg=NONE gui=italic cterm=italic
-" call s:h("markdownBlockquote", { "fg": s:comment_grey })
-
-hi! markdownItalic term=italic cterm=italic gui=italic
-hi! markdownBold   term=bold   cterm=bold   gui=bold
-"
-" call s:h("markdownListMarker", { "fg": s:red })
-" call s:h("markdownOrderedListMarker", { "fg": s:red })
-" call s:h("markdownIdDeclaration", { "fg": s:blue })
-hi! markdownLinkText guifg=#61afef ctermfg=75 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
-hi! markdownLinkDelimiter guifg=#abb2bf ctermfg=249 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
-hi! markdownUrl guifg=#56b6c2 ctermfg=73 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
+hi! markdownBold             term=bold cterm=bold gui=bold
+hi! markdownH1               term=bold cterm=bold gui=bold
+hi! markdownH2               term=bold cterm=bold gui=bold
+hi! markdownH3               term=bold cterm=bold gui=bold
+hi! markdownH4               term=bold cterm=bold gui=bold
+hi! markdownH5               term=bold cterm=bold gui=bold
+hi! markdownH6               term=bold cterm=bold gui=bold
+hi! markdownHeadingDelimiter guifg=#e06c75 ctermfg=168
+hi! markdownItalic           term=italic cterm=italic gui=italic
+hi! link markdownLinkDelimiter    todNormal
+hi! markdownLinkText         guifg=#61afef ctermfg=75
+hi! markdownUrl              guifg=#56b6c2 ctermfg=73
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Language: Perl
@@ -490,14 +480,14 @@ hi! markdownUrl guifg=#56b6c2 ctermfg=73 guibg=NONE ctermbg=NONE gui=NONE cterm=
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Language: PHP
 
+hi! link phpInclude     Keyword
+hi! link phpVarSelector Identifier
 hi! phpClass         guifg=#e5c07b ctermfg=180 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
+hi! phpClassExtends  guifg=#98c379 ctermfg=108 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 hi! phpFunction      guifg=#61afef ctermfg=75 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
+hi! phpParent        guifg=#abb2bf ctermfg=249 gui=NONE cterm=NONE
 hi! phpRegion        guifg=#abb2bf ctermfg=249 guibg=#282c34 ctermbg=236 gui=NONE cterm=NONE
 hi! phpUseClass      guifg=#e5c07b ctermfg=180 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
-hi! phpClassExtends  guifg=#98c379 ctermfg=108 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
-hi! phpParent        guifg=#abb2bf ctermfg=249 gui=NONE cterm=NONE
-hi! link phpInclude Keyword
-hi! link phpVarSelector Identifier
 
 " call s:h("phpVarSelector", { "fg": s:red })
 " call s:h("phpOperator", { "fg": s:white })
@@ -688,10 +678,10 @@ hi! link gitcommitComment todComment
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Plugin: coc.nvim
 
-hi! CocHighlightText guifg=#282c34 ctermfg=236 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
-hi! CocUnderline     gui=underline cterm=underline
-hi! CocCodeLens      guifg=#5c6370 ctermfg=241 guibg=NONE ctermbg=NONE gui=italic cterm=italic
-hi! link CocHighlightTextRead CocHighlightText
+hi! CocHighlightText           guifg=#282c34 ctermfg=236 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
+hi! CocUnderline               gui=underline cterm=underline
+hi! CocCodeLens                guifg=#5c6370 ctermfg=241 guibg=NONE ctermbg=NONE gui=italic cterm=italic
+hi! link CocHighlightTextRead  CocHighlightText
 hi! link CocHighlightTextWrite CocHighlightText
 "
 hi! CocErrorSign           guifg=#e06c75 ctermfg=168 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
@@ -746,8 +736,8 @@ endif
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Plugin: indentLine
 
-let g:indentLine_setColors = 0
-let g:indentLine_color_gui =  '#5c6370'
+let g:indentLine_setColors  = 0
+let g:indentLine_color_gui  = '#5c6370'
 let g:indentLine_color_term = '241'
 
 

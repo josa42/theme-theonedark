@@ -190,6 +190,7 @@ hi! cssSelectorOp        {{.Purple.Vim     "fg"}}
 hi! cssSelectorOp2       {{.Purple.Vim     "fg"}}
 hi! cssTagName           {{.Red.Vim        "fg"}}
 hi! cssUnitDecorators    {{.Red.Vim        "fg"}}
+hi! todNormal            {{.White.Vim      "fg"}}
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -440,34 +441,23 @@ hi! mkdHeading {{.Identifier}}
 " mkdNonListItemBlock xxx cleared
 " mkdRule        xxx links to Identifier
 
-hi! markdownCode          {{.String}}
-hi! markdownCodeBlock     {{.String}}
-hi! markdownCodeDelimiter {{.String}}
-"
-" call s:h("markdownRule", { "fg": s:comment_grey })
-" call s:h("markdownHeadingRule", { "fg": s:comment_grey })
+hi! link markdownBlockquote    todComment
+hi! link markdownCode          todString
+hi! link markdownCodeBlock     todString
+hi! link markdownCodeDelimiter todString
+hi! link markdownLinkDelimiter todNormal
 
-hi! markdownHeadingDelimiter {{.Identifier}}
-hi! markdownH1               {{.Identifier}}
-hi! markdownH2               {{.Identifier}}
-hi! markdownH3               {{.Identifier}}
-hi! markdownH4               {{.Identifier}}
-hi! markdownH5               {{.Identifier}}
-hi! markdownH6               {{.Identifier}}
-" call s:h("markdownIdDelimiter", { "fg": s:purple })
-" call s:h("markdownId", { "fg": s:purple })
-hi! markdownBlockquote {{.Comment}}
-" call s:h("markdownBlockquote", { "fg": s:comment_grey })
-
-hi! markdownItalic term=italic cterm=italic gui=italic
-hi! markdownBold   term=bold   cterm=bold   gui=bold
-"
-" call s:h("markdownListMarker", { "fg": s:red })
-" call s:h("markdownOrderedListMarker", { "fg": s:red })
-" call s:h("markdownIdDeclaration", { "fg": s:blue })
-hi! markdownLinkText      {{.Function}}
-hi! markdownLinkDelimiter {{.Text}}
-hi! markdownUrl           {{.Constant}}
+hi! markdownBold             term=bold cterm=bold gui=bold
+hi! markdownH1               term=bold cterm=bold gui=bold
+hi! markdownH2               term=bold cterm=bold gui=bold
+hi! markdownH3               term=bold cterm=bold gui=bold
+hi! markdownH4               term=bold cterm=bold gui=bold
+hi! markdownH5               term=bold cterm=bold gui=bold
+hi! markdownH6               term=bold cterm=bold gui=bold
+hi! markdownHeadingDelimiter {{.Red.Vim "fg"}}
+hi! markdownItalic           term=italic cterm=italic gui=italic
+hi! markdownLinkText         {{.Blue.Vim "fg"}}
+hi! markdownUrl              {{.Cyan.Vim "fg"}}
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Language: Perl

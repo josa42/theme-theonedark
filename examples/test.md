@@ -12,6 +12,7 @@
 - *italic*
 - `test`
 - ~~Strikethrough~~
+- __underline__
 
 ```js
 const c = () => console.log("Huhu")
@@ -19,6 +20,10 @@ const c = () => console.log("Huhu")
 
 > One Theme to rule them all, One Theme to find them,  
 > One Theme to bring them all, and in the darkness bind them
+
+<!--
+Comment
+-->
 
 ## Contained Themes
 
@@ -51,6 +56,16 @@ The themes os based on or `inspired` by these projects:
 - [`NovaDev94/lightline-onedark`](https://github.com/NovaDev94/lightline-onedark)
 - [`atom/atom`: `one-dark-syntax`](https://github.com/atom/atom/tree/master/packages/one-dark-syntax)
 - [test](google.com)
+* test
+
+1. Foo
+2. Bar
+
+![alt text](foo.org)
+
+```js
+const = () => {}
+```
 
 ## License
 
