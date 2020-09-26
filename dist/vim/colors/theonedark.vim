@@ -405,6 +405,17 @@ hi! link jsonSemicolonError    todError
 hi! link jsonString            todString
 hi! link jsonStringSQError     todError
 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Language: YAML
+
+hi! link yamlBlockCollectionItemStart todNormal
+hi! link yamlBlockMappingKey          todProperty
+hi! link yamlBool                     todBoolean
+hi! link yamlFlowIndicator            todNorma
+hi! link yamlKeyValueDelimiter        todNormal
+hi! link yamlNodeTag                  todFunctionName
+hi! link yamlPlainScalar              todString
+
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Language: LESS
@@ -445,6 +456,7 @@ hi! link markdownBlockquote    todComment
 hi! link markdownCode          todString
 hi! link markdownCodeBlock     todString
 hi! link markdownCodeDelimiter todString
+hi! link markdownLinkDelimiter todNormal
 
 hi! markdownBold             term=bold cterm=bold gui=bold
 hi! markdownH1               term=bold cterm=bold gui=bold
@@ -455,7 +467,6 @@ hi! markdownH5               term=bold cterm=bold gui=bold
 hi! markdownH6               term=bold cterm=bold gui=bold
 hi! markdownHeadingDelimiter guifg=#e06c75 ctermfg=168
 hi! markdownItalic           term=italic cterm=italic gui=italic
-hi! link markdownLinkDelimiter    todNormal
 hi! markdownLinkText         guifg=#61afef ctermfg=75
 hi! markdownUrl              guifg=#56b6c2 ctermfg=73
 

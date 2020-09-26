@@ -405,6 +405,17 @@ hi! link jsonSemicolonError    todError
 hi! link jsonString            todString
 hi! link jsonStringSQError     todError
 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Language: YAML
+
+hi! link yamlBlockCollectionItemStart todNormal
+hi! link yamlBlockMappingKey          todProperty
+hi! link yamlBool                     todBoolean
+hi! link yamlFlowIndicator            todNorma
+hi! link yamlKeyValueDelimiter        todNormal
+hi! link yamlNodeTag                  todFunctionName
+hi! link yamlPlainScalar              todString
+
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Language: LESS
