@@ -9,47 +9,82 @@ set t_Co=256
 if has("nvim") | let $NVIM_TUI_ENABLE_TRUE_COLOR=1 | endif
 if has("termguicolors") | set termguicolors | endif
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Syntax Groups (descriptions and ordering from `:h w18`)
 
-hi!   Comment          {{.Comment}}
-hi!   Constant         {{.Constant}}
-hi!   String           {{.String}}
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Theme: groups
+
+hi! todBoolean         {{.Cyan.Vim "fg"}}
+hi! todBraces          {{.White.Vim "fg"}}
+hi! todClassName       {{.Cyan.Vim "fg"}}
+hi! todComment         {{.Grey.Vim "fg"}} term=italic cterm=italic gui=italic
+hi! todError           {{.Red.Vim "fg"}}
+hi! todFunction        {{.Purple.Vim "fg"}}
+hi! todFunctionName    {{.Blue.Vim "fg"}}
+hi! todImport          {{.Blue.Vim "fg"}}
+hi! todKeyword         {{.Purple.Vim "fg"}}
+hi! todModule          {{.Blue.Vim "fg"}}
+hi! todModuleName      {{.Cyan.Vim "fg"}}
+hi! todNormal          {{.White.Vim "fg"}}
+hi! todNull            {{.DarkYellow.Vim "fg"}}
+hi! todNumber          {{.DarkYellow.Vim "fg"}}
+hi! todOperatorKeyword {{.Cyan.Vim "fg"}}
+hi! todOperatorSymbol  {{.Cyan.Vim "fg"}}
+hi! todProperty        {{.Red.Vim "fg"}}
+hi! todReturn          {{.Purple.Vim "fg"}}
+hi! todStatic          {{.Purple.Vim "fg"}}
+hi! todString          {{.Yellow.Vim "fg"}}
+hi! todSuper           {{.Cyan.Vim "fg"}}
+hi! todThis            {{.Cyan.Vim "fg"}}
+hi! todType            {{.Purple.Vim "fg"}}
+hi! todTypeName        {{.Cyan.Vim "fg"}}
+hi! todVariable        {{.Purple.Vim "fg"}}
+hi! todVariableName    {{.White.Vim "fg"}}
+hi! todCommentTag      {{.White.Vim "fg"}}  term=bold cterm=bold gui=bold
+hi! todCommentValue    {{.White.Vim "fg"}}
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Defaults: Syntax Groups (descriptions and ordering from `:h w18`)
+
 hi!   Character        {{.Character}}
-hi!   Number           {{.Number}}
-hi!   Boolean          {{.Boolean}}
-hi!   Float            {{.Float}}
-hi!   Identifier       {{.Identifier}}
-hi!   Function         {{.Function}}
-hi!   Statement        {{.Statement}}
 hi!   Conditional      {{.Conditional}}
-hi!   Repeat           {{.Repeat}}
-hi!   Label            {{.Label}}
-hi!   Operator         {{.Operator}}
-hi!   Keyword          {{.Keyword}}
-hi!   Exception        {{.Exception}}
-hi!   PreProc          {{.PreProc}}
-hi!   Include          {{.Include}}
+hi!   Constant         {{.Constant}}
+hi!   Debug            {{.Debug}}
 hi!   Define           {{.Define}}
+hi!   Delimiter        {{.Delimiter}}
+hi!   Exception        {{.Exception}}
+hi!   Function         {{.Function}}
+hi!   Identifier       {{.Identifier}}
+hi!   Ignore           {{.Ignore}}
+hi!   Include          {{.Include}}
+hi!   Keyword          {{.Keyword}}
+hi!   Label            {{.Label}}
 hi!   Macro            {{.Macro}}
+hi!   Operator         {{.Operator}}
 hi!   PreCondit        {{.PreCondit}}
-hi!   Type             {{.Type}}
-hi!   StorageClass     {{.StorageClass}}
-hi!   Structure        {{.Structure}}
-hi!   Typedef          {{.Typedef}}
+hi!   PreProc          {{.PreProc}}
+hi!   Repeat           {{.Repeat}}
 hi!   Special          {{.Special}}
 hi!   SpecialChar      {{.SpecialChar}}
-hi!   Tag              {{.Tag}}
-hi!   Delimiter        {{.Delimiter}}
 hi!   SpecialComment   {{.SpecialComment}}
-hi!   Debug            {{.Debug}}
-hi!   Underlined       {{.Underlined}}
-hi!   Ignore           {{.Ignore}}
-hi!   Error            {{.Error}}
+hi!   Statement        {{.Statement}}
+hi!   StorageClass     {{.StorageClass}}
+hi!   Structure        {{.Structure}}
+hi!   Tag              {{.Tag}}
 hi!   Todo             {{.Todo}}
+hi!   Type             {{.Type}}
+hi!   Typedef          {{.Typedef}}
+hi!   Underlined       {{.Underlined}}
+hi! link Boolean       todBoolean
+hi! link Comment       todComment
+hi! link Error         todError
+hi! link Float         todNumber
+hi! link Number        todNumber
+hi! link String        todString
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Highlighting Groups (descriptions and ordering from `:h highlight-groups`)
+" Defaults: Highlighting Groups (descriptions and ordering from `:h highlight-groups`)
 
 hi!   ColorColumn        {{.ColorColumn}}
 hi!   Conceal            {{.Conceal}}
@@ -115,6 +150,11 @@ hi!   WildMenu           {{.WildMenu}}
 if &diff
   highlight! CursorLine         {{.DiffCursorLine}}
 endif
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Neovim: LSP
+hi! LspDiagnosticsError {{.Red.Vim "fg"}}
 
 
 
@@ -192,11 +232,8 @@ hi! scssSelectorName {{.Type}}
 " call s:h("fishConditional", { "fg": s:purple })
 "
 " " Go
-" call s:h("goDeclaration", { "fg": s:purple })
 hi! goCoverageCovered {{.OK}}
 hi! goCoverageUncover {{.Error}}
-" highlight GoDebugBreakpoint ctermfg=0 ctermbg=117 guifg=Black guibg=#BAD4F5
-" highlight GoDebugCurrent ctermfg=7 ctermbg=12 guifg=White guibg=DarkBlue
 
 
 " " HTML
@@ -225,33 +262,28 @@ hi! htmlUnderlineItalic     term=italic,underline      cterm=italic,underline   
 hi! htmlItalic              term=italic                cterm=italic                gui=italic
 
 
-
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Theme: groups
+" Language: Typescript
 
-hi! todBoolean         {{.Cyan.Vim "fg"}}
-hi! todBraces          {{.White.Vim "fg"}}
-hi! todClassName       {{.Cyan.Vim "fg"}}
-hi! todFunction        {{.Purple.Vim "fg"}}
-hi! todFunctionName    {{.Blue.Vim "fg"}}
-hi! todImport          {{.Blue.Vim "fg"}}
-hi! todKeyword         {{.Purple.Vim "fg"}}
-hi! todModule          {{.Blue.Vim "fg"}}
-hi! todModuleName      {{.Cyan.Vim "fg"}}
-hi! todNormal          {{.White.Vim "fg"}}
-hi! todNull            {{.DarkYellow.Vim "fg"}}
-hi! todNumber          {{.DarkYellow.Vim "fg"}}
-hi! todOperatorKeyword {{.Cyan.Vim "fg"}}
-hi! todOperatorSymbol  {{.Cyan.Vim "fg"}}
-hi! todProperty        {{.Red.Vim "fg"}}
-hi! todReturn          {{.Purple.Vim "fg"}}
-hi! todStatic          {{.Purple.Vim "fg"}}
-hi! todSuper           {{.Cyan.Vim "fg"}}
-hi! todThis            {{.Cyan.Vim "fg"}}
-hi! todType            {{.Purple.Vim "fg"}}
-hi! todTypeName        {{.Cyan.Vim "fg"}}
-hi! todVariable        {{.Purple.Vim "fg"}}
-hi! todVariableName    {{.White.Vim "fg"}}
+hi! link typescriptArrowFunc      todFunction
+hi! link typescriptAssign         todOperatorSymbol
+hi! link typescriptBinaryOp       todOperatorSymbol
+hi! link typescriptBoolean        todBoolean
+hi! link typescriptBraces         todBraces
+hi! link typescriptCall           todVariableName
+hi! link typescriptClassHeritage  todClassName
+hi! link typescriptClassName      todClassName
+hi! link typescriptFunctionMethod todFunctionName
+hi! link typescriptNull           todNull
+hi! link typescriptObjectLabel    todProperty
+hi! link typescriptOperator       todOperatorKeyword
+hi! link typescriptParens         todParens
+hi! link typescriptProp           todProperty
+hi! link typescriptReflectMethod  todFunctionName
+hi! link typescriptTypeReference  todTypeName
+hi! link typescriptUnaryOp        todOperatorSymbol
+hi! link typescriptVariable       todVariable
+
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Language: Go
@@ -282,11 +314,12 @@ hi! link jsFuncName        todFunctionName
 hi! link jsFunction        todFunction
 hi! link jsFunctionKey     todProperty
 hi! link jsModuleKeyword   todModuleName
+hi! link jsObjectKey       todProperty
+hi! link jsOperator        todOperatorSymbol
+hi! link jsOperatorKeyword todOperatorKeyword
 hi! link jsReturn          todReturn
 hi! link jsStatic          todStatic
 hi! link jsThis            todThis
-hi! link jsOperator        todOperatorSymbol
-hi! link jsOperatorKeyword todOperatorKeyword
 
 " yuezk/vim-js
 
@@ -307,6 +340,9 @@ hi! link jsNew             todOperatorKeyword
 hi! link jsIfCondition     todOperatorSymbol
 hi! link jsComma           todNormal
 hi! link jsClassMethodType todStatic
+hi! link jsDocTags                   todCommentTag
+hi! link jsDocModuleName             todCommentValue
+hi! link jsDocIdentifier             todCommentValue
 
 " axmellon/vim-jsx-pretty
 
@@ -340,25 +376,25 @@ hi! link javascriptOpSymbol          todOperatorSymbol
 hi! link javascriptOpSymbols         todOperatorSymbol
 hi! link javascriptOperator          todOperatorKeyword
 hi! link javascriptArrowFuncArg      todVariableName
+hi! link javascriptDocTags           todCommentTag
+hi! link javascriptDocParamName      todCommentValue
+hi! link javascriptDocComment        todComment
 
 " hi! link jsDocParam                DraculaOrangeItalic
 " hi! link jsDocTags                 Keyword
 " hi! link jsDocType                 Type
 " hi! link jsDocTypeBrackets         DraculaCyan
-" hi! link jsFuncArgOperator         Operator
-" hi! link jsFunction                Keyword
 " hi! link jsTemplateBraces          Special
-
-" " JSON
-hi! jsonCommentError {{.Comment}}
-" call s:h("jsonKeyword", { "fg": s:red })
-hi! jsonBoolean  {{.Boolean}}
-hi! jsonNumber   {{.Number}}
-hi! jsonString   {{.String}}
-
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Language: JSON
+
+hi! link jsonCommentError todComment
+hi! link jsonBoolean      todBoolean
+hi! link jsonNumber       todNumber
+hi! link jsonString       todString
+hi! link jsonKeyword      todProperty
+hi! link jsonBraces       todBraces
 
 " call s:h("jsonQuote", { "fg": s:white })
 " call s:h("jsonMissingCommaError", { "fg": s:red, "gui": "reverse" })
@@ -367,7 +403,9 @@ hi! jsonString   {{.String}}
 " call s:h("jsonStringSQError", { "fg": s:red, "gui": "reverse" })
 " call s:h("jsonSemicolonError", { "fg": s:red, "gui": "reverse" })
 "
-" " LESS
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Language: LESS
+
 " call s:h("lessVariable", { "fg": s:purple })
 " call s:h("lessAmpersandChar", { "fg": s:white })
 " call s:h("lessClass", { "fg": s:dark_yellow })
@@ -444,8 +482,10 @@ hi! markdownUrl {{.Constant}}
 " call s:h("perlStatementStorage", { "fg": s:purple })
 " call s:h("perlSubName",{ "fg": s:yellow })
 " call s:h("perlVarPlain",{ "fg": s:blue })
-"
-" " PHP
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Language: PHP
+
 hi! phpClass         {{.ClassName}}
 hi! phpFunction      {{.Function}}
 hi! phpRegion        {{.Normal}}
@@ -472,8 +512,11 @@ hi! link phpVarSelector Identifier
 " call s:h("phpMagicConstants", { "fg": s:dark_yellow })
 " call s:h("phpSuperglobals", { "fg": s:red })
 " call s:h("phpConstants", { "fg": s:dark_yellow })
-"
-" " Ruby
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Language: Ruby
+
 " call s:h("rubyBlockParameter", { "fg": s:red})
 " call s:h("rubyBlockParameterList", { "fg": s:red })
 " call s:h("rubyClass", { "fg": s:purple})
@@ -494,8 +537,9 @@ hi! link phpVarSelector Identifier
 " call s:h("rubySymbol", { "fg": s:cyan})
 "
 
-"
-" " TeX
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Language: TeX
+
 " call s:h("texStatement", { "fg": s:purple })
 " call s:h("texSubscripts", { "fg": s:dark_yellow })
 " call s:h("texSuperscripts", { "fg": s:dark_yellow })
@@ -508,17 +552,16 @@ hi! link phpVarSelector Identifier
 " call s:h("texSpecialChar", { "fg": s:dark_yellow })
 " call s:h("texCite", { "fg": s:blue })
 " call s:h("texRefZone", { "fg": s:blue })
-"
-" " TypeScript
-" call s:h("typescriptReserved", { "fg": s:purple })
-" call s:h("typescriptEndColons", { "fg": s:white })
-" call s:h("typescriptBraces", { "fg": s:white })
-"
-" " XML
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Language: XML
+
 hi! xmlTag     {{.TagSurround}}
 hi! xmlEndTag  {{.TagSurround}}
 hi! xmlTagName {{.TagName}}
 hi! xmlAttrib  {{.TagAttr}}
+
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Plugin: airblade/vim-gitgutter
@@ -536,7 +579,8 @@ hi! GitGutterDelete {{.GutterRemoved}}
 "
 
 
-" Lua
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Language:  Lua
 
 " highlight link luaParens           Text
 " highlight link luaBraces           Text
@@ -581,7 +625,8 @@ hi! link luaLocal            StorageClass
 
 
 
-" viml
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Language: viml
 hi! link vimLet StorageClass
 hi! link vimVar Normal
 hi! link vimCommand Structure

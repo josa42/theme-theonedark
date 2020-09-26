@@ -12,8 +12,8 @@ const s3 = s
 let m = 1 + 2 * 4 / 6 - 4
 m++
 
-const n = null
-const u = undefined
+const n: Foo = null
+const u: Foo = undefined
 
 const b = () => {}
 const B = () => {}
@@ -29,7 +29,7 @@ class Foo extends Bar {
 
   private bar()
 
-  foo() {
+  foo(): string {
     if (this.bar == 'bar') {
       this.bar = "foo"
     }
@@ -47,11 +47,7 @@ class Foo extends Bar {
 }
 
 /**
- * Hallo welt
- *
- * @param foo foo
- * @class foo foo
- * @foo bar
+ * @param foo
  */
 function foo() {
 

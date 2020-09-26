@@ -9,47 +9,82 @@ set t_Co=256
 if has("nvim") | let $NVIM_TUI_ENABLE_TRUE_COLOR=1 | endif
 if has("termguicolors") | set termguicolors | endif
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Syntax Groups (descriptions and ordering from `:h w18`)
 
-hi!   Comment          guifg=#5c6370 ctermfg=241 guibg=NONE ctermbg=NONE gui=italic cterm=italic
-hi!   Constant         guifg=#56b6c2 ctermfg=73 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
-hi!   String           guifg=#98c379 ctermfg=108 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Theme: groups
+
+hi! todBoolean         guifg=#56b6c2 ctermfg=73
+hi! todBraces          guifg=#abb2bf ctermfg=249
+hi! todClassName       guifg=#56b6c2 ctermfg=73
+hi! todComment         guifg=#5c6370 ctermfg=241 term=italic cterm=italic gui=italic
+hi! todError           guifg=#e06c75 ctermfg=168
+hi! todFunction        guifg=#c678dd ctermfg=176
+hi! todFunctionName    guifg=#61afef ctermfg=75
+hi! todImport          guifg=#61afef ctermfg=75
+hi! todKeyword         guifg=#c678dd ctermfg=176
+hi! todModule          guifg=#61afef ctermfg=75
+hi! todModuleName      guifg=#56b6c2 ctermfg=73
+hi! todNormal          guifg=#abb2bf ctermfg=249
+hi! todNull            guifg=#d19a66 ctermfg=173
+hi! todNumber          guifg=#d19a66 ctermfg=173
+hi! todOperatorKeyword guifg=#56b6c2 ctermfg=73
+hi! todOperatorSymbol  guifg=#56b6c2 ctermfg=73
+hi! todProperty        guifg=#e06c75 ctermfg=168
+hi! todReturn          guifg=#c678dd ctermfg=176
+hi! todStatic          guifg=#c678dd ctermfg=176
+hi! todString          guifg=#e5c07b ctermfg=180
+hi! todSuper           guifg=#56b6c2 ctermfg=73
+hi! todThis            guifg=#56b6c2 ctermfg=73
+hi! todType            guifg=#c678dd ctermfg=176
+hi! todTypeName        guifg=#56b6c2 ctermfg=73
+hi! todVariable        guifg=#c678dd ctermfg=176
+hi! todVariableName    guifg=#abb2bf ctermfg=249
+hi! todCommentTag      guifg=#abb2bf ctermfg=249  term=bold cterm=bold gui=bold
+hi! todCommentValue    guifg=#abb2bf ctermfg=249
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Defaults: Syntax Groups (descriptions and ordering from `:h w18`)
+
 hi!   Character        guifg=#98c379 ctermfg=108 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
-hi!   Number           guifg=#d19a66 ctermfg=173 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
-hi!   Boolean          guifg=#d19a66 ctermfg=173 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
-hi!   Float            guifg=#d19a66 ctermfg=173 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
-hi!   Identifier       guifg=#e06c75 ctermfg=168 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
-hi!   Function         guifg=#61afef ctermfg=75 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
-hi!   Statement        guifg=#e06c75 ctermfg=168 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 hi!   Conditional      guifg=#c678dd ctermfg=176 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
-hi!   Repeat           guifg=#c678dd ctermfg=176 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
-hi!   Label            guifg=#c678dd ctermfg=176 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
-hi!   Operator         guifg=#56b6c2 ctermfg=73 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
-hi!   Keyword          guifg=#c678dd ctermfg=176 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
-hi!   Exception        guifg=#c678dd ctermfg=176 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
-hi!   PreProc          guifg=#e5c07b ctermfg=180 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
-hi!   Include          guifg=#61afef ctermfg=75 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
+hi!   Constant         guifg=#56b6c2 ctermfg=73 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
+hi!   Debug            guifg=NONE ctermfg=NONE guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 hi!   Define           guifg=#c678dd ctermfg=176 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
+hi!   Delimiter        guifg=NONE ctermfg=NONE guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
+hi!   Exception        guifg=#c678dd ctermfg=176 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
+hi!   Function         guifg=#61afef ctermfg=75 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
+hi!   Identifier       guifg=#e06c75 ctermfg=168 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
+hi!   Ignore           gui=NONE cterm=NONE
+hi!   Include          guifg=#61afef ctermfg=75 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
+hi!   Keyword          guifg=#c678dd ctermfg=176 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
+hi!   Label            guifg=#c678dd ctermfg=176 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 hi!   Macro            guifg=#c678dd ctermfg=176 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
+hi!   Operator         guifg=#56b6c2 ctermfg=73 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 hi!   PreCondit        guifg=#e5c07b ctermfg=180 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
-hi!   Type             guifg=#56b6c2 ctermfg=73 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
-hi!   StorageClass     guifg=#c678dd ctermfg=176 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
-hi!   Structure        guifg=#c678dd ctermfg=176 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
-hi!   Typedef          guifg=#e5c07b ctermfg=180 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
+hi!   PreProc          guifg=#e5c07b ctermfg=180 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
+hi!   Repeat           guifg=#c678dd ctermfg=176 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 hi!   Special          guifg=#61afef ctermfg=75 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 hi!   SpecialChar      guifg=NONE ctermfg=NONE guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
-hi!   Tag              guifg=NONE ctermfg=NONE guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
-hi!   Delimiter        guifg=NONE ctermfg=NONE guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 hi!   SpecialComment   guifg=NONE ctermfg=NONE guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
-hi!   Debug            guifg=NONE ctermfg=NONE guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
-hi!   Underlined       gui=underline cterm=underline
-hi!   Ignore           gui=NONE cterm=NONE
-hi!   Error            guifg=#e06c75 ctermfg=168 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
+hi!   Statement        guifg=#e06c75 ctermfg=168 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
+hi!   StorageClass     guifg=#c678dd ctermfg=176 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
+hi!   Structure        guifg=#c678dd ctermfg=176 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
+hi!   Tag              guifg=NONE ctermfg=NONE guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 hi!   Todo             guifg=#c678dd ctermfg=176 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
+hi!   Type             guifg=#56b6c2 ctermfg=73 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
+hi!   Typedef          guifg=#e5c07b ctermfg=180 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
+hi!   Underlined       gui=underline cterm=underline
+hi! link Boolean       todBoolean
+hi! link Comment       todComment
+hi! link Error         todError
+hi! link Float         todNumber
+hi! link Number        todNumber
+hi! link String        todString
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Highlighting Groups (descriptions and ordering from `:h highlight-groups`)
+" Defaults: Highlighting Groups (descriptions and ordering from `:h highlight-groups`)
 
 hi!   ColorColumn        guifg=NONE ctermfg=NONE guibg=#2c323c ctermbg=236 gui=NONE cterm=NONE
 hi!   Conceal            guifg=NONE ctermfg=NONE guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
@@ -115,6 +150,11 @@ hi!   WildMenu           guifg=#282c34 ctermfg=236 guibg=#61afef ctermbg=75 gui=
 if &diff
   highlight! CursorLine         gui=underline cterm=underline
 endif
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Neovim: LSP
+hi! LspDiagnosticsError guifg=#e06c75 ctermfg=168
 
 
 
@@ -192,11 +232,8 @@ hi! scssSelectorName guifg=#56b6c2 ctermfg=73 guibg=NONE ctermbg=NONE gui=NONE c
 " call s:h("fishConditional", { "fg": s:purple })
 "
 " " Go
-" call s:h("goDeclaration", { "fg": s:purple })
 hi! goCoverageCovered guifg=#98c379 ctermfg=108 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 hi! goCoverageUncover guifg=#e06c75 ctermfg=168 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
-" highlight GoDebugBreakpoint ctermfg=0 ctermbg=117 guifg=Black guibg=#BAD4F5
-" highlight GoDebugCurrent ctermfg=7 ctermbg=12 guifg=White guibg=DarkBlue
 
 
 " " HTML
@@ -225,33 +262,28 @@ hi! htmlUnderlineItalic     term=italic,underline      cterm=italic,underline   
 hi! htmlItalic              term=italic                cterm=italic                gui=italic
 
 
-
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Theme: groups
+" Language: Typescript
 
-hi! todBoolean         guifg=#56b6c2 ctermfg=73
-hi! todBraces          guifg=#abb2bf ctermfg=249
-hi! todClassName       guifg=#56b6c2 ctermfg=73
-hi! todFunction        guifg=#c678dd ctermfg=176
-hi! todFunctionName    guifg=#61afef ctermfg=75
-hi! todImport          guifg=#61afef ctermfg=75
-hi! todKeyword         guifg=#c678dd ctermfg=176
-hi! todModule          guifg=#61afef ctermfg=75
-hi! todModuleName      guifg=#56b6c2 ctermfg=73
-hi! todNormal          guifg=#abb2bf ctermfg=249
-hi! todNull            guifg=#d19a66 ctermfg=173
-hi! todNumber          guifg=#d19a66 ctermfg=173
-hi! todOperatorKeyword guifg=#56b6c2 ctermfg=73
-hi! todOperatorSymbol  guifg=#56b6c2 ctermfg=73
-hi! todProperty        guifg=#e06c75 ctermfg=168
-hi! todReturn          guifg=#c678dd ctermfg=176
-hi! todStatic          guifg=#c678dd ctermfg=176
-hi! todSuper           guifg=#56b6c2 ctermfg=73
-hi! todThis            guifg=#56b6c2 ctermfg=73
-hi! todType            guifg=#c678dd ctermfg=176
-hi! todTypeName        guifg=#56b6c2 ctermfg=73
-hi! todVariable        guifg=#c678dd ctermfg=176
-hi! todVariableName    guifg=#abb2bf ctermfg=249
+hi! link typescriptArrowFunc      todFunction
+hi! link typescriptAssign         todOperatorSymbol
+hi! link typescriptBinaryOp       todOperatorSymbol
+hi! link typescriptBoolean        todBoolean
+hi! link typescriptBraces         todBraces
+hi! link typescriptCall           todVariableName
+hi! link typescriptClassHeritage  todClassName
+hi! link typescriptClassName      todClassName
+hi! link typescriptFunctionMethod todFunctionName
+hi! link typescriptNull           todNull
+hi! link typescriptObjectLabel    todProperty
+hi! link typescriptOperator       todOperatorKeyword
+hi! link typescriptParens         todParens
+hi! link typescriptProp           todProperty
+hi! link typescriptReflectMethod  todFunctionName
+hi! link typescriptTypeReference  todTypeName
+hi! link typescriptUnaryOp        todOperatorSymbol
+hi! link typescriptVariable       todVariable
+
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Language: Go
@@ -282,11 +314,12 @@ hi! link jsFuncName        todFunctionName
 hi! link jsFunction        todFunction
 hi! link jsFunctionKey     todProperty
 hi! link jsModuleKeyword   todModuleName
+hi! link jsObjectKey       todProperty
+hi! link jsOperator        todOperatorSymbol
+hi! link jsOperatorKeyword todOperatorKeyword
 hi! link jsReturn          todReturn
 hi! link jsStatic          todStatic
 hi! link jsThis            todThis
-hi! link jsOperator        todOperatorSymbol
-hi! link jsOperatorKeyword todOperatorKeyword
 
 " yuezk/vim-js
 
@@ -307,6 +340,9 @@ hi! link jsNew             todOperatorKeyword
 hi! link jsIfCondition     todOperatorSymbol
 hi! link jsComma           todNormal
 hi! link jsClassMethodType todStatic
+hi! link jsDocTags                   todCommentTag
+hi! link jsDocModuleName             todCommentValue
+hi! link jsDocIdentifier             todCommentValue
 
 " axmellon/vim-jsx-pretty
 
@@ -340,25 +376,25 @@ hi! link javascriptOpSymbol          todOperatorSymbol
 hi! link javascriptOpSymbols         todOperatorSymbol
 hi! link javascriptOperator          todOperatorKeyword
 hi! link javascriptArrowFuncArg      todVariableName
+hi! link javascriptDocTags           todCommentTag
+hi! link javascriptDocParamName      todCommentValue
+hi! link javascriptDocComment        todComment
 
 " hi! link jsDocParam                DraculaOrangeItalic
 " hi! link jsDocTags                 Keyword
 " hi! link jsDocType                 Type
 " hi! link jsDocTypeBrackets         DraculaCyan
-" hi! link jsFuncArgOperator         Operator
-" hi! link jsFunction                Keyword
 " hi! link jsTemplateBraces          Special
-
-" " JSON
-hi! jsonCommentError guifg=#5c6370 ctermfg=241 guibg=NONE ctermbg=NONE gui=italic cterm=italic
-" call s:h("jsonKeyword", { "fg": s:red })
-hi! jsonBoolean  guifg=#d19a66 ctermfg=173 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
-hi! jsonNumber   guifg=#d19a66 ctermfg=173 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
-hi! jsonString   guifg=#98c379 ctermfg=108 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
-
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Language: JSON
+
+hi! link jsonCommentError todComment
+hi! link jsonBoolean      todBoolean
+hi! link jsonNumber       todNumber
+hi! link jsonString       todString
+hi! link jsonKeyword      todProperty
+hi! link jsonBraces       todBraces
 
 " call s:h("jsonQuote", { "fg": s:white })
 " call s:h("jsonMissingCommaError", { "fg": s:red, "gui": "reverse" })
@@ -367,7 +403,9 @@ hi! jsonString   guifg=#98c379 ctermfg=108 guibg=NONE ctermbg=NONE gui=NONE cter
 " call s:h("jsonStringSQError", { "fg": s:red, "gui": "reverse" })
 " call s:h("jsonSemicolonError", { "fg": s:red, "gui": "reverse" })
 "
-" " LESS
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Language: LESS
+
 " call s:h("lessVariable", { "fg": s:purple })
 " call s:h("lessAmpersandChar", { "fg": s:white })
 " call s:h("lessClass", { "fg": s:dark_yellow })
@@ -444,8 +482,10 @@ hi! markdownUrl guifg=#56b6c2 ctermfg=73 guibg=NONE ctermbg=NONE gui=NONE cterm=
 " call s:h("perlStatementStorage", { "fg": s:purple })
 " call s:h("perlSubName",{ "fg": s:yellow })
 " call s:h("perlVarPlain",{ "fg": s:blue })
-"
-" " PHP
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Language: PHP
+
 hi! phpClass         guifg=#e5c07b ctermfg=180 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 hi! phpFunction      guifg=#61afef ctermfg=75 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 hi! phpRegion        guifg=#abb2bf ctermfg=249 guibg=#282c34 ctermbg=236 gui=NONE cterm=NONE
@@ -472,8 +512,11 @@ hi! link phpVarSelector Identifier
 " call s:h("phpMagicConstants", { "fg": s:dark_yellow })
 " call s:h("phpSuperglobals", { "fg": s:red })
 " call s:h("phpConstants", { "fg": s:dark_yellow })
-"
-" " Ruby
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Language: Ruby
+
 " call s:h("rubyBlockParameter", { "fg": s:red})
 " call s:h("rubyBlockParameterList", { "fg": s:red })
 " call s:h("rubyClass", { "fg": s:purple})
@@ -494,8 +537,9 @@ hi! link phpVarSelector Identifier
 " call s:h("rubySymbol", { "fg": s:cyan})
 "
 
-"
-" " TeX
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Language: TeX
+
 " call s:h("texStatement", { "fg": s:purple })
 " call s:h("texSubscripts", { "fg": s:dark_yellow })
 " call s:h("texSuperscripts", { "fg": s:dark_yellow })
@@ -508,17 +552,16 @@ hi! link phpVarSelector Identifier
 " call s:h("texSpecialChar", { "fg": s:dark_yellow })
 " call s:h("texCite", { "fg": s:blue })
 " call s:h("texRefZone", { "fg": s:blue })
-"
-" " TypeScript
-" call s:h("typescriptReserved", { "fg": s:purple })
-" call s:h("typescriptEndColons", { "fg": s:white })
-" call s:h("typescriptBraces", { "fg": s:white })
-"
-" " XML
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Language: XML
+
 hi! xmlTag     guifg=#abb2bf ctermfg=249 gui=NONE cterm=NONE
 hi! xmlEndTag  guifg=#abb2bf ctermfg=249 gui=NONE cterm=NONE
 hi! xmlTagName guifg=#e06c75 ctermfg=168 gui=NONE cterm=NONE
 hi! xmlAttrib  guifg=#d19a66 ctermfg=173 gui=NONE cterm=NONE
+
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Plugin: airblade/vim-gitgutter
@@ -536,7 +579,8 @@ hi! GitGutterDelete guifg=#e06c75 ctermfg=168 gui=NONE cterm=NONE
 "
 
 
-" Lua
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Language:  Lua
 
 " highlight link luaParens           Text
 " highlight link luaBraces           Text
@@ -581,7 +625,8 @@ hi! link luaLocal            StorageClass
 
 
 
-" viml
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Language: viml
 hi! link vimLet StorageClass
 hi! link vimVar Normal
 hi! link vimCommand Structure
