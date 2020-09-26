@@ -5,9 +5,13 @@
 
 #foo {
   width: 1px;
-  background: url("httpp://example.org")
+  background: url("httpp://example.org");
 }
 
 .foo::after {
   width: 100% !important;
+}
+
+h1 {
+  transform: translateY(1px);
 }

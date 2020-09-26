@@ -77,7 +77,13 @@ func (c Color) Iterm() string {
 	}
 
 	return fmt.Sprintf(`<dict>%s</dict>`, strings.Join(components, ""))
+}
 
+func (c Color) Vim(key string) string {
+	if c != "" {
+		return fmt.Sprintf("gui%[1]s=%[2]s cterm%[1]s=%[3]s", key, c.Gui(), c.Cterm())
+	}
+	return ""
 }
 
 // <dict>

@@ -1,4 +1,4 @@
-highlight clear
+hi! clear
 
 if exists("syntax_on")
   syntax reset
@@ -12,95 +12,95 @@ if has("termguicolors") | set termguicolors | endif
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Syntax Groups (descriptions and ordering from `:h w18`)
 
-highlight   Comment          {{.Comment}}
-highlight   Constant         {{.Constant}}
-highlight   String           {{.String}}
-highlight   Character        {{.Character}}
-highlight   Number           {{.Number}}
-highlight   Boolean          {{.Boolean}}
-highlight   Float            {{.Float}}
-highlight   Identifier       {{.Identifier}}
-highlight   Function         {{.Function}}
-highlight   Statement        {{.Statement}}
-highlight   Conditional      {{.Conditional}}
-highlight   Repeat           {{.Repeat}}
-highlight   Label            {{.Label}}
-highlight   Operator         {{.Operator}}
-highlight   Keyword          {{.Keyword}}
-highlight   Exception        {{.Exception}}
-highlight   PreProc          {{.PreProc}}
-highlight   Include          {{.Include}}
-highlight   Define           {{.Define}}
-highlight   Macro            {{.Macro}}
-highlight   PreCondit        {{.PreCondit}}
-highlight   Type             {{.Type}}
-highlight   StorageClass     {{.StorageClass}}
-highlight   Structure        {{.Structure}}
-highlight   Typedef          {{.Typedef}}
-highlight   Special          {{.Special}}
-highlight   SpecialChar      {{.SpecialChar}}
-highlight   Tag              {{.Tag}}
-highlight   Delimiter        {{.Delimiter}}
-highlight   SpecialComment   {{.SpecialComment}}
-highlight   Debug            {{.Debug}}
-highlight   Underlined       {{.Underlined}}
-highlight   Ignore           {{.Ignore}}
-highlight   Error            {{.Error}}
-highlight   Todo             {{.Todo}}
+hi!   Comment          {{.Comment}}
+hi!   Constant         {{.Constant}}
+hi!   String           {{.String}}
+hi!   Character        {{.Character}}
+hi!   Number           {{.Number}}
+hi!   Boolean          {{.Boolean}}
+hi!   Float            {{.Float}}
+hi!   Identifier       {{.Identifier}}
+hi!   Function         {{.Function}}
+hi!   Statement        {{.Statement}}
+hi!   Conditional      {{.Conditional}}
+hi!   Repeat           {{.Repeat}}
+hi!   Label            {{.Label}}
+hi!   Operator         {{.Operator}}
+hi!   Keyword          {{.Keyword}}
+hi!   Exception        {{.Exception}}
+hi!   PreProc          {{.PreProc}}
+hi!   Include          {{.Include}}
+hi!   Define           {{.Define}}
+hi!   Macro            {{.Macro}}
+hi!   PreCondit        {{.PreCondit}}
+hi!   Type             {{.Type}}
+hi!   StorageClass     {{.StorageClass}}
+hi!   Structure        {{.Structure}}
+hi!   Typedef          {{.Typedef}}
+hi!   Special          {{.Special}}
+hi!   SpecialChar      {{.SpecialChar}}
+hi!   Tag              {{.Tag}}
+hi!   Delimiter        {{.Delimiter}}
+hi!   SpecialComment   {{.SpecialComment}}
+hi!   Debug            {{.Debug}}
+hi!   Underlined       {{.Underlined}}
+hi!   Ignore           {{.Ignore}}
+hi!   Error            {{.Error}}
+hi!   Todo             {{.Todo}}
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Highlighting Groups (descriptions and ordering from `:h highlight-groups`)
 
-highlight   ColorColumn        {{.ColorColumn}}
-highlight   Conceal            {{.Conceal}}
-highlight   Cursor             {{.Cursor}}
-highlight   CursorIM           {{.CursorIM}}
-highlight   CursorColumn       {{.CursorColumn}}
-highlight   CursorLine         {{.CursorLine}}
-highlight   Directory          {{.Directory}}
-highlight   DiffAdd            {{.DiffAdd}}
-highlight   DiffChange         {{.DiffChange}}
-highlight   DiffDelete         {{.DiffDelete}}
-highlight   DiffText           {{.DiffText}}
-highlight   EndOfBuffer        {{.EndOfBuffer}}
-highlight   ErrorMsg           {{.ErrorMsg}}
-highlight   VertSplit          {{.VertSplit}}
-highlight   Folded             {{.Folded}}
-highlight   FoldColumn         {{.FoldColumn}}
-highlight   SignColumn         {{.SignColumn}}
-highlight   IncSearch          {{.IncSearch}}
-highlight   LineNr             {{.LineNr}}
-highlight   CursorLineNr       {{.CursorLineNr}}
-highlight   MatchParen         {{.MatchParen}}
-highlight   ModeMsg            {{.ModeMsg}}
-highlight   MoreMsg            {{.MoreMsg}}
-highlight   NonText            {{.NonText}}
-highlight   Normal             {{.Normal}}
-highlight   Pmenu              {{.Pmenu}}
-highlight   PmenuSel           {{.PmenuSel}}
-highlight   PmenuSbar          {{.PmenuSbar}}
-highlight   PmenuThumb         {{.PmenuThumb}}
-highlight   Question           {{.Question}}
-highlight   QuickFixLine       {{.QuickFixLine}}
-highlight   Search             {{.Search}}
-highlight   SpecialKey         {{.SpecialKey}}
-highlight   SpellBad           {{.SpellBad}}
-highlight   SpellCap           {{.SpellCap}}
-highlight   SpellLocal         {{.SpellLocal}}
-highlight   SpellRare          {{.SpellRare}}
-highlight   StatusLine         {{.StatusLine}}
-highlight   StatusLineNC       {{.StatusLineNC}}
-highlight   StatusLineTerm     {{.StatusLineTerm}}
-highlight   StatusLineTermNC   {{.StatusLineTermNC}}
-highlight   TabLine            {{.TabLine}}
-highlight   TabLineFill        {{.TabLineFill}}
-highlight   TabLineSel         {{.TabLineSel}}
-highlight   Terminal           {{.Terminal}}
-highlight   Title              {{.Title}}
-highlight   Visual             {{.Visual}}
-highlight   VisualNOS          {{.VisualNOS}}
-highlight   WarningMsg         {{.WarningMsg}}
-highlight   WildMenu           {{.WildMenu}}
+hi!   ColorColumn        {{.ColorColumn}}
+hi!   Conceal            {{.Conceal}}
+hi!   Cursor             {{.Cursor}}
+hi!   CursorIM           {{.CursorIM}}
+hi!   CursorColumn       {{.CursorColumn}}
+hi!   CursorLine         {{.CursorLine}}
+hi!   Directory          {{.Directory}}
+hi!   DiffAdd            {{.DiffAdd}}
+hi!   DiffChange         {{.DiffChange}}
+hi!   DiffDelete         {{.DiffDelete}}
+hi!   DiffText           {{.DiffText}}
+hi!   EndOfBuffer        {{.EndOfBuffer}}
+hi!   ErrorMsg           {{.ErrorMsg}}
+hi!   VertSplit          {{.VertSplit}}
+hi!   Folded             {{.Folded}}
+hi!   FoldColumn         {{.FoldColumn}}
+hi!   SignColumn         {{.SignColumn}}
+hi!   IncSearch          {{.IncSearch}}
+hi!   LineNr             {{.LineNr}}
+hi!   CursorLineNr       {{.CursorLineNr}}
+hi!   MatchParen         {{.MatchParen}}
+hi!   ModeMsg            {{.ModeMsg}}
+hi!   MoreMsg            {{.MoreMsg}}
+hi!   NonText            {{.NonText}}
+hi!   Normal             {{.Normal}}
+hi!   Pmenu              {{.Pmenu}}
+hi!   PmenuSel           {{.PmenuSel}}
+hi!   PmenuSbar          {{.PmenuSbar}}
+hi!   PmenuThumb         {{.PmenuThumb}}
+hi!   Question           {{.Question}}
+hi!   QuickFixLine       {{.QuickFixLine}}
+hi!   Search             {{.Search}}
+hi!   SpecialKey         {{.SpecialKey}}
+hi!   SpellBad           {{.SpellBad}}
+hi!   SpellCap           {{.SpellCap}}
+hi!   SpellLocal         {{.SpellLocal}}
+hi!   SpellRare          {{.SpellRare}}
+hi!   StatusLine         {{.StatusLine}}
+hi!   StatusLineNC       {{.StatusLineNC}}
+hi!   StatusLineTerm     {{.StatusLineTerm}}
+hi!   StatusLineTermNC   {{.StatusLineTermNC}}
+hi!   TabLine            {{.TabLine}}
+hi!   TabLineFill        {{.TabLineFill}}
+hi!   TabLineSel         {{.TabLineSel}}
+hi!   Terminal           {{.Terminal}}
+hi!   Title              {{.Title}}
+hi!   Visual             {{.Visual}}
+hi!   VisualNOS          {{.VisualNOS}}
+hi!   WarningMsg         {{.WarningMsg}}
+hi!   WildMenu           {{.WildMenu}}
 
 
 " Language
@@ -131,34 +131,33 @@ endif
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Language: CSS
+" => https://github.com/neovim/neovim/blob/dd7355358edc40734afcce695432756859377eb8/runtime/syntax/css.vim
 
-" call s:h("cssAttrComma", { "fg": s:purple })
-" call s:h("cssAttributeSelector", { "fg": s:green })
-highlight cssBraces       {{.Brace}}
-highlight cssClassName    {{.Type}}
-highlight cssClassNameDot {{.Type}}
-highlight cssIdentifier   {{.Function}}
-
-" highlight cssPseudoClass  {{.Constant}}
-highlight cssImportant {{.Statement}}
-highlight cssProp      {{.Text}}
-
-" call s:h("cssDefinition", { "fg": s:purple })
-" call s:h("cssFontAttr", { "fg": s:dark_yellow })
-" call s:h("cssFontDescriptor", { "fg": s:purple })
-" call s:h("cssFunctionName", { "fg": s:blue })
-" call s:h("cssInclude", { "fg": s:white })
-" call s:h("cssIncludeKeyword", { "fg": s:purple })
-" call s:h("cssMediaType", { "fg": s:dark_yellow })
-" call s:h("cssProp", { "fg": s:white })
-" call s:h("cssPseudoClassId", { "fg": s:dark_yellow })
-" call s:h("cssSelectorOp", { "fg": s:purple })
-" call s:h("cssSelectorOp2", { "fg": s:purple })
-" call s:h("cssTagName", { "fg": s:red })
+hi! cssAttrComma         {{.Purple.Vim     "fg"}}
+hi! cssAttributeSelector {{.Green.Vim      "fg"}}
+hi! cssBraces            {{.White.Vim      "fg"}}
+hi! cssClassName         {{.DarkYellow.Vim "fg"}}
+hi! cssClassNameDot      {{.DarkYellow.Vim "fg"}}
+hi! cssDefinition        {{.Purple.Vim     "fg"}}
+hi! cssFontAttr          {{.DarkYellow.Vim "fg"}}
+hi! cssFontDescriptor    {{.Purple.Vim     "fg"}}
+hi! cssFunctionName      {{.Blue.Vim       "fg"}}
+hi! cssIdentifier        {{.Blue.Vim       "fg"}}
+hi! cssImportant         {{.Purple.Vim     "fg"}}
+hi! cssInclude           {{.White.Vim      "fg"}}
+hi! cssIncludeKeyword    {{.Purple.Vim     "fg"}}
+hi! cssMediaType         {{.DarkYellow.Vim "fg"}}
+hi! cssProp              {{.White.Vim      "fg"}}
+hi! cssPseudoClassId     {{.Cyan.Vim       "fg"}}
+hi! cssPseudoClassId     {{.DarkYellow.Vim "fg"}}
+hi! cssSelectorOp        {{.Purple.Vim     "fg"}}
+hi! cssSelectorOp2       {{.Purple.Vim     "fg"}}
+hi! cssTagName           {{.Red.Vim        "fg"}}
+hi! cssUnitDecorators    {{.Red.Vim        "fg"}}
 
 " scss
-highlight scssSelectorChar {{.Type}}
-highlight scssSelectorName {{.Type}}
+hi! scssSelectorChar {{.Type}}
+hi! scssSelectorName {{.Type}}
 
 
 " " https://github.com/cakebaker/scss-syntax.vim
@@ -194,105 +193,137 @@ highlight scssSelectorName {{.Type}}
 "
 " " Go
 " call s:h("goDeclaration", { "fg": s:purple })
-highlight goCoverageCovered {{.OK}}
-highlight goCoverageUncover {{.Error}}
+hi! goCoverageCovered {{.OK}}
+hi! goCoverageUncover {{.Error}}
 " highlight GoDebugBreakpoint ctermfg=0 ctermbg=117 guifg=Black guibg=#BAD4F5
 " highlight GoDebugCurrent ctermfg=7 ctermbg=12 guifg=White guibg=DarkBlue
 
 
 " " HTML
-" call s:h("htmlLink", { "fg": s:purple })
-" call s:h("htmlSpecialChar", { "fg": s:dark_yellow })
+hi! htmlArg            {{.DarkYellow.Vim "fg"}}
+hi! htmlEndTag         {{.White.Vim      "fg"}}
+hi! htmlH1             {{.White.Vim      "fg"}}
+hi! htmlH2             {{.White.Vim      "fg"}}
+hi! htmlH3             {{.White.Vim      "fg"}}
+hi! htmlH4             {{.White.Vim      "fg"}}
+hi! htmlH5             {{.White.Vim      "fg"}}
+hi! htmlH6             {{.White.Vim      "fg"}}
+hi! htmlLink           {{.White.Vim      "fg"}}
+hi! htmlSpecialChar    {{.DarkYellow.Vim "fg"}}
+hi! htmlSpecialTagName {{.Red.Vim        "fg"}}
+hi! htmlTag            {{.White.Vim      "fg"}}
+hi! htmlTagN           {{.Red.Vim        "fg"}}
+hi! htmlTagName        {{.Red.Vim        "fg"}}
+hi! htmlTitle          {{.White.Vim      "fg"}}
 
-highlight htmlTag            {{.TagSurround}}
-highlight htmlEndTag         {{.TagSurround}}
-highlight htmlTagName        {{.TagName}}
-highlight htmlSpecialTagName {{.TagName}}
-highlight htmlArg            {{.TagAttr}}
-highlight htmlH1             {{.Text}}
-highlight htmlTitle          {{.Text}}
+hi! htmlBold                term=bold                  cterm=bold                  gui=bold
+hi! htmlBoldUnderline       term=bold,underline        cterm=bold,underline        gui=bold,underline
+hi! htmlBoldItalic          term=bold,italic           cterm=bold,italic           gui=bold,italic
+hi! htmlBoldUnderlineItalic term=bold,italic,underline cterm=bold,italic,underline gui=bold,italic,underline
+hi! htmlUnderline           term=underline             cterm=underline             gui=underline
+hi! htmlUnderlineItalic     term=italic,underline      cterm=italic,underline      gui=italic,underline
+hi! htmlItalic              term=italic                cterm=italic                gui=italic
 
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Theme: groups
+hi! todNormal          {{.White.Vim "fg"}}
+hi! todModuleName      {{.Yellow.Vim "fg"}}
+hi! todBoolean         {{.Cyan.Vim "fg"}}
+hi! todBraces          {{.White.Vim "fg"}}
+hi! todClassName       {{.Yellow.Vim "fg"}}
+hi! todFunctionName    {{.Blue.Vim "fg"}}
+hi! todNull            {{.DarkYellow.Vim "fg"}}
+hi! todProperty        {{.Red.Vim "fg"}}
+hi! todReturn          {{.Purple.Vim "fg"}}
+hi! todVariable        {{.Purple.Vim "fg"}}
+hi! todFunction        {{.Purple.Vim "fg"}}
+hi! todKeyword         {{.Purple.Vim "fg"}}
+hi! todImport          {{.Blue.Vim "fg"}}
+hi! todNumber          {{.DarkYellow.Vim "fg"}}
+hi! todStatic          {{.Purple.Vim "fg"}}
+hi! todSuper           {{.Cyan.Vim "fg"}}
+hi! todThis            {{.Cyan.Vim "fg"}}
+hi! todOperatorSymbol  {{.Cyan.Vim "fg"}}
+hi! todOperatorKeyword {{.Cyan.Vim "fg"}}
+hi! todVariableName    {{.White.Vim "fg"}}
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Language: JavaScript
 
-highlight javaScriptBraces   {{.Brace}}
-highlight javaScriptFunction {{.Function}}
-highlight javaScriptNumber   {{.Number}}
-highlight javaScriptNull     {{.Null}}
-
-
-
-" call s:h("javaScriptIdentifier", { "fg": s:purple })
-" call s:h("javaScriptNumber", { "fg": s:dark_yellow })
-" call s:h("javaScriptRequire", { "fg": s:cyan })
-" call s:h("javaScriptReserved", { "fg": s:purple })
+" pangloss/vim-javascript => sheerun/vim-polyglot
 "
+" not perfect:
+" - arrow function braces
 
+hi! link jsArrowFunction   todFunction
+hi! link jsBooleanFalse    todBoolean
+hi! link jsBooleanTrue     todBoolean
+hi! link jsClassDefinition todClassName
+hi! link jsClassFuncName   todFunctionName
+hi! link jsFuncName        todFunctionName
+hi! link jsFunction        todFunction
+hi! link jsFunctionKey     todProperty
+hi! link jsModuleKeyword   todModuleName
+hi! link jsReturn          todReturn
+hi! link jsStatic          todStatic
+hi! link jsThis            todThis
+hi! link jsOperator        todOperatorSymbol
+hi! link jsOperatorKeyword todOperatorKeyword
 
+" yuezk/vim-js
 
+hi! link jsBraces          todBraces
+hi! link jsClassName       todClassName
+hi! link jsConstructor     todFunctionName
+hi! link jsImport          todImport
+hi! link jsModuleName      todModuleName
+hi! link jsNewClassName    todClassName
+hi! link jsNumberDot       todNumber
+hi! link jsParens          todParens
+hi! link jsReturn          todReturn
+hi! link jsVariableType    todVariable
+hi! link jsSuper           todSuper
+hi! link jsIdentifierProp  todProperty
+hi! link jsTopOperator     todOperatorSymbol
+hi! link jsNew             todOperatorKeyword
+hi! link jsIfCondition     todOperatorSymbol
+hi! link jsComma           todNormal
 
-highlight jsClassDefinitio {{.ClassName}}
+" axmellon/vim-jsx-pretty
 
+" TODO
 
-" " https://github.com/pangloss/vim-javascript
-" call s:h("jsArrowFunction", { "fg": s:purple })
-" call s:h("jsClassKeyword", { "fg": s:purple })
-" call s:h("jsClassMethodType", { "fg": s:purple })
-" call s:h("jsDocParam", { "fg": s:blue })
-" call s:h("jsDocTags", { "fg": s:purple })
-" call s:h("jsExport", { "fg": s:purple })
-" call s:h("jsExportDefault", { "fg": s:purple })
-" call s:h("jsExtendsKeyword", { "fg": s:purple })
-" call s:h("jsFrom", { "fg": s:purple })
-" call s:h("jsFuncCall", { "fg": s:blue })
-highlight link jsFunction Structure
-" call s:h("jsGenerator", { "fg": s:yellow })
-" call s:h("jsGlobalObjects", { "fg": s:yellow })
-" call s:h("jsImport", { "fg": s:purple })
-" call s:h("jsModuleAs", { "fg": s:purple })
-" call s:h("jsModuleWords", { "fg": s:purple })
-" call s:h("jsModules", { "fg": s:purple })
-highlight jsNull     {{.Null}}
-" call s:h("jsOperator", { "fg": s:purple })
-" call s:h("jsStorageClass", { "fg": s:purple })
-" call s:h("jsSuper", { "fg": s:red })
-highlight jsTemplateBraces {{.TemplateBrace}}
-" call s:h("jsTemplateVar", { "fg": s:green })
-" call s:h("jsThis", { "fg": s:red })
-highlight jsUndefined     {{.Null}}
-" TODO: diferenciate between null and undefined?
+" othree/yajs.vim
+"
+" not perfect:
+" - moduleName
+" - property
+" - new className
 
-" " https://github.com/othree/yajs.vim
+hi! link javascriptArrowFunc         todKeyword
+hi! link javascriptBoolean           todBoolean
+hi! link javascriptBraces            todBraces
+hi! link javascriptClassName         todClassName
+hi! link javascriptClassSuper        todSuper
+hi! link javascriptClassSuperName    todClassName
+hi! link javascriptEndColons         toEndColon
+hi! link javascriptFunctionMethod    todFunctionName
+hi! link javascriptNull              todNull
+hi! link javascriptNumber            todNumber
+hi! link javascriptObjectLabel       todProperty
+hi! link javascriptObjectMethodName  todFunctionName
+hi! link javascriptProp              todProperty
+hi! link javascriptReflectMethod     todFunctionName
+hi! link javascriptReturn            todReturn
+hi! link javascriptUndefined         todNull
+hi! link javascriptVariable          todVariable
+hi! link javascriptOpSymbol          todOperatorSymbol
+hi! link javascriptOpSymbols         todOperatorSymbol
+hi! link javascriptOperator          todOperatorKeyword
+hi! link javascriptArrowFuncArg      todVariableName
 
-
-" call s:h("javascriptArrowFunc", { "fg": s:purple })
-" call s:h("javascriptClassExtends", { "fg": s:purple })
-" call s:h("javascriptClassKeyword", { "fg": s:purple })
-" call s:h("javascriptDocNotation", { "fg": s:purple })
-" call s:h("javascriptDocParamName", { "fg": s:blue })
-" call s:h("javascriptDocTags", { "fg": s:purple })
-" call s:h("javascriptEndColons", { "fg": s:white })
-" call s:h("javascriptExport", { "fg": s:purple })
-" call s:h("javascriptFuncArg", { "fg": s:white })
-" call s:h("javascriptFuncKeyword", { "fg": s:purple })
-" call s:h("javascriptIdentifier", { "fg": s:red })
-" call s:h("javascriptImport", { "fg": s:purple })
-" call s:h("javascriptMethodName", { "fg": s:white })
-" call s:h("javascriptObjectLabel", { "fg": s:white })
-" call s:h("javascriptOpSymbol", { "fg": s:cyan })
-" call s:h("javascriptOpSymbols", { "fg": s:cyan })
-" call s:h("javascriptPropertyName", { "fg": s:green })
-" call s:h("javascriptTemplateSB", { "fg": s:dark_red })
-" call s:h("javascriptVariable", { "fg": s:purple })
-
-
-
-
-
-" hi! link jsArrowFunction           Operator
-" hi! link jsClassMethodType         Keyword
-" hi! link jsDestructuringAssignment DraculaOrangeItalic
 " hi! link jsDocParam                DraculaOrangeItalic
 " hi! link jsDocTags                 Keyword
 " hi! link jsDocType                 Type
@@ -301,21 +332,15 @@ highlight jsUndefined     {{.Null}}
 " hi! link jsFunction                Keyword
 " hi! link jsTemplateBraces          Special
 
-
-" highlight link jsVariableDef Identifier
-highlight jsObjectKey  {{.Property}}
-highlight jsObjectProp {{.Property}}
-
 " " JSON
-highlight jsonCommentError {{.Comment}}
+hi! jsonCommentError {{.Comment}}
 " call s:h("jsonKeyword", { "fg": s:red })
-highlight jsonBoolean  {{.Boolean}}
-highlight jsonNumber   {{.Number}}
-highlight jsonString   {{.String}}
+hi! jsonBoolean  {{.Boolean}}
+hi! jsonNumber   {{.Number}}
+hi! jsonString   {{.String}}
 
 
 " call s:h("jsonQuote", { "fg": s:white })
-"
 " call s:h("jsonMissingCommaError", { "fg": s:red, "gui": "reverse" })
 " call s:h("jsonNoQuotesError", { "fg": s:red, "gui": "reverse" })
 " call s:h("jsonNumError", { "fg": s:red, "gui": "reverse" })
@@ -328,7 +353,7 @@ highlight jsonString   {{.String}}
 " call s:h("lessClass", { "fg": s:dark_yellow })
 "
 " " Markdown
-highlight mkdHeading {{.Identifier}}
+hi! mkdHeading {{.Identifier}}
 
 " mkdItalic      xxx cleared
 " mkdBold        xxx cleared
@@ -353,34 +378,34 @@ highlight mkdHeading {{.Identifier}}
 " mkdNonListItemBlock xxx cleared
 " mkdRule        xxx links to Identifier
 
-highlight markdownCode {{.String}}
-highlight markdownCodeBlock {{.String}}
-highlight markdownCodeDelimiter {{.String}}
+hi! markdownCode {{.String}}
+hi! markdownCodeBlock {{.String}}
+hi! markdownCodeDelimiter {{.String}}
 "
 " call s:h("markdownRule", { "fg": s:comment_grey })
 " call s:h("markdownHeadingRule", { "fg": s:comment_grey })
 
-highlight markdownHeadingDelimiter {{.Identifier}}
-highlight markdownH1 {{.Identifier}}
-highlight markdownH2 {{.Identifier}}
-highlight markdownH3 {{.Identifier}}
-highlight markdownH4 {{.Identifier}}
-highlight markdownH5 {{.Identifier}}
-highlight markdownH6 {{.Identifier}}
+hi! markdownHeadingDelimiter {{.Identifier}}
+hi! markdownH1 {{.Identifier}}
+hi! markdownH2 {{.Identifier}}
+hi! markdownH3 {{.Identifier}}
+hi! markdownH4 {{.Identifier}}
+hi! markdownH5 {{.Identifier}}
+hi! markdownH6 {{.Identifier}}
 " call s:h("markdownIdDelimiter", { "fg": s:purple })
 " call s:h("markdownId", { "fg": s:purple })
-highlight markdownBlockquote {{.Comment}}
+hi! markdownBlockquote {{.Comment}}
 " call s:h("markdownBlockquote", { "fg": s:comment_grey })
-highlight markdownItalic {{.TextItalic}}
-highlight markdownBold   {{.TextBold}}
+hi! markdownItalic {{.TextItalic}}
+hi! markdownBold   {{.TextBold}}
 " call s:h("markdownItalic", { "fg": s:purple, "gui": "italic", "cterm": "italic" })
 " call s:h("markdownBold", { "fg": s:dark_yellow, "gui": "bold", "cterm": "bold" })
 " call s:h("markdownListMarker", { "fg": s:red })
 " call s:h("markdownOrderedListMarker", { "fg": s:red })
 " call s:h("markdownIdDeclaration", { "fg": s:blue })
-highlight markdownLinkText {{.Function}}
-highlight markdownLinkDelimiter {{.Text}}
-highlight markdownUrl {{.Constant}}
+hi! markdownLinkText {{.Function}}
+hi! markdownLinkDelimiter {{.Text}}
+hi! markdownUrl {{.Constant}}
 "
 " " Perl
 " call s:h("perlFiledescRead", { "fg": s:green })
@@ -399,14 +424,14 @@ highlight markdownUrl {{.Constant}}
 " call s:h("perlVarPlain",{ "fg": s:blue })
 "
 " " PHP
-highlight phpClass         {{.ClassName}}
-highlight phpFunction      {{.Function}}
-highlight phpRegion        {{.Normal}}
-highlight phpUseClass      {{.ClassName}}
-highlight phpClassExtends  {{.ExtendsClassName}}
-highlight phpParent        {{.Brace}}
-highlight link phpInclude Keyword
-highlight link phpVarSelector Identifier
+hi! phpClass         {{.ClassName}}
+hi! phpFunction      {{.Function}}
+hi! phpRegion        {{.Normal}}
+hi! phpUseClass      {{.ClassName}}
+hi! phpClassExtends  {{.ExtendsClassName}}
+hi! phpParent        {{.Brace}}
+hi! link phpInclude Keyword
+hi! link phpVarSelector Identifier
 
 
 
@@ -468,17 +493,17 @@ highlight link phpVarSelector Identifier
 " call s:h("typescriptBraces", { "fg": s:white })
 "
 " " XML
-highlight xmlTag     {{.TagSurround}}
-highlight xmlEndTag  {{.TagSurround}}
-highlight xmlTagName {{.TagName}}
-highlight xmlAttrib  {{.TagAttr}}
+hi! xmlTag     {{.TagSurround}}
+hi! xmlEndTag  {{.TagSurround}}
+hi! xmlTagName {{.TagName}}
+hi! xmlAttrib  {{.TagAttr}}
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Plugin: airblade/vim-gitgutter
 
-highlight GitGutterAdd    {{.GutterAdded}}
-highlight GitGutterChange {{.GutterChanged}}
-highlight GitGutterDelete {{.GutterRemoved}}
+hi! GitGutterAdd    {{.GutterAdded}}
+hi! GitGutterChange {{.GutterChanged}}
+hi! GitGutterDelete {{.GutterRemoved}}
 
 "
 " " easymotion/vim-easymotion
@@ -518,7 +543,7 @@ highlight GitGutterDelete {{.GutterRemoved}}
 " highlight link luaGotoLabel        Noise
 " highlight link luaIn               Repeat
 " highlight link luaLabel            Label
-highlight link luaLocal            StorageClass
+hi! link luaLocal            StorageClass
 " highlight link luaNumber           Number
 " highlight link luaSymbolOperator   luaOperator
 " highlight link luaOperator         Operator
@@ -535,36 +560,36 @@ highlight link luaLocal            StorageClass
 
 
 " viml
-highlight link vimLet StorageClass
-highlight link vimVar Normal
-highlight link vimCommand Structure
+hi! link vimLet StorageClass
+hi! link vimVar Normal
+hi! link vimCommand Structure
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Plugin: mhinz/vim-signify
 
-highlight SignifySignAdd    {{.GutterAdded}}
-highlight SignifySignChange {{.GutterChanged}}
-highlight SignifySignDelete {{.GutterRemoved}}
+hi! SignifySignAdd    {{.GutterAdded}}
+hi! SignifySignChange {{.GutterChanged}}
+hi! SignifySignDelete {{.GutterRemoved}}
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Plugin: neomake/neomake
 
-highlight NeomakeErrorSign   {{.Error}}
-highlight NeomakeWarningSign {{.Warning}}
-highlight NeomakeInfoSign    {{.Information}}
+hi! NeomakeErrorSign   {{.Error}}
+hi! NeomakeWarningSign {{.Warning}}
+hi! NeomakeInfoSign    {{.Information}}
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Plugin: tpope/vim-fugitive
 
-highlight diffAdded    {{.GutterAdded}}
-highlight diffRemoved  {{.GutterRemoved}}
+hi! diffAdded    {{.GutterAdded}}
+hi! diffRemoved  {{.GutterRemoved}}
 
 
 " " Git Highlighting
 
-highlight gitcommitComment {{.Comment}}
+hi! gitcommitComment {{.Comment}}
 " call s:h("gitcommitUnmerged", { "fg": s:green })
 " call s:h("gitcommitOnBranch", {})
 " call s:h("gitcommitBranch", { "fg": s:purple })
@@ -589,31 +614,31 @@ highlight gitcommitComment {{.Comment}}
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Plugin: coc.nvim
 
-highlight CocHighlightText {{.Highlight}}
-highlight CocUnderline     gui=underline cterm=underline
-highlight CocCodeLens      {{.Comment}}
-highlight link CocHighlightTextRead CocHighlightText
-highlight link CocHighlightTextWrite CocHighlightText
+hi! CocHighlightText {{.Highlight}}
+hi! CocUnderline     gui=underline cterm=underline
+hi! CocCodeLens      {{.Comment}}
+hi! link CocHighlightTextRead CocHighlightText
+hi! link CocHighlightTextWrite CocHighlightText
 "
-highlight CocErrorSign           {{.Error}}
-highlight link CocErrorFloat     CocErrorSign
-highlight link CocErrorHighlight CocUnderline
-highlight clear CocErrorLine
+hi! CocErrorSign           {{.Error}}
+hi! link CocErrorFloat     CocErrorSign
+hi! link CocErrorHighlight CocUnderline
+hi! clear CocErrorLine
 
-highlight CocWarningSign           {{.Warning}}
-highlight link CocWarningFloat     CocWarningSign
-highlight link CocWarningHighlight CocUnderline
-highlight clear CocWarningLine
+hi! CocWarningSign           {{.Warning}}
+hi! link CocWarningFloat     CocWarningSign
+hi! link CocWarningHighlight CocUnderline
+hi! clear CocWarningLine
 
-highlight CocInfoSign           {{.Information}}
-highlight link CocInfoFloat     CocInfoSign
-highlight link CocInfoHighlight CocUnderline
-highlight clear CocInfoLine
+hi! CocInfoSign           {{.Information}}
+hi! link CocInfoFloat     CocInfoSign
+hi! link CocInfoHighlight CocUnderline
+hi! clear CocInfoLine
 
-highlight CocHintSign           {{.Hint}}
-highlight link CocHintFloat     CocHintSign
-highlight link CocHintHighlight CocUnderline
-highlight clear CocHintLine
+hi! CocHintSign           {{.Hint}}
+hi! link CocHintFloat     CocHintSign
+hi! link CocHintHighlight CocUnderline
+hi! clear CocHintLine
 
 
 " " Neovim terminal colors

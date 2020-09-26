@@ -195,3 +195,15 @@ type Theme struct {
 	TagName     Style `yaml:"tag_name"`
 	TagAttr     Style `yaml:"tag_attr"`
 }
+
+func (t Theme) Bold() Font {
+	return Font("bold")
+}
+
+func (t Theme) Underline() Font {
+	return Font("underline")
+}
+
+func (t Theme) Italic() Font {
+	return Font("italic")
+}

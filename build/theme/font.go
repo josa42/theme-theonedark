@@ -17,3 +17,10 @@ func (f Font) ObjProps() string {
 	}
 	return ""
 }
+
+func (f Font) Vim() string {
+	if f != "" {
+		return fmt.Sprintf("gui=%[1]s cterm=%[1]s", f.String())
+	}
+	return ""
+}
