@@ -1,14 +1,10 @@
 hi! clear
-
-if exists("syntax_on")
-  syntax reset
-endif
+if exists("syntax_on") | syntax reset | endif
 
 set t_Co=256
 
 if has("nvim") | let $NVIM_TUI_ENABLE_TRUE_COLOR=1 | endif
 if has("termguicolors") | set termguicolors | endif
-
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -33,7 +29,7 @@ hi! todOperatorSymbol  guifg=#56b6c2 ctermfg=73
 hi! todProperty        guifg=#e06c75 ctermfg=168
 hi! todReturn          guifg=#c678dd ctermfg=176
 hi! todStatic          guifg=#c678dd ctermfg=176
-hi! todString          guifg=#e5c07b ctermfg=180
+hi! todString          guifg=#98c379 ctermfg=108
 hi! todSuper           guifg=#56b6c2 ctermfg=73
 hi! todThis            guifg=#56b6c2 ctermfg=73
 hi! todType            guifg=#c678dd ctermfg=176
@@ -155,23 +151,22 @@ endif
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Neovim: LSP
+
 hi! LspDiagnosticsError guifg=#e06c75 ctermfg=168
 
 
-
-" " Termdebug highlighting for Vim 8.1+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Plugin: Termdebug highlighting for Vim 8.1+
 "
 " " See `:h hl-debugPC` and `:h hl-debugBreakpoint`.
 " call s:h("debugPC", { "bg": s:special_grey }) " the current position
 " call s:h("debugBreakpoint", { "fg": s:black, "bg": s:red }) " a breakpoint
 "
-" "
-"
-" " Language-Specific Highlighting
-"
+
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Language: CSS
+"
 " => https://github.com/neovim/neovim/blob/dd7355358edc40734afcce695432756859377eb8/runtime/syntax/css.vim
 
 hi! cssAttrComma         guifg=#c678dd ctermfg=176
@@ -196,6 +191,7 @@ hi! cssSelectorOp2       guifg=#c678dd ctermfg=176
 hi! cssTagName           guifg=#e06c75 ctermfg=168
 hi! cssUnitDecorators    guifg=#e06c75 ctermfg=168
 
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Language: scss
 
@@ -211,7 +207,10 @@ hi! scssSelectorName guifg=#56b6c2 ctermfg=73 guibg=NONE ctermbg=NONE gui=NONE c
 " call s:h("scssSelectorName", { "fg": s:dark_yellow })
 " call s:h("scssVariable", { "fg": s:purple })
 
-" " Sass
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Language: Sass
+
 " " https://github.com/tpope/vim-haml
 " call s:h("sassAmpersand", { "fg": s:red })
 " call s:h("sassClass", { "fg": s:dark_yellow })
@@ -229,17 +228,16 @@ hi! scssSelectorName guifg=#56b6c2 ctermfg=73 guibg=NONE ctermbg=NONE gui=NONE c
 " call s:h("sassVariable", { "fg": s:purple })
 
 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Language: Fish Shell
 
-" " Fish Shell
 " call s:h("fishKeyword", { "fg": s:purple })
 " call s:h("fishConditional", { "fg": s:purple })
-"
-" " Go
-hi! goCoverageCovered guifg=#98c379 ctermfg=108 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
-hi! goCoverageUncover guifg=#e06c75 ctermfg=168 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 
 
-" " HTML
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Language: HTML
+
 hi! htmlArg            guifg=#d19a66 ctermfg=173
 hi! htmlEndTag         guifg=#abb2bf ctermfg=249
 hi! htmlH1             guifg=#abb2bf ctermfg=249
@@ -299,6 +297,13 @@ hi! link goType        todTypeName
 hi! link goDeclaration todType
 hi! link goDeclType    todType
 hi! link goBoolean     todBoolean
+hi! link goFunctionCall todFunctionName
+hi! link goVarAssign  todVariableName
+
+
+hi! goCoverageCovered guifg=#98c379 ctermfg=108 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
+hi! goCoverageUncover guifg=#e06c75 ctermfg=168 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
+
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Language: JavaScript
@@ -383,29 +388,23 @@ hi! link javascriptDocTags           todCommentTag
 hi! link javascriptDocParamName      todCommentValue
 hi! link javascriptDocComment        todComment
 
-" hi! link jsDocParam                DraculaOrangeItalic
-" hi! link jsDocTags                 Keyword
-" hi! link jsDocType                 Type
-" hi! link jsDocTypeBrackets         DraculaCyan
-" hi! link jsTemplateBraces          Special
-
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Language: JSON
 
-hi! link jsonCommentError todComment
-hi! link jsonBoolean      todBoolean
-hi! link jsonNumber       todNumber
-hi! link jsonString       todString
-hi! link jsonKeyword      todProperty
-hi! link jsonBraces       todBraces
+hi! link jsonBoolean           todBoolean
+hi! link jsonBraces            todBraces
+hi! link jsonCommentError      todComment
+hi! link jsonKeyword           todProperty
+hi! link jsonMissingCommaError todError
+hi! link jsonNoQuotesError     todError
+hi! link jsonNumError          todError
+hi! link jsonNumber            todNumber
+hi! link jsonQuote             todNormal
+hi! link jsonSemicolonError    todError
+hi! link jsonString            todString
+hi! link jsonStringSQError     todError
 
-" call s:h("jsonQuote", { "fg": s:white })
-" call s:h("jsonMissingCommaError", { "fg": s:red, "gui": "reverse" })
-" call s:h("jsonNoQuotesError", { "fg": s:red, "gui": "reverse" })
-" call s:h("jsonNumError", { "fg": s:red, "gui": "reverse" })
-" call s:h("jsonStringSQError", { "fg": s:red, "gui": "reverse" })
-" call s:h("jsonSemicolonError", { "fg": s:red, "gui": "reverse" })
-"
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Language: LESS
 
@@ -459,18 +458,20 @@ hi! markdownH6 guifg=#e06c75 ctermfg=168 guibg=NONE ctermbg=NONE gui=NONE cterm=
 " call s:h("markdownId", { "fg": s:purple })
 hi! markdownBlockquote guifg=#5c6370 ctermfg=241 guibg=NONE ctermbg=NONE gui=italic cterm=italic
 " call s:h("markdownBlockquote", { "fg": s:comment_grey })
-hi! markdownItalic guifg=#abb2bf ctermfg=249 guibg=NONE ctermbg=NONE gui=italic cterm=italic
-hi! markdownBold   guifg=#abb2bf ctermfg=249 guibg=NONE ctermbg=NONE gui=bold cterm=bold
-" call s:h("markdownItalic", { "fg": s:purple, "gui": "italic", "cterm": "italic" })
-" call s:h("markdownBold", { "fg": s:dark_yellow, "gui": "bold", "cterm": "bold" })
+
+hi! markdownItalic term=italic cterm=italic gui=italic
+hi! markdownBold   term=bold   cterm=bold   gui=bold
+"
 " call s:h("markdownListMarker", { "fg": s:red })
 " call s:h("markdownOrderedListMarker", { "fg": s:red })
 " call s:h("markdownIdDeclaration", { "fg": s:blue })
 hi! markdownLinkText guifg=#61afef ctermfg=75 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 hi! markdownLinkDelimiter guifg=#abb2bf ctermfg=249 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 hi! markdownUrl guifg=#56b6c2 ctermfg=73 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
-"
-" " Perl
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Language: Perl
+
 " call s:h("perlFiledescRead", { "fg": s:green })
 " call s:h("perlFunction", { "fg": s:purple })
 " call s:h("perlMatchStartEnd",{ "fg": s:blue })
@@ -497,8 +498,6 @@ hi! phpClassExtends  guifg=#98c379 ctermfg=108 guibg=NONE ctermbg=NONE gui=NONE 
 hi! phpParent        guifg=#abb2bf ctermfg=249 gui=NONE cterm=NONE
 hi! link phpInclude Keyword
 hi! link phpVarSelector Identifier
-
-
 
 " call s:h("phpVarSelector", { "fg": s:red })
 " call s:h("phpOperator", { "fg": s:white })
@@ -573,13 +572,14 @@ hi! GitGutterAdd    guifg=#98c379 ctermfg=108 gui=NONE cterm=NONE
 hi! GitGutterChange guifg=#e5c07b ctermfg=180 gui=NONE cterm=NONE
 hi! GitGutterDelete guifg=#e06c75 ctermfg=168 gui=NONE cterm=NONE
 
-"
-" " easymotion/vim-easymotion
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Plugin: easymotion/vim-easymotion
+
 " call s:h("EasyMotionTarget", { "fg": s:red, "gui": "bold", "cterm": "bold" })
 " call s:h("EasyMotionTarget2First", { "fg": s:yellow, "gui": "bold", "cterm": "bold" })
 " call s:h("EasyMotionTarget2Second", { "fg": s:dark_yellow, "gui": "bold", "cterm": "bold" })
 " call s:h("EasyMotionShade",  { "fg": s:comment_grey })
-"
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -627,13 +627,13 @@ hi! link luaLocal            StorageClass
 " highlight link luaErrHand          Exception
 
 
-
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Language: viml
 hi! link vimLet          StorageClass
 hi! link vimVar          Normal
 hi! link vimCommand      Structure
 hi! link vimCommentTitle todCommentTitle
+
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Plugin: mhinz/vim-signify
@@ -658,9 +658,11 @@ hi! diffAdded    guifg=#98c379 ctermfg=108 gui=NONE cterm=NONE
 hi! diffRemoved  guifg=#e06c75 ctermfg=168 gui=NONE cterm=NONE
 
 
-" " Git Highlighting
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Plugin: Git Highlighting
 
-hi! gitcommitComment guifg=#5c6370 ctermfg=241 guibg=NONE ctermbg=NONE gui=italic cterm=italic
+hi! link gitcommitComment todComment
+
 " call s:h("gitcommitUnmerged", { "fg": s:green })
 " call s:h("gitcommitOnBranch", {})
 " call s:h("gitcommitBranch", { "fg": s:purple })
@@ -681,6 +683,7 @@ hi! gitcommitComment guifg=#5c6370 ctermfg=241 guibg=NONE ctermbg=NONE gui=itali
 " hi link gitcommitDiscardedArrow gitcommitDiscardedFile
 " hi link gitcommitSelectedArrow gitcommitSelectedFile
 " hi link gitcommitUnmergedArrow gitcommitUnmergedFile
+
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Plugin: coc.nvim
@@ -712,7 +715,8 @@ hi! link CocHintHighlight CocUnderline
 hi! clear CocHintLine
 
 
-" " Neovim terminal colors
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Neovim: terminal colors
 "
 if has("nvim")
   let g:terminal_color_0 =         '#282c34'
@@ -741,22 +745,14 @@ endif
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Plugin: indentLine
+
 let g:indentLine_setColors = 0
 let g:indentLine_color_gui =  '#5c6370'
 let g:indentLine_color_term = '241'
 
 
-
-" "
-
-" Must appear at the end of the file to work around this oddity:
-" https://groups.google.com/forum/#!msg/vim_dev/afPqwAFNdrU/nqh6tOM87QUJ
-" set background=dark
-
-
-
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Plugin NERDTree
+" Plugin: NERDTree
 "
 " hi NERDTreePart     Special
 " hi NERDTreePartFile Type

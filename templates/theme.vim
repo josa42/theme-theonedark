@@ -29,7 +29,7 @@ hi! todOperatorSymbol  {{.Cyan.Vim "fg"}}
 hi! todProperty        {{.Red.Vim "fg"}}
 hi! todReturn          {{.Purple.Vim "fg"}}
 hi! todStatic          {{.Purple.Vim "fg"}}
-hi! todString          {{.Yellow.Vim "fg"}}
+hi! todString          {{.Green.Vim "fg"}}
 hi! todSuper           {{.Cyan.Vim "fg"}}
 hi! todThis            {{.Cyan.Vim "fg"}}
 hi! todType            {{.Purple.Vim "fg"}}
@@ -297,6 +297,9 @@ hi! link goType        todTypeName
 hi! link goDeclaration todType
 hi! link goDeclType    todType
 hi! link goBoolean     todBoolean
+hi! link goFunctionCall todFunctionName
+hi! link goVarAssign  todVariableName
+
 
 hi! goCoverageCovered {{.OK}}
 hi! goCoverageUncover {{.Error}}
