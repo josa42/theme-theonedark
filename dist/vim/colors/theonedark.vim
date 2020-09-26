@@ -13,7 +13,10 @@ if has("termguicolors") | set termguicolors | endif
 hi! todBoolean         guifg=#56b6c2 ctermfg=73
 hi! todBraces          guifg=#abb2bf ctermfg=249
 hi! todClassName       guifg=#56b6c2 ctermfg=73
-hi! todComment         guifg=#5c6370 ctermfg=241 term=italic cterm=italic gui=italic
+hi! todComment         guifg=#5c6370 ctermfg=241 term=italic         cterm=italic         gui=italic
+hi! todCommentTag      guifg=#abb2bf ctermfg=249 term=bold           cterm=bold           gui=bold
+hi! todCommentTitle    guifg=#abb2bf ctermfg=249 term=bold,underline cterm=bold,underline gui=bold,underline
+hi! todCommentValue    guifg=#abb2bf ctermfg=249
 hi! todError           guifg=#e06c75 ctermfg=168
 hi! todFunction        guifg=#c678dd ctermfg=176
 hi! todFunctionName    guifg=#61afef ctermfg=75
@@ -31,14 +34,14 @@ hi! todReturn          guifg=#c678dd ctermfg=176
 hi! todStatic          guifg=#c678dd ctermfg=176
 hi! todString          guifg=#98c379 ctermfg=108
 hi! todSuper           guifg=#56b6c2 ctermfg=73
+hi! todTag             guifg=#e06c75 ctermfg=168
+hi! todTagAttribute    guifg=#d19a66 ctermfg=173
+hi! todTagName         guifg=#e06c75 ctermfg=168
 hi! todThis            guifg=#56b6c2 ctermfg=73
 hi! todType            guifg=#c678dd ctermfg=176
 hi! todTypeName        guifg=#56b6c2 ctermfg=73
 hi! todVariable        guifg=#c678dd ctermfg=176
 hi! todVariableName    guifg=#abb2bf ctermfg=249
-hi! todCommentTag      guifg=#abb2bf ctermfg=249  term=bold cterm=bold gui=bold
-hi! todCommentValue    guifg=#abb2bf ctermfg=249
-hi! todCommentTitle    guifg=#abb2bf ctermfg=249  term=bold,underline cterm=bold,underline gui=bold,underline
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -200,8 +203,6 @@ hi! link sassId    cssIdentifier
 hi! link sassClass cssClassName
 
 
-
-
 " " https://github.com/cakebaker/scss-syntax.vim
 " call s:h("scssExtend", { "fg": s:purple })
 " call s:h("scssImport", { "fg": s:purple })
@@ -239,23 +240,26 @@ hi! link sassClass cssClassName
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Language: HTML
 
-hi! htmlArg            guifg=#d19a66 ctermfg=173
-hi! htmlEndTag         guifg=#abb2bf ctermfg=249
-hi! htmlH1             guifg=#abb2bf ctermfg=249
-hi! htmlH2             guifg=#abb2bf ctermfg=249
-hi! htmlH3             guifg=#abb2bf ctermfg=249
-hi! htmlH4             guifg=#abb2bf ctermfg=249
-hi! htmlH5             guifg=#abb2bf ctermfg=249
-hi! htmlH6             guifg=#abb2bf ctermfg=249
-hi! htmlLink           guifg=#abb2bf ctermfg=249
-hi! htmlSpecialChar    guifg=#d19a66 ctermfg=173
-hi! htmlSpecialTagName guifg=#e06c75 ctermfg=168
-hi! htmlTag            guifg=#abb2bf ctermfg=249
-hi! htmlTagN           guifg=#e06c75 ctermfg=168
-hi! htmlTagName        guifg=#e06c75 ctermfg=168
-hi! htmlTitle          guifg=#abb2bf ctermfg=249
+hi! link htmlArg            todTagAttribute
+hi! link htmlEndTag         todTag
+hi! link htmlH1             todNormal
+hi! link htmlH2             todNormal
+hi! link htmlH3             todNormal
+hi! link htmlH4             todNormal
+hi! link htmlH5             todNormal
+hi! link htmlH6             todNormal
+hi! link htmlLink           todNormal
+hi! link htmlSpecialTagName todTagName
+hi! link htmlTag            todTag
+hi! link htmlTagName        todTagName
+hi! link htmlTitle          todNormal
 
 hi! htmlBold                term=bold                  cterm=bold                  gui=bold
 hi! htmlBoldUnderline       term=bold,underline        cterm=bold,underline        gui=bold,underline
@@ -264,6 +268,13 @@ hi! htmlBoldUnderlineItalic term=bold,italic,underline cterm=bold,italic,underli
 hi! htmlUnderline           term=underline             cterm=underline             gui=underline
 hi! htmlUnderlineItalic     term=italic,underline      cterm=italic,underline      gui=italic,underline
 hi! htmlItalic              term=italic                cterm=italic                gui=italic
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Language: XML
+
+hi! link xmlTag     todTag
+hi! link xmlEndTag  todTagName
+hi! link xmlTagName todTagName
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -294,14 +305,14 @@ hi! link typescriptVariable       todVariable
 
 " fatih/vim-go => sheerun/vim-polyglot
 
-hi! link goImport      todImport
-hi! link goPackage     todModule
-hi! link goType        todTypeName
-hi! link goDeclaration todType
-hi! link goDeclType    todType
-hi! link goBoolean     todBoolean
+hi! link goImport       todImport
+hi! link goPackage      todModule
+hi! link goType         todTypeName
+hi! link goDeclaration  todType
+hi! link goDeclType     todType
+hi! link goBoolean      todBoolean
 hi! link goFunctionCall todFunctionName
-hi! link goVarAssign  todVariableName
+hi! link goVarAssign    todVariableName
 
 
 hi! goCoverageCovered guifg=#98c379 ctermfg=108 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
@@ -429,31 +440,6 @@ hi! link yamlPlainScalar              todString
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Language: Markdown
 
-hi! mkdHeading guifg=#e06c75 ctermfg=168 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
-
-" mkdItalic      xxx cleared
-" mkdBold        xxx cleared
-" mkdBoldItalic  xxx cleared
-" mkdDelimiter   xxx links to Delimiter
-" mkdFootnotes   xxx links to htmlLink
-" mkdID          xxx links to Identifier
-" mkdURL         xxx links to htmlString
-" mkdLink        xxx links to htmlLink
-" mkdInlineURL   xxx links to htmlLink
-" mkdLinkDefTarget xxx links to mkdURL
-" mkdLinkDef     xxx links to mkdID
-" mkdLinkTitle   xxx links to htmlString
-" mkdHeading     xxx cleared
-" mkdLineBreak   xxx links to Visual
-" mkdBlockquote  xxx links to Comment
-" mkdCodeDelimiter xxx links to String
-" mkdCode        xxx links to String
-" mkdFootnote    xxx links to Comment
-" mkdListItem    xxx links to Identifier
-" mkdListItemLine xxx cleared
-" mkdNonListItemBlock xxx cleared
-" mkdRule        xxx links to Identifier
-
 hi! link markdownBlockquote    todComment
 hi! link markdownCode          todString
 hi! link markdownCodeBlock     todString
@@ -472,35 +458,22 @@ hi! markdownItalic           term=italic cterm=italic gui=italic
 hi! markdownLinkText         guifg=#61afef ctermfg=75
 hi! markdownUrl              guifg=#56b6c2 ctermfg=73
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Language: Perl
-
-" call s:h("perlFiledescRead", { "fg": s:green })
-" call s:h("perlFunction", { "fg": s:purple })
-" call s:h("perlMatchStartEnd",{ "fg": s:blue })
-" call s:h("perlMethod", { "fg": s:purple })
-" call s:h("perlPOD", { "fg": s:comment_grey })
-" call s:h("perlSharpBang", { "fg": s:comment_grey })
-" call s:h("perlSpecialString",{ "fg": s:cyan })
-" call s:h("perlStatementFiledesc", { "fg": s:red })
-" call s:h("perlStatementFlow",{ "fg": s:red })
-" call s:h("perlStatementInclude", { "fg": s:purple })
-" call s:h("perlStatementScalar",{ "fg": s:purple })
-" call s:h("perlStatementStorage", { "fg": s:purple })
-" call s:h("perlSubName",{ "fg": s:yellow })
-" call s:h("perlVarPlain",{ "fg": s:blue })
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Language: PHP
 
-hi! link phpInclude     Keyword
-hi! link phpVarSelector Identifier
-hi! phpClass         guifg=#e5c07b ctermfg=180 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
-hi! phpClassExtends  guifg=#98c379 ctermfg=108 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
-hi! phpFunction      guifg=#61afef ctermfg=75 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
-hi! phpParent        guifg=#abb2bf ctermfg=249 gui=NONE cterm=NONE
-hi! phpRegion        guifg=#abb2bf ctermfg=249 guibg=#282c34 ctermbg=236 gui=NONE cterm=NONE
-hi! phpUseClass      guifg=#e5c07b ctermfg=180 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
+hi! link phpInclude      Keyword
+hi! link phpVarSelector  Identifier
+hi! link phpClass        todClassName
+hi! link phpClassExtends todClassName
+hi! link phpParent       todParens
+hi! link phpMethodsVar   todProperty
+
+" hi! phpClassExtends    guifg=#98c379 ctermfg=108 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
+" hi! phpFunction        guifg=#61afef ctermfg=75 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
+" hi! phpParent          guifg=#abb2bf ctermfg=249 gui=NONE cterm=NONE
+" hi! phpRegion          guifg=#abb2bf ctermfg=249 guibg=#282c34 ctermbg=236 gui=NONE cterm=NONE
+" hi! phpUseClass        guifg=#e5c07b ctermfg=180 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 
 " call s:h("phpVarSelector", { "fg": s:red })
 " call s:h("phpOperator", { "fg": s:white })
@@ -557,15 +530,6 @@ hi! phpUseClass      guifg=#e5c07b ctermfg=180 guibg=NONE ctermbg=NONE gui=NONE 
 " call s:h("texSpecialChar", { "fg": s:dark_yellow })
 " call s:h("texCite", { "fg": s:blue })
 " call s:h("texRefZone", { "fg": s:blue })
-
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Language: XML
-
-hi! xmlTag     guifg=#abb2bf ctermfg=249 gui=NONE cterm=NONE
-hi! xmlEndTag  guifg=#abb2bf ctermfg=249 gui=NONE cterm=NONE
-hi! xmlTagName guifg=#e06c75 ctermfg=168 gui=NONE cterm=NONE
-hi! xmlAttrib  guifg=#d19a66 ctermfg=173 gui=NONE cterm=NONE
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
