@@ -332,25 +332,25 @@ hi! link jsThis            todThis
 " yuezk/vim-js
 
 hi! link jsBraces          todBraces
+hi! link jsClassMethodType todStatic
 hi! link jsClassName       todClassName
+hi! link jsComma           todNormal
 hi! link jsConstructor     todFunctionName
+hi! link jsDocIdentifier   todCommentValue
+hi! link jsDocModuleName   todCommentValue
+hi! link jsDocTags         todCommentTag
+hi! link jsIdentifierProp  todProperty
+hi! link jsIfCondition     todOperatorSymbol
 hi! link jsImport          todImport
 hi! link jsModuleName      todModuleName
+hi! link jsNew             todOperatorKeyword
 hi! link jsNewClassName    todClassName
 hi! link jsNumberDot       todNumber
 hi! link jsParens          todParens
 hi! link jsReturn          todReturn
-hi! link jsVariableType    todVariable
 hi! link jsSuper           todSuper
-hi! link jsIdentifierProp  todProperty
 hi! link jsTopOperator     todOperatorSymbol
-hi! link jsNew             todOperatorKeyword
-hi! link jsIfCondition     todOperatorSymbol
-hi! link jsComma           todNormal
-hi! link jsClassMethodType todStatic
-hi! link jsDocTags                   todCommentTag
-hi! link jsDocModuleName             todCommentValue
-hi! link jsDocIdentifier             todCommentValue
+hi! link jsVariableType    todVariable
 
 " axmellon/vim-jsx-pretty
 
@@ -364,29 +364,29 @@ hi! link jsDocIdentifier             todCommentValue
 " - new className
 
 hi! link javascriptArrowFunc         todKeyword
+hi! link javascriptArrowFuncArg      todVariableName
 hi! link javascriptBoolean           todBoolean
 hi! link javascriptBraces            todBraces
 hi! link javascriptClassName         todClassName
 hi! link javascriptClassSuper        todSuper
 hi! link javascriptClassSuperName    todClassName
+hi! link javascriptDocComment        todComment
+hi! link javascriptDocParamName      todCommentValue
+hi! link javascriptDocTags           todCommentTag
 hi! link javascriptEndColons         toEndColon
 hi! link javascriptFunctionMethod    todFunctionName
 hi! link javascriptNull              todNull
 hi! link javascriptNumber            todNumber
 hi! link javascriptObjectLabel       todProperty
 hi! link javascriptObjectMethodName  todFunctionName
+hi! link javascriptOpSymbol          todOperatorSymbol
+hi! link javascriptOpSymbols         todOperatorSymbol
+hi! link javascriptOperator          todOperatorKeyword
 hi! link javascriptProp              todProperty
 hi! link javascriptReflectMethod     todFunctionName
 hi! link javascriptReturn            todReturn
 hi! link javascriptUndefined         todNull
 hi! link javascriptVariable          todVariable
-hi! link javascriptOpSymbol          todOperatorSymbol
-hi! link javascriptOpSymbols         todOperatorSymbol
-hi! link javascriptOperator          todOperatorKeyword
-hi! link javascriptArrowFuncArg      todVariableName
-hi! link javascriptDocTags           todCommentTag
-hi! link javascriptDocParamName      todCommentValue
-hi! link javascriptDocComment        todComment
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Language: JSON
@@ -440,20 +440,20 @@ hi! mkdHeading {{.Identifier}}
 " mkdNonListItemBlock xxx cleared
 " mkdRule        xxx links to Identifier
 
-hi! markdownCode {{.String}}
-hi! markdownCodeBlock {{.String}}
+hi! markdownCode          {{.String}}
+hi! markdownCodeBlock     {{.String}}
 hi! markdownCodeDelimiter {{.String}}
 "
 " call s:h("markdownRule", { "fg": s:comment_grey })
 " call s:h("markdownHeadingRule", { "fg": s:comment_grey })
 
 hi! markdownHeadingDelimiter {{.Identifier}}
-hi! markdownH1 {{.Identifier}}
-hi! markdownH2 {{.Identifier}}
-hi! markdownH3 {{.Identifier}}
-hi! markdownH4 {{.Identifier}}
-hi! markdownH5 {{.Identifier}}
-hi! markdownH6 {{.Identifier}}
+hi! markdownH1               {{.Identifier}}
+hi! markdownH2               {{.Identifier}}
+hi! markdownH3               {{.Identifier}}
+hi! markdownH4               {{.Identifier}}
+hi! markdownH5               {{.Identifier}}
+hi! markdownH6               {{.Identifier}}
 " call s:h("markdownIdDelimiter", { "fg": s:purple })
 " call s:h("markdownId", { "fg": s:purple })
 hi! markdownBlockquote {{.Comment}}
@@ -465,9 +465,9 @@ hi! markdownBold   term=bold   cterm=bold   gui=bold
 " call s:h("markdownListMarker", { "fg": s:red })
 " call s:h("markdownOrderedListMarker", { "fg": s:red })
 " call s:h("markdownIdDeclaration", { "fg": s:blue })
-hi! markdownLinkText {{.Function}}
+hi! markdownLinkText      {{.Function}}
 hi! markdownLinkDelimiter {{.Text}}
-hi! markdownUrl {{.Constant}}
+hi! markdownUrl           {{.Constant}}
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Language: Perl
@@ -490,14 +490,14 @@ hi! markdownUrl {{.Constant}}
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Language: PHP
 
+hi! link phpInclude     Keyword
+hi! link phpVarSelector Identifier
 hi! phpClass         {{.ClassName}}
+hi! phpClassExtends  {{.ExtendsClassName}}
 hi! phpFunction      {{.Function}}
+hi! phpParent        {{.Brace}}
 hi! phpRegion        {{.Normal}}
 hi! phpUseClass      {{.ClassName}}
-hi! phpClassExtends  {{.ExtendsClassName}}
-hi! phpParent        {{.Brace}}
-hi! link phpInclude Keyword
-hi! link phpVarSelector Identifier
 
 " call s:h("phpVarSelector", { "fg": s:red })
 " call s:h("phpOperator", { "fg": s:white })
@@ -688,10 +688,10 @@ hi! link gitcommitComment todComment
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Plugin: coc.nvim
 
-hi! CocHighlightText {{.Highlight}}
-hi! CocUnderline     gui=underline cterm=underline
-hi! CocCodeLens      {{.Comment}}
-hi! link CocHighlightTextRead CocHighlightText
+hi! CocHighlightText           {{.Highlight}}
+hi! CocUnderline               gui=underline cterm=underline
+hi! CocCodeLens                {{.Comment}}
+hi! link CocHighlightTextRead  CocHighlightText
 hi! link CocHighlightTextWrite CocHighlightText
 "
 hi! CocErrorSign           {{.Error}}
@@ -746,8 +746,8 @@ endif
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Plugin: indentLine
 
-let g:indentLine_setColors = 0
-let g:indentLine_color_gui =  '{{.Comment.Foreground.Gui}}'
+let g:indentLine_setColors  = 0
+let g:indentLine_color_gui  = '{{.Comment.Foreground.Gui}}'
 let g:indentLine_color_term = '{{.Comment.Foreground.Cterm}}'
 
 
