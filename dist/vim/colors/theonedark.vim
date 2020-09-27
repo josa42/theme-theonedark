@@ -42,7 +42,9 @@ hi! todType            guifg=#c678dd ctermfg=176
 hi! todTypeName        guifg=#56b6c2 ctermfg=73
 hi! todVariable        guifg=#c678dd ctermfg=176
 hi! todVariableName    guifg=#abb2bf ctermfg=249
-
+hi! todLink            guifg=#61afef ctermfg=75
+hi! todUrl             guifg=#56b6c2 ctermfg=73
+hi! todBrackets        guifg=#abb2bf ctermfg=249
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Defaults: Syntax Groups (descriptions and ordering from `:h w18`)
@@ -337,71 +339,19 @@ hi! link jsFunction        todFunction
 hi! link jsFunctionKey     todProperty
 hi! link jsModuleKeyword   todModuleName
 hi! link jsObjectKey       todProperty
+hi! link jsObjectProp      todProperty
 hi! link jsOperator        todOperatorSymbol
 hi! link jsOperatorKeyword todOperatorKeyword
 hi! link jsReturn          todReturn
 hi! link jsStatic          todStatic
 hi! link jsThis            todThis
-
-hi! link jsxOpenPunct      todTag
-hi! link jsxClosePunct     todTag
 hi! link jsxAttrib         todTagAttribute
+hi! link jsxClosePunct     todTag
 hi! link jsxEqual          todTag
-
-
-"
-"
-"hi! link htmlArg            todTagAttribute
-"hi! link htmlEndTag         todTag
-"hi! link htmlH1             todNormal
-"hi! link htmlH2             todNormal
-"hi! link htmlH3             todNormal
-"hi! link htmlH4             todNormal
-"hi! link htmlH5             todNormal
-"hi! link htmlH6             todNormal
-"hi! link htmlLink           todNormal
-"hi! link htmlSpecialTagName todTagName
-"hi! link htmlTag            todTag
-"hi! link htmlTagName        todTagName
-"hi! link htmlTitle          todNormal
-"
-"hi! htmlBold                term=bold                  cterm=bold
-"gui=bold
-"hi! htmlBoldUnderline       term=bold,underline        cterm=bold,underline
-"gui=bold,underline
-"hi! htmlBoldItalic          term=bold,italic           cterm=bold,italic
-"gui=bold,italic
-"hi! htmlBoldUnderlineItalic term=bold,italic,underline
-"cterm=bold,italic,underline gui=bold,italic,underline
-"hi! htmlUnderline           term=underline             cterm=underline
-"gui=underline
-"hi! htmlUnderlineItalic     term=italic,underline      cterm=italic,underline
-"gui=italic,underline
-"hi! htmlItalic              term=italic                cterm=italic
-"gui=italic
-"hi! link htmlArg            todTagAttribute
-" hi! link htmlEndTag         todTag
-" hi! link htmlH1             todNormal
-" hi! link htmlH2             todNormal
-" hi! link htmlH3             todNormal
-" hi! link htmlH4             todNormal
-" hi! link htmlH5             todNormal
-" hi! link htmlH6             todNormal
-" hi! link htmlLink           todNormal
-" hi! link htmlSpecialTagName todTagName
-" hi! link htmlTag            todTag
-" hi! link htmlTagName        todTagName
-" hi! link htmlTitle          todNormal
-"
-" hi! htmlBold                term=bold                  cterm=bold                  gui=bold
-" hi! htmlBoldUnderline       term=bold,underline        cterm=bold,underline        gui=bold,underline
-" hi! htmlBoldItalic          term=bold,italic           cterm=bold,italic           gui=bold,italic
-" hi! htmlBoldUnderlineItalic term=bold,italic,underline cterm=bold,italic,underline gui=bold,italic,underline
-" hi! htmlUnderline           term=underline             cterm=underline             gui=underline
-" hi! htmlUnderlineItalic     term=italic,underline      cterm=italic,underline      gui=italic,underline
-" hi! htmlItalic              term=italic                cterm=italic                gui=italic
-
-
+hi! link jsxOpenPunct      todTag
+hi! link jsTemplateBraces  todParens
+hi! link jsxBraces         todBraces
+hi! link jsBrackets        todBrackets
 " yuezk/vim-js
 
 hi! link jsBraces          todBraces
@@ -496,6 +446,7 @@ hi! link yamlPlainScalar              todString
 " call s:h("lessAmpersandChar", { "fg": s:white })
 " call s:h("lessClass", { "fg": s:dark_yellow })
 
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Language: Markdown
 
@@ -514,14 +465,12 @@ hi! markdownH5               term=bold cterm=bold gui=bold
 hi! markdownH6               term=bold cterm=bold gui=bold
 hi! markdownHeadingDelimiter guifg=#e06c75 ctermfg=168
 hi! markdownItalic           term=italic cterm=italic gui=italic
-hi! markdownLinkText         guifg=#61afef ctermfg=75
-hi! markdownUrl              guifg=#56b6c2 ctermfg=73
-
-
+hi! link markdownLinkText    todLink
+hi! link markdownUrl         todUrl
 
 hi! mkdHeading       guifg=#e06c75 ctermfg=168
-hi! mkdLink          guifg=#61afef ctermfg=75
-hi! mkdUrl           guifg=#56b6c2 ctermfg=73
+hi! link mkdLink     todLink
+hi! link mkdUrl      todUrl
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Language: PHP

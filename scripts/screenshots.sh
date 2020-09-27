@@ -1,6 +1,7 @@
 #!/bin/bash
 
 s() {
+  echo "${2} - ${1}"
   osascript scripts/screenshot.applescript \
     "$(pwd)" \
     scripts/config/init-${1}.vim \
@@ -9,6 +10,8 @@ s() {
 
   wt "    <div><b>$(pluginInfo "$c")</b></div>"
   wt '    <img style="width: 67%;" src="../screenshots/'"vim-$f-$c.png"'" />'
+
+  optipng screenshots/vim-${2}-${1}.png 2> /dev/null > /dev/null &
 }
 
 ws() {
@@ -32,7 +35,7 @@ pluginInfo() {
 jsfiles=("test.js" "test.jsx")
 types=("base" "polyglot")
 jsTypes=("base" "polyglot" "vim-js" "yajs")
-files=$(ls examples)
+files=${1:-$(ls examples)}
 
 rm -f ./docs/screenshots.md ./tmp.md
 
@@ -64,6 +67,8 @@ for f in ${files[@]}; do
 
 done
 
-optipng screenshots/*.png
+# optipng screenshots/*.png
 
+echo wait…
+wait
 

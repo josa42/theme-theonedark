@@ -51,7 +51,7 @@ const Comp = ({ foo }) => {
 class Foo extends Bar {
   static foo() {}
 
-  private bar()
+  bar()
 
   foo() {
     if (this.bar == 'bar') {

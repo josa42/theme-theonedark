@@ -1,10 +1,11 @@
 import React from 'react';
 
-const Comp = ({ foo }) => {
+export const Comp = ({ foo }) => {
   return (
     <div id="foo">
-      Foo
+      Foo{' '}
       {/* Comment */}
+      {[1, 2].map((n) => <span>{n}</span>)}
       <MyComp className={"my-cls"}></MyComp>
     </div>
   )

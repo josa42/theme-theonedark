@@ -44,7 +44,7 @@ hi! todVariable        {{.Purple.Vim     "fg"}}
 hi! todVariableName    {{.White.Vim      "fg"}}
 hi! todLink            {{.Blue.Vim       "fg"}}
 hi! todUrl             {{.Cyan.Vim       "fg"}}
-
+hi! todBrackets        {{.White.Vim      "fg"}}
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Defaults: Syntax Groups (descriptions and ordering from `:h w18`)
@@ -339,17 +339,19 @@ hi! link jsFunction        todFunction
 hi! link jsFunctionKey     todProperty
 hi! link jsModuleKeyword   todModuleName
 hi! link jsObjectKey       todProperty
+hi! link jsObjectProp      todProperty
 hi! link jsOperator        todOperatorSymbol
 hi! link jsOperatorKeyword todOperatorKeyword
 hi! link jsReturn          todReturn
 hi! link jsStatic          todStatic
 hi! link jsThis            todThis
-
-hi! link jsxOpenPunct      todTag
-hi! link jsxClosePunct     todTag
 hi! link jsxAttrib         todTagAttribute
+hi! link jsxClosePunct     todTag
 hi! link jsxEqual          todTag
-
+hi! link jsxOpenPunct      todTag
+hi! link jsTemplateBraces  todParens
+hi! link jsxBraces         todBraces
+hi! link jsBrackets        todBrackets
 " yuezk/vim-js
 
 hi! link jsBraces          todBraces
@@ -463,12 +465,12 @@ hi! markdownH5               term=bold cterm=bold gui=bold
 hi! markdownH6               term=bold cterm=bold gui=bold
 hi! markdownHeadingDelimiter {{.Red.Vim "fg"}}
 hi! markdownItalic           term=italic cterm=italic gui=italic
-hi! link markdownLinkText    todUrl
+hi! link markdownLinkText    todLink
 hi! link markdownUrl         todUrl
 
 hi! mkdHeading       {{.Red.Vim "fg"}}
 hi! link mkdLink     todLink
-hi! mkdUrl           todUrl
+hi! link mkdUrl      todUrl
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Language: PHP
