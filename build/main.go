@@ -34,6 +34,7 @@ func main() {
 	writeTheme(theme, "alacritty.yml", "./dist/alacritty/colors.yml")
 	writeTheme(theme, "kitty.conf", "./dist/kitty/theonedark.conf")
 	writeTheme(theme, "slack.txt", "./dist/slack/colors.txt")
+	writeTheme(theme, "theme.xccolortheme", "./dist/xcode/TheOneDark.xccolortheme")
 
 	// theme.
 

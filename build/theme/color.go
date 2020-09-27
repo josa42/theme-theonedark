@@ -86,6 +86,33 @@ func (c Color) Vim(key string) string {
 	return ""
 }
 
+func (c Color) Xcode(opacity float32) string {
+
+	p := exprCompoments.FindStringSubmatch(string(c))
+	if len(p) == 4 {
+
+		r, _ := strconv.ParseInt(p[1], 16, 32)
+		g, _ := strconv.ParseInt(p[2], 16, 32)
+		b, _ := strconv.ParseInt(p[3], 16, 32)
+
+		return fmt.Sprintf(`%f %f %f %f`, float64(r)/255, float64(g)/255, float64(b)/255, opacity)
+	}
+
+	return ""
+
+	// 	components = append(
+	// 		components,
+	// 		fmt.Sprintf(`<key>Color Space</key><string>sRGB</string>`),
+	// 		fmt.Sprintf(`<key>Red Component</key><real>%f</real>`, float64(r)/255),
+	// 		fmt.Sprintf(`<key>Green Component</key><real>%f</real>`, float64(g)/255),
+	// 		fmt.Sprintf(`<key>Blue Component</key><real>%f</real>`, float64(b)/255),
+	// 		fmt.Sprintf(`<key>Alpha Component</key><real>1</real>`),
+	// 	)
+	// }
+	//
+	// return fmt.Sprintf(`<dict>%s</dict>`, strings.Join(components, ""))
+}
+
 // <dict>
 // <key>Alpha Component</key>
 // <real>1</real>

@@ -95,9 +95,6 @@ yellow_dim:      *yellow
 dark_red:    *darkRed
 dark_yellow: *darkYellow
 
-
-
-
 grey: *commentGrey
 visual_grey: *visualGrey
 
