@@ -3,6 +3,8 @@ colorscheme theonedark
 set nobackup
 set noswapfile
 
+let &l:statusline='%{getline(line("w$")+1)}'
+
 let g:go_highlight_array_whitespace_error = v:true
 let g:go_highlight_build_constraints = v:true
 let g:go_highlight_chan_whitespace_error = v:true

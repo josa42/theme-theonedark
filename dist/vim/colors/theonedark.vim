@@ -518,6 +518,11 @@ hi! markdownLinkText         guifg=#61afef ctermfg=75
 hi! markdownUrl              guifg=#56b6c2 ctermfg=73
 
 
+
+hi! mkdHeading       guifg=#e06c75 ctermfg=168
+hi! mkdLink          guifg=#61afef ctermfg=75
+hi! mkdUrl           guifg=#56b6c2 ctermfg=73
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Language: PHP
 
