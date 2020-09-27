@@ -23,7 +23,7 @@ pluginInfo() {
   case $1 in
     base)     echo 'Neovim buildin';;
     polyglot) echo '<a href="github.com/sheerun/vim-polyglot">sheerun/vim-polyglot</a>' ;;
-    vim-js)   echo '<a href="github.com/maxmellon/vim-jsx-pretty">yuezk/vim-js](github.com/yuezk/vim-js) and [maxmellon/vim-jsx-pretty</a>' ;;
+    vim-js)   echo '<a href="https://github.com/yuezk/vim-js">yuezk/vim-js</a> and <a href="https://github.com/maxmellon/vim-jsx-pretty">maxmellon/vim-jsx-pretty</a>' ;;
     yajs)     echo '<a href="github.com/othree/yajs.vim">othree/yajs.vim</a>' ;;
   esac
 }
@@ -32,25 +32,7 @@ pluginInfo() {
 jsfiles=("test.js" "test.jsx")
 types=("base" "polyglot")
 jsTypes=("base" "polyglot" "vim-js" "yajs")
-files=(
-  "test.css"
-  "test.go"
-  "test.html"
-  "test.js"
-  "test.json"
-  "test.jsx"
-  "test.lua"
-  "test.md"
-  "test.php"
-  "test.scss"
-  "test.ts"
-  "test.xml"
-  "test.yaml"
-  "test.yml"
-)
-
-# types=("base")
-# files=("test.go")
+files=$(ls examples)
 
 rm -f ./docs/screenshots.md ./tmp.md
 

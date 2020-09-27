@@ -2,6 +2,18 @@
 
 ## Neovim / Vim
 
+### `Dockerfile`
+
+<img style="width: 67%;" src="../screenshots/vim-Dockerfile-polyglot.png" />
+
+<details>
+    <summary>All Plugins</summary>
+    <div><b>Neovim buildin</b></div>
+    <img style="width: 67%;" src="../screenshots/vim-Dockerfile-base.png" />
+    <div><b><a href="github.com/sheerun/vim-polyglot">sheerun/vim-polyglot</a></b></div>
+    <img style="width: 67%;" src="../screenshots/vim-Dockerfile-polyglot.png" />
+</details>
+
 ### `css`
 
 <img style="width: 67%;" src="../screenshots/vim-test.css-polyglot.png" />
@@ -48,7 +60,7 @@
     <img style="width: 67%;" src="../screenshots/vim-test.js-base.png" />
     <div><b><a href="github.com/sheerun/vim-polyglot">sheerun/vim-polyglot</a></b></div>
     <img style="width: 67%;" src="../screenshots/vim-test.js-polyglot.png" />
-    <div><b><a href="github.com/maxmellon/vim-jsx-pretty">yuezk/vim-js](github.com/yuezk/vim-js) and [maxmellon/vim-jsx-pretty</a></b></div>
+    <div><b><a href="https://github.com/yuezk/vim-js">yuezk/vim-js</a> and <a href="https://github.com/maxmellon/vim-jsx-pretty">maxmellon/vim-jsx-pretty</a></b></div>
     <img style="width: 67%;" src="../screenshots/vim-test.js-vim-js.png" />
     <div><b><a href="github.com/othree/yajs.vim">othree/yajs.vim</a></b></div>
     <img style="width: 67%;" src="../screenshots/vim-test.js-yajs.png" />
@@ -76,7 +88,7 @@
     <img style="width: 67%;" src="../screenshots/vim-test.jsx-base.png" />
     <div><b><a href="github.com/sheerun/vim-polyglot">sheerun/vim-polyglot</a></b></div>
     <img style="width: 67%;" src="../screenshots/vim-test.jsx-polyglot.png" />
-    <div><b><a href="github.com/maxmellon/vim-jsx-pretty">yuezk/vim-js](github.com/yuezk/vim-js) and [maxmellon/vim-jsx-pretty</a></b></div>
+    <div><b><a href="https://github.com/yuezk/vim-js">yuezk/vim-js</a> and <a href="https://github.com/maxmellon/vim-jsx-pretty">maxmellon/vim-jsx-pretty</a></b></div>
     <img style="width: 67%;" src="../screenshots/vim-test.jsx-vim-js.png" />
     <div><b><a href="github.com/othree/yajs.vim">othree/yajs.vim</a></b></div>
     <img style="width: 67%;" src="../screenshots/vim-test.jsx-yajs.png" />
@@ -130,6 +142,18 @@
     <img style="width: 67%;" src="../screenshots/vim-test.scss-polyglot.png" />
 </details>
 
+### `swift`
+
+<img style="width: 67%;" src="../screenshots/vim-test.swift-polyglot.png" />
+
+<details>
+    <summary>All Plugins</summary>
+    <div><b>Neovim buildin</b></div>
+    <img style="width: 67%;" src="../screenshots/vim-test.swift-base.png" />
+    <div><b><a href="github.com/sheerun/vim-polyglot">sheerun/vim-polyglot</a></b></div>
+    <img style="width: 67%;" src="../screenshots/vim-test.swift-polyglot.png" />
+</details>
+
 ### `ts`
 
 <img style="width: 67%;" src="../screenshots/vim-test.ts-polyglot.png" />
@@ -152,18 +176,6 @@
     <img style="width: 67%;" src="../screenshots/vim-test.xml-base.png" />
     <div><b><a href="github.com/sheerun/vim-polyglot">sheerun/vim-polyglot</a></b></div>
     <img style="width: 67%;" src="../screenshots/vim-test.xml-polyglot.png" />
-</details>
-
-### `yaml`
-
-<img style="width: 67%;" src="../screenshots/vim-test.yaml-polyglot.png" />
-
-<details>
-    <summary>All Plugins</summary>
-    <div><b>Neovim buildin</b></div>
-    <img style="width: 67%;" src="../screenshots/vim-test.yaml-base.png" />
-    <div><b><a href="github.com/sheerun/vim-polyglot">sheerun/vim-polyglot</a></b></div>
-    <img style="width: 67%;" src="../screenshots/vim-test.yaml-polyglot.png" />
 </details>
 
 ### `yml`

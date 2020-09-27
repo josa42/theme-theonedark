@@ -1,5 +1,29 @@
 import React from 'react';
 
+const THING = 'World'
+
+export class Foo extends Bar {
+  constructor() {
+    console.log(`Hallo ${THING}`)
+    return super()
+  }
+
+  foo() {
+    if (this.bar === 'foo') {
+      this.bar = "foo"
+    }
+
+    return this.bar
+  }
+}
+
+export const obj = {
+  foo0: "hello",
+  foo3() {},
+}
+////////////////////////////////////////////////////////////////////////////////
+// ^ Screenshot (23 lines)
+
 var a = 0.1
 let n = 0.1
 let t = false

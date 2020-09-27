@@ -1,8 +1,25 @@
 def:
   foo: &foo
-    name: "Foo"
 
-foo: bar
-one: 1
-bar: *foo
+test:
+  - off: true
+    on: yes
+    yes: on
+    no:  off
 
+  - foo: [ 1, 2 ]
+  - string: 'string'
+  - string: !tag 'string'
+  - foo: { test: true }
+  - bar: *foo
+
+
+
+
+
+
+
+
+
+################################################################################
+# ^ Screenshot (23 lines)

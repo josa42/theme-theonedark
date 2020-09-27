@@ -21,6 +21,8 @@ func == (lhs: Friend, rhs: Friend) -> Bool {
     }
     return returnValue
 }
+////////////////////////////////////////////////////////////////////////////////
+// ^ Screenshot (23 lines)
 
 
 // MARK: - test
