@@ -3,6 +3,10 @@
 > One Theme to rule them all, One Theme to find them,  
 > One Theme to bring them all, and in the darkness bind them
 
+![](screenshots/vim-test.js-polyglot.png)
+
+[All screenshots](docs/screenshots.md)
+
 ## Contained Themes
 
 - neovim / vim
@@ -20,7 +24,7 @@ foo abr
 
 ## Credit
 
-The themes os based on or inspired by these projects:
+The themes is based on or inspired by these projects:
 
 - [`joshdick/onedark.vim`](https://github.com/joshdick/onedark.vim)
 - [`NovaDev94/lightline-onedark`](https://github.com/NovaDev94/lightline-onedark)

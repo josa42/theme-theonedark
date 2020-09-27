@@ -1,6 +1,6 @@
 import React from 'react';
 
-var a =a 0.1
+var a = 0.1
 let n = 0.1
 let t = false
 const f = true

@@ -343,6 +343,65 @@ hi! link jsReturn          todReturn
 hi! link jsStatic          todStatic
 hi! link jsThis            todThis
 
+hi! link jsxOpenPunct      todTag
+hi! link jsxClosePunct     todTag
+hi! link jsxAttrib         todTagAttribute
+hi! link jsxEqual          todTag
+
+
+"
+"
+"hi! link htmlArg            todTagAttribute
+"hi! link htmlEndTag         todTag
+"hi! link htmlH1             todNormal
+"hi! link htmlH2             todNormal
+"hi! link htmlH3             todNormal
+"hi! link htmlH4             todNormal
+"hi! link htmlH5             todNormal
+"hi! link htmlH6             todNormal
+"hi! link htmlLink           todNormal
+"hi! link htmlSpecialTagName todTagName
+"hi! link htmlTag            todTag
+"hi! link htmlTagName        todTagName
+"hi! link htmlTitle          todNormal
+"
+"hi! htmlBold                term=bold                  cterm=bold
+"gui=bold
+"hi! htmlBoldUnderline       term=bold,underline        cterm=bold,underline
+"gui=bold,underline
+"hi! htmlBoldItalic          term=bold,italic           cterm=bold,italic
+"gui=bold,italic
+"hi! htmlBoldUnderlineItalic term=bold,italic,underline
+"cterm=bold,italic,underline gui=bold,italic,underline
+"hi! htmlUnderline           term=underline             cterm=underline
+"gui=underline
+"hi! htmlUnderlineItalic     term=italic,underline      cterm=italic,underline
+"gui=italic,underline
+"hi! htmlItalic              term=italic                cterm=italic
+"gui=italic
+"hi! link htmlArg            todTagAttribute
+" hi! link htmlEndTag         todTag
+" hi! link htmlH1             todNormal
+" hi! link htmlH2             todNormal
+" hi! link htmlH3             todNormal
+" hi! link htmlH4             todNormal
+" hi! link htmlH5             todNormal
+" hi! link htmlH6             todNormal
+" hi! link htmlLink           todNormal
+" hi! link htmlSpecialTagName todTagName
+" hi! link htmlTag            todTag
+" hi! link htmlTagName        todTagName
+" hi! link htmlTitle          todNormal
+"
+" hi! htmlBold                term=bold                  cterm=bold                  gui=bold
+" hi! htmlBoldUnderline       term=bold,underline        cterm=bold,underline        gui=bold,underline
+" hi! htmlBoldItalic          term=bold,italic           cterm=bold,italic           gui=bold,italic
+" hi! htmlBoldUnderlineItalic term=bold,italic,underline cterm=bold,italic,underline gui=bold,italic,underline
+" hi! htmlUnderline           term=underline             cterm=underline             gui=underline
+" hi! htmlUnderlineItalic     term=italic,underline      cterm=italic,underline      gui=italic,underline
+" hi! htmlItalic              term=italic                cterm=italic                gui=italic
+
+
 " yuezk/vim-js
 
 hi! link jsBraces          todBraces
