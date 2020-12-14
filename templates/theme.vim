@@ -153,6 +153,14 @@ if &diff
   highlight! CursorLine         {{.DiffCursorLine}}
 endif
 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Neovim:
+
+hi! NvimInternalError    {{.Red.Vim "bg"}}    {{.Black.Vim "fg"}}
+
+hi! RedrawDebugClear     {{.Yellow.Vim "bg"}} {{.Black.Vim "fg"}}
+hi! RedrawDebugComposed  {{.Green.Vim "bg"}}  {{.Black.Vim "fg"}}
+hi! RedrawDebugRecompose {{.Red.Vim "bg"}}    {{.Black.Vim "fg"}}
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Neovim: LSP
@@ -668,6 +676,7 @@ hi! link gitcommitComment todComment
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Plugin: coc.nvim
 
+hi! CocSelectedText            {{.Red.Vim "fg"}}
 hi! CocHighlightText           {{.Highlight}}
 hi! CocUnderline               gui=underline cterm=underline
 hi! CocCodeLens                {{.Comment}}

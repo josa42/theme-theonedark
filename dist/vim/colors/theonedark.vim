@@ -153,6 +153,14 @@ if &diff
   highlight! CursorLine         gui=underline cterm=underline
 endif
 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Neovim:
+
+hi! NvimInternalError    guibg=#e06c75 ctermbg=168    guifg=#282c34 ctermfg=236
+
+hi! RedrawDebugClear     guibg=#e5c07b ctermbg=180 guifg=#282c34 ctermfg=236
+hi! RedrawDebugComposed  guibg=#98c379 ctermbg=108  guifg=#282c34 ctermfg=236
+hi! RedrawDebugRecompose guibg=#e06c75 ctermbg=168    guifg=#282c34 ctermfg=236
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Neovim: LSP
@@ -668,6 +676,7 @@ hi! link gitcommitComment todComment
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Plugin: coc.nvim
 
+hi! CocSelectedText            guifg=#e06c75 ctermfg=168
 hi! CocHighlightText           guifg=#282c34 ctermfg=236 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 hi! CocUnderline               gui=underline cterm=underline
 hi! CocCodeLens                guifg=#5c6370 ctermfg=241 guibg=NONE ctermbg=NONE gui=italic cterm=italic
