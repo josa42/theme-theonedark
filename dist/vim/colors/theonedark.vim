@@ -735,7 +735,7 @@ endif
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Plugin: indentLine
 
-let g:indentLine_setColors  = 0
+let g:indentLine_setColors  = 1
 let g:indentLine_color_gui  = '#5c6370'
 let g:indentLine_color_term = '241'
 
