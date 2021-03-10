@@ -4,6 +4,7 @@ s() {
   echo "${2} - ${1}"
   osascript scripts/screenshot.applescript \
     "$(pwd)" \
+    "$(which nvim)" \
     scripts/config/init-${1}.vim \
     examples/${2} \
     screenshots/vim-${2}-${1}.png
@@ -38,6 +39,10 @@ jsTypes=("base" "polyglot" "vim-js" "yajs")
 files=${1:-$(ls examples)}
 
 rm -f ./docs/screenshots.md ./tmp.md
+
+for f in $(find 'scripts/config' -type f -name 'init-*.vim'); do
+  nvim -u $f +PlugInstall +PlugUpdate +qa
+done
 
 ws '# Screeshots'
 ws ''

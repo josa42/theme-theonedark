@@ -5,6 +5,8 @@ set noswapfile
 
 set number
 
+set tabstop=2
+
 let &l:statusline='    %f'
 hi! link StatusLine todComment
 
