@@ -168,6 +168,10 @@ hi! RedrawDebugRecompose {{.Red.Vim "bg"}}    {{.Black.Vim "fg"}}
 hi! LspDiagnosticsError {{.Red.Vim "fg"}}
 
 
+" Quickfix:
+
+hi QuickFixLine {{.Black.Vim "fg"}} {{.Blue.Vim "bg"}}
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Plugin: Termdebug highlighting for Vim 8.1+
 "
@@ -702,6 +706,17 @@ hi! CocHintSign           {{.Hint}}
 hi! link CocHintFloat     CocHintSign
 hi! link CocHintHighlight CocUnderline
 hi! clear CocHintLine
+
+
+hi! LspDiagnosticsSignError       {{.Error}}
+hi! LspDiagnosticsSignWarning     {{.Warning}}
+hi! LspDiagnosticsSignInformation {{.Information}}
+hi! LspDiagnosticsSignHint        {{.Hint}}
+
+hi! LspDiagnosticsVirtualtextError       {{.Error}}
+hi! LspDiagnosticsVirtualtextWarning     {{.Warning}}
+hi! LspDiagnosticsVirtualtextInformation {{.Information}}
+hi! LspDiagnosticsVirtualtextHint        {{.Hint}}
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

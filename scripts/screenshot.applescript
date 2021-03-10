@@ -6,7 +6,8 @@ on run argv
   set t to item 4 of argv
 
   tell application "iTerm"
-    set nvim to "/usr/local/bin/nvim"
+    (* set nvim to "/usr/local/bin/nvim" *)
+    set nvim to "/Users/josa/bin/neovim/bin/nvim"
     (* set c to "/Users/josa/github/josa42/theme-theonedark/scripts/config/init.vim" *)
 
     set win to (create window with default profile command nvim & " -u " & (pwd & "/" & c) & " " & (pwd & "/" & f))
