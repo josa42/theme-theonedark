@@ -774,3 +774,9 @@ let g:indentLine_color_term = '{{.Comment.Foreground.Cterm}}'
 " hi NERDTreeIgnore   ignore
 " hi NERDTreeRO       WarningMsg
 " hi NERDTreeFlags    Number
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Plugin: josa42/nvim-filetree
+
+hi! TreeNormal {{.White.Vim "fg"}} {{.BlackDark.Vim "bg"}}

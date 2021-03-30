@@ -774,3 +774,9 @@ let g:indentLine_color_term = '241'
 " hi NERDTreeIgnore   ignore
 " hi NERDTreeRO       WarningMsg
 " hi NERDTreeFlags    Number
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Plugin: josa42/nvim-filetree
+
+hi! TreeNormal guifg=#abb2bf ctermfg=249 guibg=#21252B ctermbg=235

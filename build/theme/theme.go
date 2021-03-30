@@ -45,6 +45,8 @@ type Theme struct {
 	// s:cyan.gui " No dar
 	// s:comment_grey.gui
 
+	BlackDark Color `yaml:"black_dark"`
+
 	// Base
 	Constant       Style `yaml:"constant"`
 	String         Style `yaml:"string"`

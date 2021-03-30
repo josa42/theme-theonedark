@@ -98,6 +98,8 @@ dark_yellow: *darkYellow
 grey: *commentGrey
 visual_grey: *visualGrey
 
+black_dark: *darkBackground
+
 # https://cloud.githubusercontent.com/assets/1002805/13759644/7500f5a2-ea2f-11e5-8357-0816cd0b5e47.png
 
 
