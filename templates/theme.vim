@@ -167,6 +167,11 @@ hi! RedrawDebugRecompose {{.Red.Vim "bg"}}    {{.Black.Vim "fg"}}
 
 hi! LspDiagnosticsError {{.Red.Vim "fg"}}
 
+hi! DiagnosticError   {{.Error}}
+hi! DiagnosticWarn    {{.Warning}}
+hi! DiagnosticInfo    {{.Information}}
+hi! DiagnosticHint    {{.Hint}}
+
 
 " Quickfix:
 
