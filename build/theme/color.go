@@ -83,7 +83,8 @@ func (c Color) Vim(key string) string {
 	if c != "" {
 		return fmt.Sprintf("gui%[1]s=%[2]s cterm%[1]s=%[3]s", key, c.Gui(), c.Cterm())
 	}
-	return ""
+
+	panic("Color missing")
 }
 
 func (c Color) Xcode(opacity float32) string {

@@ -97,6 +97,8 @@ dark_yellow: *darkYellow
 
 grey: *commentGrey
 visual_grey: *visualGrey
+background_grey: *cursorGrey
+
 
 black_dark: *darkBackground
 
@@ -204,7 +206,7 @@ null:                        { foreground: *darkYellow                          
 color_column:                { foreground: *none,           background: *cursorGrey                      }  # used for the columns set with 'colorcolumn'
 conceal:                     { foreground: *none,           background: *none                            }  # placeholder characters substituted for concealed text (see 'conceallevel')
 cursor:                      { foreground: *black,          background: *blue                            }  # the character under the cursor
-cursor_im:                   {  background: *cursorGrey                                                  }  # like Cursor, but used when in IME mode
+cursor_im:                   {                              background: *cursorGrey                      }  # like Cursor, but used when in IME mode
 cursor_column:               { foreground: *none,           background: *cursorGrey                      }  # the screen column that the cursor is in when 'cursorcolumn' is set
 cursor_line:                 { foreground: *none,           background: *cursorGrey                      }  # the screen line that the cursor is in when 'cursorline' is set
 directory:                   { foreground: *blue,           background: *none                            }  # directory names (and other special names in listings)

@@ -31,8 +31,9 @@ type Theme struct {
 	YellowBright Color `yaml:"yellow_bright"`
 	YellowDim    Color `yaml:"yellow_dim"`
 
-	Grey       Color `yaml:"grey"`
-	VisualGrey Color `yaml:"visual_grey"`
+	Grey           Color `yaml:"grey"`
+	VisualGrey     Color `yaml:"visual_grey"`
+	BackgroundGrey Color `yaml:"background_grey"`
 
 	DarkRed    Color `yaml:"dark_red"`
 	DarkYellow Color `yaml:"dark_yellow"`

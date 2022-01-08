@@ -785,3 +785,12 @@ let g:indentLine_color_term = '241'
 " Plugin: josa42/nvim-filetree
 
 hi! TreeNormal guifg=#abb2bf ctermfg=249 guibg=#21252B ctermbg=235
+
+" Plugin: Telescope
+hi! TelescopeNormal         guibg=#2c323c ctermbg=236
+hi! TelescopeBorder         guibg=#2c323c ctermbg=236 guifg=#5c6370 ctermfg=241
+hi! TelescopePreviewBorder  guibg=#282c34 ctermbg=236 guifg=#5c6370 ctermfg=241
+hi! TelescopeSelection      guifg=#ffffff
+hi! TelescopeMultiSelection guifg=#61afef ctermfg=75 gui=bold
+hi! TelescopeSelectionCaret guifg=#61afef ctermfg=75
+
