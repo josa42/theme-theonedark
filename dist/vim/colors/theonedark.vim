@@ -139,10 +139,17 @@ hi!   VisualNOS          guifg=NONE ctermfg=NONE guibg=#3E4452 ctermbg=238 gui=N
 hi!   WarningMsg         guifg=#e5c07b ctermfg=180 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 hi!   WildMenu           guifg=#282c34 ctermfg=236 guibg=#61afef ctermbg=75 gui=NONE cterm=NONE
 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Float
+
+hi! link FloatBorder Normal
+hi! link NormalFloat Normal
 
 " Language
 " highlight   ClassName          guifg=#e5c07b ctermfg=180 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 " highlight   Property           guifg=#e06c75 ctermfg=168 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
+
+
 
 
 
@@ -789,7 +796,7 @@ hi! TreeNormal guifg=#abb2bf ctermfg=249 guibg=#21252B ctermbg=235
 " Plugin: Telescope
 hi! TelescopeNormal         guibg=#2c323c ctermbg=236
 hi! TelescopeBorder         guibg=#2c323c ctermbg=236 guifg=#5c6370 ctermfg=241
-hi! TelescopePreviewBorder  guibg=#282c34 ctermbg=236 guifg=#5c6370 ctermfg=241
+" hi! TelescopePreviewBorder  guibg=#282c34 ctermbg=236 guifg=#5c6370 ctermfg=241
 hi! TelescopeSelection      guifg=#ffffff
 hi! TelescopeMultiSelection guifg=#61afef ctermfg=75 gui=bold
 hi! TelescopeSelectionCaret guifg=#61afef ctermfg=75

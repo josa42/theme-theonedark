@@ -139,10 +139,17 @@ hi!   VisualNOS          {{.VisualNOS}}
 hi!   WarningMsg         {{.WarningMsg}}
 hi!   WildMenu           {{.WildMenu}}
 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Float
+
+hi! link FloatBorder Normal
+hi! link NormalFloat Normal
 
 " Language
 " highlight   ClassName          {{.ClassName}}
 " highlight   Property           {{.Property}}
+
+
 
 
 
@@ -789,7 +796,7 @@ hi! TreeNormal {{.White.Vim "fg"}} {{.BlackDark.Vim "bg"}}
 " Plugin: Telescope
 hi! TelescopeNormal         {{.BackgroundGrey.Vim "bg"}}
 hi! TelescopeBorder         {{.BackgroundGrey.Vim "bg"}} {{.Grey.Vim "fg"}}
-hi! TelescopePreviewBorder  {{.Black.Vim          "bg"}} {{.Grey.Vim "fg"}}
+" hi! TelescopePreviewBorder  {{.Black.Vim          "bg"}} {{.Grey.Vim "fg"}}
 hi! TelescopeSelection      guifg=#ffffff
 hi! TelescopeMultiSelection {{.Blue.Vim           "fg"}} gui=bold
 hi! TelescopeSelectionCaret {{.Blue.Vim           "fg"}}
