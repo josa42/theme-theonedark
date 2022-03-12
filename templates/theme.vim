@@ -121,10 +121,10 @@ hi!   Question           {{.Question}}
 hi!   QuickFixLine       {{.QuickFixLine}}
 hi!   Search             {{.Search}}
 hi!   SpecialKey         {{.SpecialKey}}
-hi!   SpellBad           {{.SpellBad}}
-hi!   SpellCap           {{.SpellCap}}
-hi!   SpellLocal         {{.SpellLocal}}
-hi!   SpellRare          {{.SpellRare}}
+hi!   SpellBad           {{.SpellBad}}   guisp={{.Red.Hex}}
+hi!   SpellCap           {{.SpellCap}}   guisp={{.Blue.Hex}}
+hi!   SpellLocal         {{.SpellLocal}} guisp={{.Purple.Hex}}
+hi!   SpellRare          {{.SpellRare}}  guisp={{.Yellow.Hex}}
 hi!   StatusLine         {{.StatusLine}}
 hi!   StatusLineNC       {{.StatusLineNC}}
 hi!   StatusLineTerm     {{.StatusLineTerm}}

@@ -121,10 +121,10 @@ hi!   Question           guifg=#c678dd ctermfg=176 guibg=NONE ctermbg=NONE gui=N
 hi!   QuickFixLine       guifg=#282c34 ctermfg=236 guibg=#e5c07b ctermbg=180 gui=NONE cterm=NONE
 hi!   Search             guifg=#282c34 ctermfg=236 guibg=#61afef ctermbg=75 gui=NONE cterm=NONE
 hi!   SpecialKey         guifg=#3B4048 ctermfg=238 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
-hi!   SpellBad           gui=undercurl cterm=undercurl
-hi!   SpellCap           gui=undercurl cterm=undercurl
-hi!   SpellLocal         gui=undercurl cterm=undercurl
-hi!   SpellRare          gui=undercurl cterm=undercurl
+hi!   SpellBad           gui=undercurl cterm=undercurl   guisp=#e06c75
+hi!   SpellCap           gui=undercurl cterm=undercurl   guisp=#61afef
+hi!   SpellLocal         gui=undercurl cterm=undercurl guisp=#c678dd
+hi!   SpellRare          gui=undercurl cterm=undercurl  guisp=#e5c07b
 hi!   StatusLine         guifg=#abb2bf ctermfg=249 guibg=#2c323c ctermbg=236 gui=NONE cterm=NONE
 hi!   StatusLineNC       guifg=#5c6370 ctermfg=241 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 hi!   StatusLineTerm     guifg=#abb2bf ctermfg=249 guibg=#2c323c ctermbg=236 gui=NONE cterm=NONE
