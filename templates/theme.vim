@@ -113,10 +113,10 @@ hi!   ModeMsg            {{.ModeMsg}}
 hi!   MoreMsg            {{.MoreMsg}}
 hi!   NonText            {{.NonText}}
 hi!   Normal             {{.Normal}}
-hi!   Pmenu              {{.Pmenu}}
+hi!   Pmenu              {{.White.Vim "fg"}} {{.MenuGrey.Vim "bg"}}
 hi!   PmenuSel           {{.PmenuSel}}
-hi!   PmenuSbar          {{.PmenuSbar}}
-hi!   PmenuThumb         {{.PmenuThumb}}
+hi!   PmenuSbar          {{.MenuGrey.Vim "fg"}} {{.MenuGrey.Vim "bg"}}
+hi!   PmenuThumb         {{.Grey.Vim "fg"}} {{.Grey.Vim "bg"}}
 hi!   Question           {{.Question}}
 hi!   QuickFixLine       {{.QuickFixLine}}
 hi!   Search             {{.Search}}
@@ -142,8 +142,8 @@ hi!   WildMenu           {{.WildMenu}}
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Float
 
-hi! link FloatBorder Normal
-hi! link NormalFloat Normal
+hi! FloatBorder {{.Colors.black.Vim "fg"}} {{.MenuGrey.Vim "bg"}}
+hi! NormalFloat {{.White.Vim "fg"}} {{.MenuGrey.Vim "bg"}}
 
 " Language
 " highlight   ClassName          {{.ClassName}}
@@ -794,10 +794,55 @@ let g:indentLine_color_term = '{{.Comment.Foreground.Cterm}}'
 hi! TreeNormal {{.White.Vim "fg"}} {{.BlackDark.Vim "bg"}}
 
 " Plugin: Telescope
-hi! TelescopeNormal         {{.BackgroundGrey.Vim "bg"}}
-hi! TelescopeBorder         {{.BackgroundGrey.Vim "bg"}} {{.Grey.Vim "fg"}}
+hi! link TelescopeNormal NormalFloat
+hi! link TelescopeBorder FloatBorder
+
+hi! link TelescopePromptNormal TelescopeNormal
+hi! link TelescopeResultsNormal TelescopeNormal
+hi! link TelescopePreviewNormal TelescopeNormal
+
+" hi! TelescopeNormal         {{.BackgroundGrey.Vim "bg"}}
+" hi! TelescopeBorder         {{.BackgroundGrey.Vim "bg"}} {{.Grey.Vim "fg"}}
 " hi! TelescopePreviewBorder  {{.Black.Vim          "bg"}} {{.Grey.Vim "fg"}}
 hi! TelescopeSelection      guifg=#ffffff
 hi! TelescopeMultiSelection {{.Blue.Vim           "fg"}} gui=bold
 hi! TelescopeSelectionCaret {{.Blue.Vim           "fg"}}
+
+
+" Plugin: rhysd/conflict-marker.vim
+
+" TODO use correct theme colors
+
+highlight ConflictMarkerBegin               guibg=#2f7366
+highlight ConflictMarkerOurs                guibg=#2e5049
+highlight ConflictMarkerTheirs              guibg=#344f69
+"                                           guibg=#2f628e
+highlight ConflictMarkerEnd                 {{.Blue.Vim "bg"}} 
+"                                           guibg=#754a81
+highlight ConflictMarkerCommonAncestorsHunk {{.Purple.Vim "bg"}}
+
+
+" Plugin: hrsh7th/nvim-cmp
+" https://github.com/hrsh7th/nvim-cmp/wiki/Menu-Appearance
+
+hi link CmpItemMenu Comment
+
+" TODO use correct theme colors
+
+" gray
+highlight! CmpItemAbbrDeprecated guibg=NONE gui=strikethrough {{.Blue.Vim "fg"}}
+" blue
+highlight! CmpItemAbbrMatch guibg=NONE guifg=#569CD6
+highlight! CmpItemAbbrMatchFuzzy guibg=NONE guifg=#569CD6
+" light blue
+highlight! CmpItemKindVariable guibg=NONE guifg=#9CDCFE
+highlight! CmpItemKindInterface guibg=NONE guifg=#9CDCFE
+highlight! CmpItemKindText guibg=NONE guifg=#9CDCFE
+" pink
+highlight! CmpItemKindFunction guibg=NONE guifg=#C586C0
+highlight! CmpItemKindMethod guibg=NONE guifg=#C586C0
+" front
+highlight! CmpItemKindKeyword guibg=NONE guifg=#D4D4D4
+highlight! CmpItemKindProperty guibg=NONE guifg=#D4D4D4
+highlight! CmpItemKindUnit guibg=NONE guifg=#D4D4D4
 

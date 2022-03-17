@@ -1,6 +1,7 @@
 package theme
 
 type Theme struct {
+	Colors map[string]Color `yaml:"colors"`
 
 	// Base
 	Body Style `yaml:"body"`
@@ -33,6 +34,7 @@ type Theme struct {
 
 	Grey           Color `yaml:"grey"`
 	VisualGrey     Color `yaml:"visual_grey"`
+	MenuGrey       Color `yaml:"menu_grey"`
 	BackgroundGrey Color `yaml:"background_grey"`
 
 	DarkRed    Color `yaml:"dark_red"`

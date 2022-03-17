@@ -113,10 +113,10 @@ hi!   ModeMsg            guifg=NONE ctermfg=NONE guibg=NONE ctermbg=NONE gui=NON
 hi!   MoreMsg            guifg=NONE ctermfg=NONE guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 hi!   NonText            guifg=#3B4048 ctermfg=238 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 hi!   Normal             guifg=#abb2bf ctermfg=249 guibg=#282c34 ctermbg=236 gui=NONE cterm=NONE
-hi!   Pmenu              guifg=NONE ctermfg=NONE guibg=#3E4452 ctermbg=238 gui=NONE cterm=NONE
-hi!   PmenuSel           guifg=#282c34 ctermfg=236 guibg=#61afef ctermbg=75 gui=NONE cterm=NONE
-hi!   PmenuSbar          guifg=NONE ctermfg=NONE guibg=#3B4048 ctermbg=238 gui=NONE cterm=NONE
-hi!   PmenuThumb         guifg=NONE ctermfg=NONE guibg=#abb2bf ctermbg=249 gui=NONE cterm=NONE
+hi!   Pmenu              guifg=#abb2bf ctermfg=249 guibg=#252830 ctermbg=235
+hi!   PmenuSel           guifg=#abb2bf ctermfg=249 guibg=#3B3F4A ctermbg=238 gui=NONE cterm=NONE
+hi!   PmenuSbar          guifg=#252830 ctermfg=235 guibg=#252830 ctermbg=235
+hi!   PmenuThumb         guifg=#5c6370 ctermfg=241 guibg=#5c6370 ctermbg=241
 hi!   Question           guifg=#c678dd ctermfg=176 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 hi!   QuickFixLine       guifg=#282c34 ctermfg=236 guibg=#e5c07b ctermbg=180 gui=NONE cterm=NONE
 hi!   Search             guifg=#282c34 ctermfg=236 guibg=#61afef ctermbg=75 gui=NONE cterm=NONE
@@ -142,8 +142,8 @@ hi!   WildMenu           guifg=#282c34 ctermfg=236 guibg=#61afef ctermbg=75 gui=
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Float
 
-hi! link FloatBorder Normal
-hi! link NormalFloat Normal
+hi! FloatBorder guifg=#181a1f ctermfg=234 guibg=#252830 ctermbg=235
+hi! NormalFloat guifg=#abb2bf ctermfg=249 guibg=#252830 ctermbg=235
 
 " Language
 " highlight   ClassName          guifg=#e5c07b ctermfg=180 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
@@ -794,10 +794,55 @@ let g:indentLine_color_term = '241'
 hi! TreeNormal guifg=#abb2bf ctermfg=249 guibg=#21252B ctermbg=235
 
 " Plugin: Telescope
-hi! TelescopeNormal         guibg=#2c323c ctermbg=236
-hi! TelescopeBorder         guibg=#2c323c ctermbg=236 guifg=#5c6370 ctermfg=241
+hi! link TelescopeNormal NormalFloat
+hi! link TelescopeBorder FloatBorder
+
+hi! link TelescopePromptNormal TelescopeNormal
+hi! link TelescopeResultsNormal TelescopeNormal
+hi! link TelescopePreviewNormal TelescopeNormal
+
+" hi! TelescopeNormal         guibg=#2c323c ctermbg=236
+" hi! TelescopeBorder         guibg=#2c323c ctermbg=236 guifg=#5c6370 ctermfg=241
 " hi! TelescopePreviewBorder  guibg=#282c34 ctermbg=236 guifg=#5c6370 ctermfg=241
 hi! TelescopeSelection      guifg=#ffffff
 hi! TelescopeMultiSelection guifg=#61afef ctermfg=75 gui=bold
 hi! TelescopeSelectionCaret guifg=#61afef ctermfg=75
+
+
+" Plugin: rhysd/conflict-marker.vim
+
+" TODO use correct theme colors
+
+highlight ConflictMarkerBegin               guibg=#2f7366
+highlight ConflictMarkerOurs                guibg=#2e5049
+highlight ConflictMarkerTheirs              guibg=#344f69
+"                                           guibg=#2f628e
+highlight ConflictMarkerEnd                 guibg=#61afef ctermbg=75 
+"                                           guibg=#754a81
+highlight ConflictMarkerCommonAncestorsHunk guibg=#c678dd ctermbg=176
+
+
+" Plugin: hrsh7th/nvim-cmp
+" https://github.com/hrsh7th/nvim-cmp/wiki/Menu-Appearance
+
+hi link CmpItemMenu Comment
+
+" TODO use correct theme colors
+
+" gray
+highlight! CmpItemAbbrDeprecated guibg=NONE gui=strikethrough guifg=#61afef ctermfg=75
+" blue
+highlight! CmpItemAbbrMatch guibg=NONE guifg=#569CD6
+highlight! CmpItemAbbrMatchFuzzy guibg=NONE guifg=#569CD6
+" light blue
+highlight! CmpItemKindVariable guibg=NONE guifg=#9CDCFE
+highlight! CmpItemKindInterface guibg=NONE guifg=#9CDCFE
+highlight! CmpItemKindText guibg=NONE guifg=#9CDCFE
+" pink
+highlight! CmpItemKindFunction guibg=NONE guifg=#C586C0
+highlight! CmpItemKindMethod guibg=NONE guifg=#C586C0
+" front
+highlight! CmpItemKindKeyword guibg=NONE guifg=#D4D4D4
+highlight! CmpItemKindProperty guibg=NONE guifg=#D4D4D4
+highlight! CmpItemKindUnit guibg=NONE guifg=#D4D4D4
 

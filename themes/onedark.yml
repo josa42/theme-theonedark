@@ -43,7 +43,7 @@ definitions:
     gutterFgGrey: &gutterFgGrey "#4B5263"
     commentGrey:  &commentGrey  "#5c6370"
 
-    menuGrey:     &menuGrey     "#3E4452"
+    menuGrey:     &menuGrey     "#252830"
 
     cursorGrey:   &cursorGrey   "#2c323c"
 
@@ -56,6 +56,8 @@ definitions:
 
     darkBackground: &darkBackground '#21252B'
 
+    selectionBackground: &selectionBackground "#3B3F4A"
+
   fonts:
     underline: &underline "underline"
     undercurl: &undercurl "undercurl"
@@ -63,8 +65,14 @@ definitions:
     bold:      &bold      "bold"
 
 
+
 ################################################################################
 # Colors
+
+colors:
+  black: "#181a1f"
+
+
 
 black:           *black
 black_bright:    *black
@@ -97,6 +105,7 @@ dark_yellow: *darkYellow
 
 grey: *commentGrey
 visual_grey: *visualGrey
+menu_grey: *menuGrey
 background_grey: *cursorGrey
 
 
@@ -230,7 +239,7 @@ more_msg:                    { foreground: *none,           background: *none   
 non_text:                    { foreground: *specialGrey,    background: *none                            }  # '~' and '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line).
 normal:                      { foreground: *white,          background: *black                           }  # normal text
 pmenu:                       { foreground: *none,           background: *menuGrey                        }  # Popup menu: normal item.
-pmenu_sel:                   { foreground: *black,          background: *blue                            }  # Popup menu: selected item.
+pmenu_sel:                   { foreground: *white,          background: *selectionBackground             }  # Popup menu: selected item.
 pmenu_sbar:                  { foreground: *none,           background: *specialGrey                     }  # Popup menu: scrollbar.
 pmenu_thumb:                 { foreground: *none,           background: *white                           }  # Popup menu: Thumb of the scrollbar.
 question:                    { foreground: *purple,         background: *none                            }  # hit-enter prompt and yes/no questions
