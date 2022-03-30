@@ -172,13 +172,12 @@ hi! RedrawDebugRecompose {{.Red.Vim "bg"}}    {{.Black.Vim "fg"}}
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Neovim: LSP
 
-hi! LspDiagnosticsError {{.Red.Vim "fg"}}
-
 hi! DiagnosticError   {{.Error}}
 hi! DiagnosticWarn    {{.Warning}}
 hi! DiagnosticInfo    {{.Information}}
 hi! DiagnosticHint    {{.Hint}}
 
+hi! DiagnosticSignAction  {{.Purple.Vim "fg"}}
 
 " Quickfix:
 
@@ -718,18 +717,6 @@ hi! CocHintSign           {{.Hint}}
 hi! link CocHintFloat     CocHintSign
 hi! link CocHintHighlight CocUnderline
 hi! clear CocHintLine
-
-
-hi! LspDiagnosticsSignError       {{.Error}}
-hi! LspDiagnosticsSignWarning     {{.Warning}}
-hi! LspDiagnosticsSignInformation {{.Information}}
-hi! LspDiagnosticsSignHint        {{.Hint}}
-
-hi! LspDiagnosticsVirtualtextError       {{.Error}}
-hi! LspDiagnosticsVirtualtextWarning     {{.Warning}}
-hi! LspDiagnosticsVirtualtextInformation {{.Information}}
-hi! LspDiagnosticsVirtualtextHint        {{.Hint}}
-
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Neovim: terminal colors

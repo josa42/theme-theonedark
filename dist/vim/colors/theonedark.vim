@@ -172,13 +172,12 @@ hi! RedrawDebugRecompose guibg=#e06c75 ctermbg=168    guifg=#282c34 ctermfg=236
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Neovim: LSP
 
-hi! LspDiagnosticsError guifg=#e06c75 ctermfg=168
-
 hi! DiagnosticError   guifg=#e06c75 ctermfg=168 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 hi! DiagnosticWarn    guifg=#d19a66 ctermfg=173 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 hi! DiagnosticInfo    guifg=#e5c07b ctermfg=180 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 hi! DiagnosticHint    guifg=#61afef ctermfg=75 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 
+hi! DiagnosticSignAction  guifg=#c678dd ctermfg=176
 
 " Quickfix:
 
@@ -718,18 +717,6 @@ hi! CocHintSign           guifg=#61afef ctermfg=75 guibg=NONE ctermbg=NONE gui=N
 hi! link CocHintFloat     CocHintSign
 hi! link CocHintHighlight CocUnderline
 hi! clear CocHintLine
-
-
-hi! LspDiagnosticsSignError       guifg=#e06c75 ctermfg=168 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
-hi! LspDiagnosticsSignWarning     guifg=#d19a66 ctermfg=173 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
-hi! LspDiagnosticsSignInformation guifg=#e5c07b ctermfg=180 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
-hi! LspDiagnosticsSignHint        guifg=#61afef ctermfg=75 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
-
-hi! LspDiagnosticsVirtualtextError       guifg=#e06c75 ctermfg=168 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
-hi! LspDiagnosticsVirtualtextWarning     guifg=#d19a66 ctermfg=173 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
-hi! LspDiagnosticsVirtualtextInformation guifg=#e5c07b ctermfg=180 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
-hi! LspDiagnosticsVirtualtextHint        guifg=#61afef ctermfg=75 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
-
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Neovim: terminal colors
