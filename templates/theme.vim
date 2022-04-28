@@ -192,6 +192,21 @@ hi QuickFixLine {{.Black.Vim "fg"}} {{.Blue.Vim "bg"}}
 "
 
 
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Tree sitter
+"
+" => https://github.com/nvim-treesitter/nvim-treesitter/blob/master/doc/nvim-treesitter.txt
+" => https://github.com/nvim-treesitter/nvim-treesitter/blob/master/plugin/nvim-treesitter.vim
+"
+" > curl -sSL 'https://raw.githubusercontent.com/nvim-treesitter/nvim-treesitter/master/doc/nvim-treesitter.txt' | grep '^`TS' | sed 's#^`\([^`]*\)`.*#\1#' | sort | uniq
+
+hi! link TSTagAttribute todTagAttribute
+hi! link TSTag todTag
+hi! link TSTagDelimiter todTag
+hi! link TSInclude Keyword
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Language: CSS
 "
