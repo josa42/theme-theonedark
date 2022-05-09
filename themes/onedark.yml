@@ -30,7 +30,7 @@ definitions:
   colors:
     black:        &black        "#282c34"
     white:        &white        "#abb2bf"
-    red:          &red          "#e06c75"
+    red:          &red          "#e06c75" # #bb5b62
     darkRed:      &darkRed      "#be5046"
     green:        &green        "#98c379"
     yellow:       &yellow       "#e5c07b"

@@ -824,6 +824,12 @@ highlight ConflictMarkerEnd                 {{.Blue.Vim "bg"}}
 highlight ConflictMarkerCommonAncestorsHunk {{.Purple.Vim "bg"}}
 
 
+hi! DiffText     guibg=#25403a " "#2e5049
+hi! DiffAdd      guibg=#344f69
+hi! DiffAncestor guibg=#4a2648 " #20232a " #441552
+
+
+
 " Plugin: hrsh7th/nvim-cmp
 " https://github.com/hrsh7th/nvim-cmp/wiki/Menu-Appearance
 
@@ -847,4 +853,53 @@ highlight! CmpItemKindMethod guibg=NONE guifg=#C586C0
 highlight! CmpItemKindKeyword guibg=NONE guifg=#D4D4D4
 highlight! CmpItemKindProperty guibg=NONE guifg=#D4D4D4
 highlight! CmpItemKindUnit guibg=NONE guifg=#D4D4D4
+
+
+" Plugin: rcarriga/nvim-notify
+
+
+" error:                       { foreground: *red,            background: *none                            }
+" warning:                     { foreground: *darkYellow,     background: *none                            }
+" information:                 { foreground: *yellow,         background: *none                            }
+" hint:                        { foreground: *blue,           background: *none                            }
+" ok:                          { foreground: *green,          background: *none                            }
+" todo:                        { foreground: *purple,         background: *none                            }
+
+
+" hi! link TelescopeNormal NormalFloat
+" hi! link TelescopeBorder FloatBorder
+
+
+" hi! DiagnosticError   {{.Error}}
+" hi! DiagnosticWarn    {{.Warning}}
+" hi! DiagnosticInfo    {{.Information}}
+" hi! DiagnosticHint    {{.Hint}}
+
+
+hi! NotifyERRORTitle  {{.Error}}
+hi! NotifyERRORBorder {{.Error}}
+hi! NotifyERRORIcon   {{.Error}}
+
+hi! NotifyWARNTitle  {{.Warning}}
+hi! NotifyWARNBorder {{.Warning}}
+hi! NotifyWARNIcon   {{.Warning}}
+
+hi! NotifyINFOTitle  {{.Normal}}
+hi! NotifyINFOBorder {{.Normal}}
+hi! NotifyINFOIcon   {{.Normal}}
+
+hi! NotifyDEBUGTitle  {{.Hint}}
+hi! NotifyDEBUGBorder {{.Hint}}
+hi! NotifyDEBUGIcon   {{.Hint}}
+
+hi! NotifyTRACETitle  {{.Hint}}
+hi! NotifyTRACEBorder {{.Hint}}
+hi! NotifyTRACEIcon   {{.Hint}}
+
+
+" hi! NotifyERRORBorder {{.Colors.black.Vim "fg"}} 
+" hi! NotifyWARNBorder  {{.Colors.black.Vim "fg"}} 
+" hi! NotifyINFOBorder  {{.Colors.black.Vim "fg"}} 
+" hi! NotifyDEBUGBorder {{.Colors.black.Vim "fg"}} 
+" hi! NotifyTRACEBorder {{.Colors.black.Vim "fg"}} 
 

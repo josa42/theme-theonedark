@@ -824,6 +824,12 @@ highlight ConflictMarkerEnd                 guibg=#61afef ctermbg=75
 highlight ConflictMarkerCommonAncestorsHunk guibg=#c678dd ctermbg=176
 
 
+hi! DiffText     guibg=#25403a " "#2e5049
+hi! DiffAdd      guibg=#344f69
+hi! DiffAncestor guibg=#4a2648 " #20232a " #441552
+
+
+
 " Plugin: hrsh7th/nvim-cmp
 " https://github.com/hrsh7th/nvim-cmp/wiki/Menu-Appearance
 
@@ -847,4 +853,70 @@ highlight! CmpItemKindMethod guibg=NONE guifg=#C586C0
 highlight! CmpItemKindKeyword guibg=NONE guifg=#D4D4D4
 highlight! CmpItemKindProperty guibg=NONE guifg=#D4D4D4
 highlight! CmpItemKindUnit guibg=NONE guifg=#D4D4D4
+
+
+" Plugin: rcarriga/nvim-notify
+
+
+" error:                       { foreground: *red,            background: *none                            }
+" warning:                     { foreground: *darkYellow,     background: *none                            }
+" information:                 { foreground: *yellow,         background: *none                            }
+" hint:                        { foreground: *blue,           background: *none                            }
+" ok:                          { foreground: *green,          background: *none                            }
+" todo:                        { foreground: *purple,         background: *none                            }
+
+
+" hi! link TelescopeNormal NormalFloat
+" hi! link TelescopeBorder FloatBorder
+
+
+" hi! DiagnosticError   guifg=#e06c75 ctermfg=168 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
+" hi! DiagnosticWarn    guifg=#d19a66 ctermfg=173 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
+" hi! DiagnosticInfo    guifg=#e5c07b ctermfg=180 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
+" hi! DiagnosticHint    guifg=#61afef ctermfg=75 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
+
+
+hi! NotifyERRORTitle  guifg=#e06c75 ctermfg=168 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
+hi! NotifyERRORBorder guifg=#e06c75 ctermfg=168 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
+hi! NotifyERRORIcon   guifg=#e06c75 ctermfg=168 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
+
+hi! NotifyWARNTitle  guifg=#d19a66 ctermfg=173 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
+hi! NotifyWARNBorder guifg=#d19a66 ctermfg=173 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
+hi! NotifyWARNIcon   guifg=#d19a66 ctermfg=173 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
+
+hi! NotifyINFOTitle  guifg=#abb2bf ctermfg=249 guibg=#282c34 ctermbg=236 gui=NONE cterm=NONE
+hi! NotifyINFOBorder guifg=#abb2bf ctermfg=249 guibg=#282c34 ctermbg=236 gui=NONE cterm=NONE
+hi! NotifyINFOIcon   guifg=#abb2bf ctermfg=249 guibg=#282c34 ctermbg=236 gui=NONE cterm=NONE
+
+hi! NotifyDEBUGTitle  guifg=#61afef ctermfg=75 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
+hi! NotifyDEBUGBorder guifg=#61afef ctermfg=75 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
+hi! NotifyDEBUGIcon   guifg=#61afef ctermfg=75 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
+
+hi! NotifyTRACETitle  guifg=#61afef ctermfg=75 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
+hi! NotifyTRACEBorder guifg=#61afef ctermfg=75 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
+hi! NotifyTRACEIcon   guifg=#61afef ctermfg=75 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
+
+
+" highlight NotifyDEBUGBorder guifg=#8B8B8B
+" highlight NotifyDEBUGIcon guifg=#8B8B8B
+" highlight NotifyDEBUGTitle  guifg=#8B8B8B
+" highlight NotifyINFOBorder guifg=#4F6752
+" " highlight NotifyINFOIcon guifg=#A9FF68
+" " highlight NotifyINFOTitle guifg=#A9FF68
+" highlight NotifyTRACEBorder guifg=#4F3552
+" highlight NotifyTRACEIcon guifg=#D484FF
+" highlight NotifyTRACETitle  guifg=#D484FF
+
+" highlight! link NotifyERRORBody NormalFloat
+" highlight! link NotifyWARNBody  NormalFloat
+" highlight! link NotifyINFOBody  NormalFloat
+" highlight! link NotifyDEBUGBody NormalFloat
+" highlight! link NotifyTRACEBody NormalFloat
+"
+
+" hi! NotifyERRORBorder guifg=#181a1f ctermfg=234 
+" hi! NotifyWARNBorder  guifg=#181a1f ctermfg=234 
+" hi! NotifyINFOBorder  guifg=#181a1f ctermfg=234 
+" hi! NotifyDEBUGBorder guifg=#181a1f ctermfg=234 
+" hi! NotifyTRACEBorder guifg=#181a1f ctermfg=234 
 
