@@ -142,7 +142,7 @@ hi!   WildMenu           {{.WildMenu}}
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Float
 
-hi! FloatBorder {{.Colors.black.Vim "fg"}} {{.MenuGrey.Vim "bg"}}
+hi! FloatBorder {{.BlackDark.Vim "fg"}} {{.MenuGrey.Vim "bg"}}
 hi! NormalFloat {{.White.Vim "fg"}} {{.MenuGrey.Vim "bg"}}
 
 " Language

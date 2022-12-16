@@ -43,7 +43,7 @@ definitions:
     gutterFgGrey: &gutterFgGrey "#4B5263"
     commentGrey:  &commentGrey  "#5c6370"
 
-    menuGrey:     &menuGrey     "#252830"
+    menuGrey:     &menuGrey     "#1e2127"
 
     cursorGrey:   &cursorGrey   "#2c323c"
 

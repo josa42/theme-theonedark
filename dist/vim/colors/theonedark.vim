@@ -113,9 +113,9 @@ hi!   ModeMsg            guifg=NONE ctermfg=NONE guibg=NONE ctermbg=NONE gui=NON
 hi!   MoreMsg            guifg=NONE ctermfg=NONE guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 hi!   NonText            guifg=#3B4048 ctermfg=238 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 hi!   Normal             guifg=#abb2bf ctermfg=249 guibg=#282c34 ctermbg=236 gui=NONE cterm=NONE
-hi!   Pmenu              guifg=#abb2bf ctermfg=249 guibg=#252830 ctermbg=235
+hi!   Pmenu              guifg=#abb2bf ctermfg=249 guibg=#1e2127 ctermbg=235
 hi!   PmenuSel           guifg=#abb2bf ctermfg=249 guibg=#3B3F4A ctermbg=238 gui=NONE cterm=NONE
-hi!   PmenuSbar          guifg=#252830 ctermfg=235 guibg=#252830 ctermbg=235
+hi!   PmenuSbar          guifg=#1e2127 ctermfg=235 guibg=#1e2127 ctermbg=235
 hi!   PmenuThumb         guifg=#5c6370 ctermfg=241 guibg=#5c6370 ctermbg=241
 hi!   Question           guifg=#c678dd ctermfg=176 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 hi!   QuickFixLine       guifg=#282c34 ctermfg=236 guibg=#e5c07b ctermbg=180 gui=NONE cterm=NONE
@@ -142,8 +142,8 @@ hi!   WildMenu           guifg=#282c34 ctermfg=236 guibg=#61afef ctermbg=75 gui=
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Float
 
-hi! FloatBorder guifg=#181a1f ctermfg=234 guibg=#252830 ctermbg=235
-hi! NormalFloat guifg=#abb2bf ctermfg=249 guibg=#252830 ctermbg=235
+hi! FloatBorder guifg=#21252B ctermfg=235 guibg=#1e2127 ctermbg=235
+hi! NormalFloat guifg=#abb2bf ctermfg=249 guibg=#1e2127 ctermbg=235
 
 " Language
 " highlight   ClassName          guifg=#e5c07b ctermfg=180 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE

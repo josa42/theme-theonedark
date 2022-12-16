@@ -184,7 +184,7 @@ hi('WildMenu', { fg = colors.Black, bg = colors.Blue })
 --------------------------------------------------------------------------------
 -- Float
 
-hi('FloatBorder', { fg = colors.Black, bg = colors.MenuGrey })
+hi('FloatBorder', { fg = colors.BlackDark, bg = colors.MenuGrey })
 hi('NormalFloat', { fg = colors.White, bg = colors.MenuGrey })
 -- Language
 -- highlight   ClassName          {{.ClassName}}
@@ -846,6 +846,45 @@ hi('CmpItemKindMethod', { bg = 'NONE', fg = '#C586C0' })
 hi('CmpItemKindKeyword', { bg = 'NONE', fg = '#D4D4D4' })
 hi('CmpItemKindProperty', { bg = 'NONE', fg = '#D4D4D4' })
 hi('CmpItemKindUnit', { bg = 'NONE', fg = '#D4D4D4' })
+
+-- local k_color = {
+--   -- light blue
+--   light_blue = '#9CDCFE',
+--   pink = '#C586C0',
+--   front = '#D4D4D4',
+-- }
+--
+-- local kinds = {
+--   Text = k_color.light_blue,
+--   Method = k_color.pink,
+--   Function = k_color.pink,
+--   Constructor = colors.DarkRed,
+--   Field = colors.DarkRed,
+--   Variable = k_color.light_blue,
+--   Class = colors.DarkRed,
+--   Interface = k_color.light_blue,
+--   Module = colors.DarkRed,
+--   Property = k_color.front,
+--   Unit = k_color.front,
+--   Value = colors.DarkRed,
+--   Enum = colors.DarkRed,
+--   Keyword = k_color.front,
+--   Snippet = colors.DarkRed,
+--   Color = colors.DarkRed,
+--   File = colors.DarkRed,
+--   Reference = colors.DarkRed,
+--   Folder = colors.DarkRed,
+--   EnumMember = colors.DarkRed,
+--   Constant = colors.DarkRed,
+--   Struct = colors.DarkRed,
+--   Event = colors.DarkRed,
+--   Operator = colors.DarkRed,
+--   TypeParameter = colors.DarkRed,
+-- }
+--
+-- for kind, color in pairs(kinds) do
+--   hi('CmpItemKind' .. kind, { fg = colors.White, bg = color })
+-- end
 
 -- Plugin: rcarriga/nvim-notify
 
