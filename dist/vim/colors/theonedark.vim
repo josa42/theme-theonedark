@@ -897,26 +897,16 @@ hi! NotifyTRACEBorder guifg=#61afef ctermfg=75 guibg=NONE ctermbg=NONE gui=NONE 
 hi! NotifyTRACEIcon   guifg=#61afef ctermfg=75 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 
 
-" highlight NotifyDEBUGBorder guifg=#8B8B8B
-" highlight NotifyDEBUGIcon guifg=#8B8B8B
-" highlight NotifyDEBUGTitle  guifg=#8B8B8B
-" highlight NotifyINFOBorder guifg=#4F6752
-" " highlight NotifyINFOIcon guifg=#A9FF68
-" " highlight NotifyINFOTitle guifg=#A9FF68
-" highlight NotifyTRACEBorder guifg=#4F3552
-" highlight NotifyTRACEIcon guifg=#D484FF
-" highlight NotifyTRACETitle  guifg=#D484FF
-
-" highlight! link NotifyERRORBody NormalFloat
-" highlight! link NotifyWARNBody  NormalFloat
-" highlight! link NotifyINFOBody  NormalFloat
-" highlight! link NotifyDEBUGBody NormalFloat
-" highlight! link NotifyTRACEBody NormalFloat
-"
-
 " hi! NotifyERRORBorder guifg=#181a1f ctermfg=234 
 " hi! NotifyWARNBorder  guifg=#181a1f ctermfg=234 
 " hi! NotifyINFOBorder  guifg=#181a1f ctermfg=234 
 " hi! NotifyDEBUGBorder guifg=#181a1f ctermfg=234 
 " hi! NotifyTRACEBorder guifg=#181a1f ctermfg=234 
+
+
+hi link @text.title          markdownBold
+hi link @punctuation.special markdownHeadingDelimiter
+hi link @text.reference      markdownLinkText
+hi link @text.uri            markdownUrl
+hi link @text.literal        markdownCode
 

@@ -903,3 +903,10 @@ hi! NotifyTRACEIcon   {{.Hint}}
 " hi! NotifyDEBUGBorder {{.Colors.black.Vim "fg"}} 
 " hi! NotifyTRACEBorder {{.Colors.black.Vim "fg"}} 
 
+
+hi link @text.title          markdownBold
+hi link @punctuation.special markdownHeadingDelimiter
+hi link @text.reference      markdownLinkText
+hi link @text.uri            markdownUrl
+hi link @text.literal        markdownCode
+
