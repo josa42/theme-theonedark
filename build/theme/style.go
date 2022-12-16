@@ -37,6 +37,47 @@ func (s Style) String() string {
 	return strings.Join(str, " ")
 }
 
+func (s Style) Lua() string {
+
+	str := []string{}
+	if s.Foreground != nil && s.Foreground.Hex() != "NONE" {
+		str = append(
+			str,
+			fmt.Sprintf("fg = '%s'", s.Foreground.Hex()),
+		)
+	}
+	if s.Background != nil && s.Background.Hex() != "NONE" {
+		str = append(
+			str,
+			fmt.Sprintf("bg = '%s'", s.Background.Hex()),
+		)
+	}
+
+	if s.Font.String() != "NONE" {
+		for _, p := range strings.Split(s.Font.String(), ",") {
+
+			if p == "underline" || p == "undercurl" || p == "italic" {
+				str = append(
+					str,
+					fmt.Sprintf("%s = true", p),
+				)
+
+			} else {
+				panic(s.Font.String())
+			}
+
+		}
+
+	}
+
+	// str = append(str,
+	// 	fmt.Sprintf("gui=%s", s.Font.String()),
+	// 	fmt.Sprintf("cterm=%s", s.Font.String()),
+	// )
+
+	return fmt.Sprintf("{ %s }", strings.Join(str, ", "))
+}
+
 func (s Style) Flat() string {
 	if s.Font != "" {
 		return fmt.Sprintf("[ %s, %s, '%s' ]", s.Foreground.Flat(), s.Background.Flat(), s.Font)

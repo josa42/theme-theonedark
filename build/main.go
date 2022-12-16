@@ -26,6 +26,7 @@ func main() {
 	}
 
 	writeTheme(theme, "theme.vim", "./dist/vim/colors/theonedark.vim")
+	writeTheme(theme, "theme.nvim.lua", "./dist/nvim/colors/theonedark.lua")
 	writeTheme(theme, "lightline.vim", "./dist/vim/autoload/lightline/colorscheme/theonedark.vim")
 	writeTheme(theme, "airline.vim", "./dist/vim/autoload/airline/themes/theonedark.vim")
 	writeTheme(theme, "theme.tmux", "./dist/tmux/theonedark.tmux")
