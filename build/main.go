@@ -37,8 +37,6 @@ func main() {
 	writeTheme(theme, "slack.txt", "./dist/slack/colors.txt")
 	writeTheme(theme, "theme.xccolortheme", "./dist/xcode/TheOneDark.xccolortheme")
 
-	// theme.
-
 	os.Chmod("./dist/tmux/theonedark.tmux", os.ModePerm)
 }
 

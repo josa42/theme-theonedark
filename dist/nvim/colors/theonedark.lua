@@ -36,6 +36,7 @@ local colors = {
   BlackDark      = "#21252B",
   MenuGrey       = "#1e2127",
   VisualGrey     = "#3E4452",
+  GutterGreyy     = "#4b5263",
   Grey           = "#5c6370",
   DarkRed        = "#be5046",
 }
@@ -184,7 +185,7 @@ hi('WildMenu', { fg = colors.Black, bg = colors.Blue })
 --------------------------------------------------------------------------------
 -- Float
 
-hi('FloatBorder', { fg = colors.BlackDark, bg = colors.MenuGrey })
+hi('FloatBorder', { fg = colors.Grey, bg = colors.MenuGrey })
 hi('NormalFloat', { fg = colors.White, bg = colors.MenuGrey })
 -- Language
 -- highlight   ClassName          guifg=#e5c07b ctermfg=180 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
@@ -904,30 +905,24 @@ hi('CmpItemKindUnit', { bg = 'NONE', fg = '#D4D4D4' })
 -- hi! DiagnosticHint    guifg=#61afef ctermfg=75 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 
 hi('NotifyERRORTitle', theme.Error)
-hi('NotifyERRORBorder', theme.Error)
+hi('NotifyERRORBorder', { fg = '#653c3f' })
 hi('NotifyERRORIcon', theme.Error)
 
 hi('NotifyWARNTitle', theme.Warning)
-hi('NotifyWARNBorder', theme.Warning)
+hi('NotifyWARNBorder', { fg = '#603d1d' })
 hi('NotifyWARNIcon', theme.Warning)
 
 hi('NotifyINFOTitle', theme.Normal)
-hi('NotifyINFOBorder', theme.Normal)
+hi('NotifyINFOBorder', { fg = colors.Grey })
 hi('NotifyINFOIcon', theme.Normal)
 
 hi('NotifyDEBUGTitle', theme.Hint)
-hi('NotifyDEBUGBorder', theme.Hint)
+hi('NotifyDEBUGBorder', { fg = colors.Grey })
 hi('NotifyDEBUGIcon', theme.Hint)
 
 hi('NotifyTRACETitle', theme.Hint)
-hi('NotifyTRACEBorder', theme.Hint)
--- hi('NotifyTRACEIcon', theme.Hint)
-
--- hi! NotifyERRORBorder guifg=#181a1f
--- hi! NotifyWARNBorder  guifg=#181a1f
--- hi! NotifyINFOBorder  guifg=#181a1f
--- hi! NotifyDEBUGBorder guifg=#181a1f
--- hi! NotifyTRACEBorder guifg=#181a1f
+hi('NotifyTRACEBorder', { fg = colors.Grey })
+hi('NotifyTRACEIcon', theme.Hint)
 
 ln('@text.title', 'markdownBold')
 ln('@punctuation.special', 'markdownHeadingDelimiter')

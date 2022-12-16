@@ -36,6 +36,7 @@ local colors = {
   BlackDark      = "{{ .BlackDark.Hex      }}",
   MenuGrey       = "{{ .MenuGrey.Hex       }}",
   VisualGrey     = "{{ .VisualGrey.Hex     }}",
+  GutterGreyy     = "{{ .Colors.gutterGrey.Hex }}",
   Grey           = "{{ .Grey.Hex           }}",
   DarkRed        = "{{ .DarkRed.Hex }}",
 }
@@ -184,7 +185,7 @@ hi('WildMenu', { fg = colors.Black, bg = colors.Blue })
 --------------------------------------------------------------------------------
 -- Float
 
-hi('FloatBorder', { fg = colors.BlackDark, bg = colors.MenuGrey })
+hi('FloatBorder', { fg = colors.Grey, bg = colors.MenuGrey })
 hi('NormalFloat', { fg = colors.White, bg = colors.MenuGrey })
 -- Language
 -- highlight   ClassName          {{.ClassName}}
@@ -904,30 +905,24 @@ hi('CmpItemKindUnit', { bg = 'NONE', fg = '#D4D4D4' })
 -- hi! DiagnosticHint    {{.Hint}}
 
 hi('NotifyERRORTitle', theme.Error)
-hi('NotifyERRORBorder', theme.Error)
+hi('NotifyERRORBorder', { fg = '#653c3f' })
 hi('NotifyERRORIcon', theme.Error)
 
 hi('NotifyWARNTitle', theme.Warning)
-hi('NotifyWARNBorder', theme.Warning)
+hi('NotifyWARNBorder', { fg = '#603d1d' })
 hi('NotifyWARNIcon', theme.Warning)
 
 hi('NotifyINFOTitle', theme.Normal)
-hi('NotifyINFOBorder', theme.Normal)
+hi('NotifyINFOBorder', { fg = colors.Grey })
 hi('NotifyINFOIcon', theme.Normal)
 
 hi('NotifyDEBUGTitle', theme.Hint)
-hi('NotifyDEBUGBorder', theme.Hint)
+hi('NotifyDEBUGBorder', { fg = colors.Grey })
 hi('NotifyDEBUGIcon', theme.Hint)
 
 hi('NotifyTRACETitle', theme.Hint)
-hi('NotifyTRACEBorder', theme.Hint)
--- hi('NotifyTRACEIcon', theme.Hint)
-
--- hi! NotifyERRORBorder guifg={{.Colors.black.Hex }}
--- hi! NotifyWARNBorder  guifg={{.Colors.black.Hex }}
--- hi! NotifyINFOBorder  guifg={{.Colors.black.Hex }}
--- hi! NotifyDEBUGBorder guifg={{.Colors.black.Hex }}
--- hi! NotifyTRACEBorder guifg={{.Colors.black.Hex }}
+hi('NotifyTRACEBorder', { fg = colors.Grey })
+hi('NotifyTRACEIcon', theme.Hint)
 
 ln('@text.title', 'markdownBold')
 ln('@punctuation.special', 'markdownHeadingDelimiter')

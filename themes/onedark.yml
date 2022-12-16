@@ -71,6 +71,7 @@ definitions:
 
 colors:
   black: "#181a1f"
+  gutterGrey: *gutterGrey
 
 
 
