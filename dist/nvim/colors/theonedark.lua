@@ -185,8 +185,9 @@ hi('WildMenu', { fg = colors.Black, bg = colors.Blue })
 --------------------------------------------------------------------------------
 -- Float
 
-hi('FloatBorder', { fg = colors.Grey, bg = colors.MenuGrey })
 hi('NormalFloat', { fg = colors.White, bg = colors.MenuGrey })
+hi('FloatBorder', { fg = colors.Grey, bg = colors.MenuGrey })
+hi('FloatTitle', { fg = colors.White, bg = colors.MenuGrey, bold = true })
 -- Language
 -- highlight   ClassName          guifg=#e5c07b ctermfg=180 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 -- highlight   Property           guifg=#e06c75 ctermfg=168 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
