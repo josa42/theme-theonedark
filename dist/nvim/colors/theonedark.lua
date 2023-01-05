@@ -930,3 +930,7 @@ ln('@punctuation.special', 'markdownHeadingDelimiter')
 ln('@text.reference', 'markdownLinkText')
 ln('@text.uri', 'markdownUrl')
 ln('@text.literal', 'markdownCode')
+
+-- html
+ln('@tag', 'htmlTag')
+ln('@tag.attribute', 'htmlArg')
