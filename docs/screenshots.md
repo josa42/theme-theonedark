@@ -10,6 +10,8 @@
     <summary>All Plugins</summary>
     <div><b>Neovim buildin</b></div>
     <img style="width: 67%;" src="../screenshots/vim-Dockerfile-base.png" />
+    <div><b></b></div>
+    <img style="width: 67%;" src="../screenshots/vim-Dockerfile-ts.png" />
     <div><b><a href="github.com/sheerun/vim-polyglot">sheerun/vim-polyglot</a></b></div>
     <img style="width: 67%;" src="../screenshots/vim-Dockerfile-polyglot.png" />
 </details>
@@ -22,6 +24,8 @@
     <summary>All Plugins</summary>
     <div><b>Neovim buildin</b></div>
     <img style="width: 67%;" src="../screenshots/vim-test.css-base.png" />
+    <div><b></b></div>
+    <img style="width: 67%;" src="../screenshots/vim-test.css-ts.png" />
     <div><b><a href="github.com/sheerun/vim-polyglot">sheerun/vim-polyglot</a></b></div>
     <img style="width: 67%;" src="../screenshots/vim-test.css-polyglot.png" />
 </details>
@@ -34,6 +38,8 @@
     <summary>All Plugins</summary>
     <div><b>Neovim buildin</b></div>
     <img style="width: 67%;" src="../screenshots/vim-test.go-base.png" />
+    <div><b></b></div>
+    <img style="width: 67%;" src="../screenshots/vim-test.go-ts.png" />
     <div><b><a href="github.com/sheerun/vim-polyglot">sheerun/vim-polyglot</a></b></div>
     <img style="width: 67%;" src="../screenshots/vim-test.go-polyglot.png" />
 </details>
@@ -46,6 +52,8 @@
     <summary>All Plugins</summary>
     <div><b>Neovim buildin</b></div>
     <img style="width: 67%;" src="../screenshots/vim-test.html-base.png" />
+    <div><b></b></div>
+    <img style="width: 67%;" src="../screenshots/vim-test.html-ts.png" />
     <div><b><a href="github.com/sheerun/vim-polyglot">sheerun/vim-polyglot</a></b></div>
     <img style="width: 67%;" src="../screenshots/vim-test.html-polyglot.png" />
 </details>
@@ -58,6 +66,8 @@
     <summary>All Plugins</summary>
     <div><b>Neovim buildin</b></div>
     <img style="width: 67%;" src="../screenshots/vim-test.js-base.png" />
+    <div><b></b></div>
+    <img style="width: 67%;" src="../screenshots/vim-test.js-ts.png" />
     <div><b><a href="github.com/sheerun/vim-polyglot">sheerun/vim-polyglot</a></b></div>
     <img style="width: 67%;" src="../screenshots/vim-test.js-polyglot.png" />
     <div><b><a href="https://github.com/yuezk/vim-js">yuezk/vim-js</a> and <a href="https://github.com/maxmellon/vim-jsx-pretty">maxmellon/vim-jsx-pretty</a></b></div>
@@ -74,6 +84,8 @@
     <summary>All Plugins</summary>
     <div><b>Neovim buildin</b></div>
     <img style="width: 67%;" src="../screenshots/vim-test.json-base.png" />
+    <div><b></b></div>
+    <img style="width: 67%;" src="../screenshots/vim-test.json-ts.png" />
     <div><b><a href="github.com/sheerun/vim-polyglot">sheerun/vim-polyglot</a></b></div>
     <img style="width: 67%;" src="../screenshots/vim-test.json-polyglot.png" />
 </details>
@@ -86,6 +98,8 @@
     <summary>All Plugins</summary>
     <div><b>Neovim buildin</b></div>
     <img style="width: 67%;" src="../screenshots/vim-test.jsx-base.png" />
+    <div><b></b></div>
+    <img style="width: 67%;" src="../screenshots/vim-test.jsx-ts.png" />
     <div><b><a href="github.com/sheerun/vim-polyglot">sheerun/vim-polyglot</a></b></div>
     <img style="width: 67%;" src="../screenshots/vim-test.jsx-polyglot.png" />
     <div><b><a href="https://github.com/yuezk/vim-js">yuezk/vim-js</a> and <a href="https://github.com/maxmellon/vim-jsx-pretty">maxmellon/vim-jsx-pretty</a></b></div>
@@ -102,6 +116,8 @@
     <summary>All Plugins</summary>
     <div><b>Neovim buildin</b></div>
     <img style="width: 67%;" src="../screenshots/vim-test.lua-base.png" />
+    <div><b></b></div>
+    <img style="width: 67%;" src="../screenshots/vim-test.lua-ts.png" />
     <div><b><a href="github.com/sheerun/vim-polyglot">sheerun/vim-polyglot</a></b></div>
     <img style="width: 67%;" src="../screenshots/vim-test.lua-polyglot.png" />
 </details>
@@ -114,6 +130,8 @@
     <summary>All Plugins</summary>
     <div><b>Neovim buildin</b></div>
     <img style="width: 67%;" src="../screenshots/vim-test.md-base.png" />
+    <div><b></b></div>
+    <img style="width: 67%;" src="../screenshots/vim-test.md-ts.png" />
     <div><b><a href="github.com/sheerun/vim-polyglot">sheerun/vim-polyglot</a></b></div>
     <img style="width: 67%;" src="../screenshots/vim-test.md-polyglot.png" />
 </details>
@@ -126,6 +144,8 @@
     <summary>All Plugins</summary>
     <div><b>Neovim buildin</b></div>
     <img style="width: 67%;" src="../screenshots/vim-test.php-base.png" />
+    <div><b></b></div>
+    <img style="width: 67%;" src="../screenshots/vim-test.php-ts.png" />
     <div><b><a href="github.com/sheerun/vim-polyglot">sheerun/vim-polyglot</a></b></div>
     <img style="width: 67%;" src="../screenshots/vim-test.php-polyglot.png" />
 </details>
@@ -138,6 +158,8 @@
     <summary>All Plugins</summary>
     <div><b>Neovim buildin</b></div>
     <img style="width: 67%;" src="../screenshots/vim-test.scss-base.png" />
+    <div><b></b></div>
+    <img style="width: 67%;" src="../screenshots/vim-test.scss-ts.png" />
     <div><b><a href="github.com/sheerun/vim-polyglot">sheerun/vim-polyglot</a></b></div>
     <img style="width: 67%;" src="../screenshots/vim-test.scss-polyglot.png" />
 </details>
@@ -150,6 +172,8 @@
     <summary>All Plugins</summary>
     <div><b>Neovim buildin</b></div>
     <img style="width: 67%;" src="../screenshots/vim-test.swift-base.png" />
+    <div><b></b></div>
+    <img style="width: 67%;" src="../screenshots/vim-test.swift-ts.png" />
     <div><b><a href="github.com/sheerun/vim-polyglot">sheerun/vim-polyglot</a></b></div>
     <img style="width: 67%;" src="../screenshots/vim-test.swift-polyglot.png" />
 </details>
@@ -162,6 +186,8 @@
     <summary>All Plugins</summary>
     <div><b>Neovim buildin</b></div>
     <img style="width: 67%;" src="../screenshots/vim-test.ts-base.png" />
+    <div><b></b></div>
+    <img style="width: 67%;" src="../screenshots/vim-test.ts-ts.png" />
     <div><b><a href="github.com/sheerun/vim-polyglot">sheerun/vim-polyglot</a></b></div>
     <img style="width: 67%;" src="../screenshots/vim-test.ts-polyglot.png" />
 </details>
@@ -174,6 +200,8 @@
     <summary>All Plugins</summary>
     <div><b>Neovim buildin</b></div>
     <img style="width: 67%;" src="../screenshots/vim-test.xml-base.png" />
+    <div><b></b></div>
+    <img style="width: 67%;" src="../screenshots/vim-test.xml-ts.png" />
     <div><b><a href="github.com/sheerun/vim-polyglot">sheerun/vim-polyglot</a></b></div>
     <img style="width: 67%;" src="../screenshots/vim-test.xml-polyglot.png" />
 </details>
@@ -186,6 +214,8 @@
     <summary>All Plugins</summary>
     <div><b>Neovim buildin</b></div>
     <img style="width: 67%;" src="../screenshots/vim-test.yml-base.png" />
+    <div><b></b></div>
+    <img style="width: 67%;" src="../screenshots/vim-test.yml-ts.png" />
     <div><b><a href="github.com/sheerun/vim-polyglot">sheerun/vim-polyglot</a></b></div>
     <img style="width: 67%;" src="../screenshots/vim-test.yml-polyglot.png" />
 </details>

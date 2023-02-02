@@ -1,18 +1,20 @@
-#!/bin/bash
+#!/usr/bin/env bash
+
+# shellcheck disable=SC2068
 
 s() {
   echo "${2} - ${1}"
   osascript scripts/screenshot.applescript \
     "$(pwd)" \
     "$(which nvim)" \
-    scripts/config/init-${1}.vim \
-    examples/${2} \
-    screenshots/vim-${2}-${1}.png
+    "scripts/config/init-${1}.vim" \
+    "examples/${2}" \
+    "screenshots/vim-${2}-${1}.png"
 
   wt "    <div><b>$(pluginInfo "$c")</b></div>"
   wt '    <img style="width: 67%;" src="../screenshots/'"vim-$f-$c.png"'" />'
 
-  optipng screenshots/vim-${2}-${1}.png 2> /dev/null > /dev/null &
+  optipng "screenshots/vim-${2}-${1}.png" 2> /dev/null > /dev/null &
 }
 
 ws() {
@@ -34,8 +36,8 @@ pluginInfo() {
 
 
 jsfiles=("test.js" "test.jsx")
-types=("base" "polyglot")
-jsTypes=("base" "polyglot" "vim-js" "yajs")
+types=("base" "ts" "polyglot")
+jsTypes=("base" "ts" "polyglot" "vim-js" "yajs")
 files=${1:-$(ls examples)}
 
 rm -f ./docs/screenshots.md ./tmp.md
@@ -48,7 +50,6 @@ ws '# Screeshots'
 ws ''
 ws '## Neovim / Vim'
 ws ''
-
 
 for f in ${files[@]}; do
   if [[ $f =~ \.jsx?$ ]]; then
