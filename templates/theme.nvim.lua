@@ -925,11 +925,14 @@ hi('NotifyTRACETitle', theme.Hint)
 hi('NotifyTRACEBorder', { fg = colors.Grey })
 hi('NotifyTRACEIcon', theme.Hint)
 
-ln('@text.title', 'markdownBold')
-ln('@punctuation.special', 'markdownHeadingDelimiter')
-ln('@text.reference', 'markdownLinkText')
-ln('@text.uri', 'markdownUrl')
-ln('@text.literal', 'markdownCode')
+-- tree sitter
+
+hi('@text.title', { bold = true })
+hi('@punctuation.special', { fg = colors.Red })
+hi('@text.reference', theme.Link)
+hi('@text.uri', theme.Url)
+hi('@text.literal', theme.String)
+hi('@text.strong', { bold = true })
 
 -- html
 ln('@tag', 'htmlTag')
